@@ -60,6 +60,59 @@ lower-level inputs, but this inherited UI does not yet provide a character-level
 The existing APL editor remains
 available for custom priorities and channel conditions.
 
+## Spell power and damage formula audit
+
+For the six spells in the Shadow rotation, a normal, unresisted hit or tick is:
+
+`(rank base damage + coefficient × eligible spell power) × damage multipliers`
+
+Eligible spell power includes generic spell damage and the spell's own school bonus.
+Shadow power does not increase Arcane Starshards. Critical outcomes, target modifiers,
+and resistance are separate from the calculation shown here.
+
+| Spell | Spell-power coefficient | Total for a completed base-duration cast |
+|---|---:|---:|
+| Mind Blast | 0.429 per hit | 0.429 |
+| Shadow Word: Death | 0.429 per hit | 0.429 |
+| Mind Flay | 0.167 per tick | 0.501 across three ticks |
+| Shadow Word: Pain | 0.200 per tick | 1.200 across six ticks |
+| Devouring Plague | 0.100 per tick | 0.800 across eight ticks |
+| Starshards | 0.167 per tick | 1.002 across six ticks |
+
+These are explicit beta client `SpellEffect.EffectBonusCoefficient` values, rounded
+only to their intended decimal precision, not estimates from cast time. In particular,
+0.167 is not silently replaced with 1/6. Improved Pain adds ticks with the same 0.200
+coefficient: eight ticks at two talent points contribute 1.600 spell power in total.
+Clipping a channel removes the damage and spell-power contribution of its skipped ticks.
+An additional targeted check against build **1.60.1.69913** found the same coefficients
+for 18 representative low/high ranks; the selected record fields and URLs are preserved in
+`sim/priest/testdata/forever_coefficient_audit_69913.json`. This supplements the original
+archive rather than claiming a full newer-build recapture.
+
+Darkness at five points, Shadow Weaving at five stacks, and Shadowform are separate
+factors: `1.10 × 1.10 × 1.10 = 1.331`, or **33.1% more Shadow damage**. Weaving's own
+five stacks form a single 10% factor; they are not five separate 2% multipliers.
+Improved Mind Flay adds a separate 1.20 factor at two points. Twin Disciplines adds a
+separate 1.05 factor to eligible instant spells at five points, excluding channels.
+
+For example, with 500 eligible spell power, rank-six Mind Flay, two points in Improved
+Mind Flay, and all three Shadow bonuses active at application, each ordinary tick is
+`(130 + 0.167 × 500) × 1.331 × 1.20 = 341.0022` before target mitigation. This is not
+a DPS estimate: critical hits, misses, fight timing, gear effects, and resource limits
+still affect simulation results.
+
+The regression tests in `sim/priest/forever_damage_formula_test.go` check the actual
+damage pipeline and archived coefficient records. They establish that the engine
+implements this formula; client records alone do not prove every beta server stacking
+or snapshot rule. In particular, ordinary periodic spells retain the spell power and
+Shadow Weaving multiplier from application; only the reviewed Eureka damage bonus is
+dynamic. A full no-snapshot model still requires controlled combat-log evidence.
+
+The Mind Flay and Starshards APL expected-tick helpers now include Forever's periodic
+critical hits and honor the request to estimate an existing snapshot. Current crit
+chance is still used, matching actual Forever ticks. These helpers estimate damage
+conditional on the channel landing; they do not apply the initial hit chance again.
+
 The inherited default equipment includes an Engineering-only Green Lens. The default
 profession selection now satisfies that requirement; this is not a profession ranking.
 
@@ -89,8 +142,6 @@ against a complete set of controlled beta combat logs.
   and lack of an internal cooldown remain assumptions; racial rankings are provisional.
 - Ordinary DoT damage snapshots remain inherited except for Eureka. Live periodic crit
   is already part of the Forever ruleset. No universal no-snapshot rule is claimed.
-- Inherited Mind Flay/Starshards expected-damage APL helpers omit periodic crits;
-  actual simulated ticks can crit. The provided presets do not use those helpers.
 - Mind Blast's cooldown starts on cast completion in this engine. Client cooldown
   fields alone do not prove that timing on the beta server.
 - The damage simulator does not halt a Priest's rotation at zero health. Death backlash

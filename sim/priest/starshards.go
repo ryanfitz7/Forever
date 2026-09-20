@@ -112,9 +112,18 @@ func (priest *Priest) newStarshardsSpellConfig(rank int, tickIdx int32, cdTimer 
 			spell.DealOutcome(sim, result)
 		},
 
-		ExpectedTickDamage: func(sim *core.Simulation, target *core.Unit, spell *core.Spell, _ bool) *core.SpellResult {
-			result := spell.CalcPeriodicDamage(sim, target, baseDamage, spell.OutcomeExpectedMagicAlwaysHit)
-			return result
+		ExpectedTickDamage: func(sim *core.Simulation, target *core.Unit, spell *core.Spell, useSnapshot bool) *core.SpellResult {
+			if sim.IsForever() {
+				outcome := spell.OutcomeExpectedMagicAlwaysHit
+				if !spell.Flags.Matches(core.SpellFlagNoPeriodicCrit) {
+					outcome = spell.OutcomeExpectedMagicCrit
+				}
+				if useSnapshot {
+					return spell.Dot(target).CalcSnapshotDamage(sim, target, outcome)
+				}
+				return spell.CalcPeriodicDamage(sim, target, baseDamage, outcome)
+			}
+			return spell.CalcPeriodicDamage(sim, target, baseDamage, spell.OutcomeExpectedMagicAlwaysHit)
 		},
 	}
 }
