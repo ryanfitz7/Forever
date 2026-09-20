@@ -275,6 +275,7 @@ func (spell *Spell) calcDamageInternal(sim *Simulation, target *Unit, baseDamage
 	result := spell.NewResult(target)
 	result.Damage = baseDamage
 	result.Damage *= attackerMultiplier
+	result.Damage *= spell.DynamicDamageMultiplier
 
 	if sim.Log == nil {
 		result.applyResistances(sim, spell, isPeriodic, attackTable)

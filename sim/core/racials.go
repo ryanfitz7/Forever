@@ -218,14 +218,18 @@ func applyRaceEffects(agent Agent) {
 	}
 }
 
-// Eureka!, the gnome's Forever racial cooldown: the next three damaging or healing
-// abilities cost 50% less mana and deal 10% more, on a two minute cooldown. Read from the
-// demo; the racials guide carries both figures.
-// TODO: beta will confirm. A warlock's tooltip listed only the damage half, so whether the
-// mana saving applies to every ability or only the caster ones is not settled; it is taken
-// here to apply to whatever the charge is spent on.
+// Eureka! has class-specific client spells. Priest's 1259823 grants 15% lower
+// mana cost, 10% more damage/healing and three charges (beta 1.60.1.69913).
+// Its damage bonus is dynamic for Priest DoTs, confirmed by beta observation.
+// Channel charges are consumed at application; Death remains eligible under
+// the generic damaging-cast assumption despite its class-mask mismatch. Both
+// charge details still need a live test. Other classes retain the fork's model.
 func (character *Character) registerEureka() {
 	actionID := ActionID{SpellID: 460550}
+	priestEureka := character.Class == proto.Class_ClassPriest
+	if priestEureka {
+		actionID = ActionID{SpellID: 1259823}
+	}
 
 	var affected []*Spell
 	aura := character.RegisterAura(Aura{
@@ -237,21 +241,36 @@ func (character *Character) registerEureka() {
 			// Anything that costs mana and deals damage is a candidate; a charge is spent
 			// by whichever of them is cast first.
 			for _, spell := range character.Spellbook {
-				if spell.Cost != nil && spell.ProcMask.Matches(ProcMaskSpellDamage) {
+				if spell.Cost != nil && spell.ProcMask.Matches(ProcMaskSpellDamage) &&
+					(!priestEureka || spell.Cost.CostType() == CostTypeMana) {
 					affected = append(affected, spell)
 				}
 			}
 		},
 		OnGain: func(aura *Aura, sim *Simulation) {
-			character.PseudoStats.DamageDealtMultiplier *= 1.1
+			if !priestEureka {
+				character.PseudoStats.DamageDealtMultiplier *= 1.1
+			}
 			for _, spell := range affected {
-				spell.Cost.Multiplier -= 50
+				if priestEureka {
+					spell.Cost.FinalMultiplier *= 0.85
+					spell.DynamicDamageMultiplier *= 1.1
+				} else {
+					spell.Cost.Multiplier -= 50
+				}
 			}
 		},
 		OnExpire: func(aura *Aura, sim *Simulation) {
-			character.PseudoStats.DamageDealtMultiplier /= 1.1
+			if !priestEureka {
+				character.PseudoStats.DamageDealtMultiplier /= 1.1
+			}
 			for _, spell := range affected {
-				spell.Cost.Multiplier += 50
+				if priestEureka {
+					spell.Cost.FinalMultiplier /= 0.85
+					spell.DynamicDamageMultiplier /= 1.1
+				} else {
+					spell.Cost.Multiplier += 50
+				}
 			}
 		},
 		OnStacksChange: func(aura *Aura, sim *Simulation, _ int32, newStacks int32) {
@@ -260,12 +279,16 @@ func (character *Character) registerEureka() {
 			}
 		},
 		OnCastComplete: func(aura *Aura, sim *Simulation, spell *Spell) {
-			// OnCastComplete runs after the cast that activated the aura, so the charge the
-			// activation itself would spend is not taken.
-			if aura.RemainingDuration(sim) == aura.Duration {
+			if !priestEureka {
+				// Preserve the inherited model for classes outside this Priest review.
+				if aura.RemainingDuration(sim) != aura.Duration && aura.GetStacks() > 0 && spell.ProcMask.Matches(ProcMaskSpellDamage) {
+					aura.RemoveStack(sim)
+				}
 				return
 			}
-			if aura.GetStacks() > 0 && spell.ProcMask.Matches(ProcMaskSpellDamage) {
+			// The activation has NoOnCastComplete and is not in affected. A damaging
+			// instant cast at the same timestamp must still spend its charge.
+			if aura.GetStacks() > 0 && slices.Contains(affected, spell) {
 				aura.RemoveStack(sim)
 			}
 		},
@@ -299,6 +322,8 @@ func (character *Character) registerEureka() {
 // Health" is read as a roll between half and full, the way every other ranged damage
 // value in the sim is, and the drain is taken to be Shadow damage that can be resisted.
 // Whether it can crit, and whether it shares a cooldown between procs, are both unknown.
+// Beta observation confirms triggering from applications, not periodic ticks;
+// only OnSpellHitDealt is registered below. Channel eligibility remains assumed.
 func (character *Character) registerTouchOfTheGrave() {
 	actionID := ActionID{SpellID: 460540}
 	healthMetrics := character.NewHealthMetrics(actionID)

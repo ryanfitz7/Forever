@@ -1,0 +1,4310 @@
+[
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-power-in-light",
+    "talent": "Power in Light",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Your Smite and Penance spells deal 2% increased damage to targets afflicted with your Holy Fire.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-power-in-light",
+    "talent": "Power in Light",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Your Smite and Penance spells deal 4% increased damage to targets afflicted with your Holy Fire.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-power-in-light",
+    "talent": "Power in Light",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Your Smite and Penance spells deal 6% increased damage to targets afflicted with your Holy Fire.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-power-in-light",
+    "talent": "Power in Light",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Your Smite and Penance spells deal 8% increased damage to targets afflicted with your Holy Fire.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-power-in-light",
+    "talent": "Power in Light",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Your Smite and Penance spells deal 10% increased damage to targets afflicted with your Holy Fire.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-wand-specialization",
+    "talent": "Wand Specialization",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your damage with Wands by 13%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14524",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Wand Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-wand-specialization",
+    "talent": "Wand Specialization",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your damage with Wands by 25%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14524",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Wand Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-twin-disciplines",
+    "talent": "Twin Disciplines",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage and healing of your instant cast spells by 1%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-twin-disciplines",
+    "talent": "Twin Disciplines",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage and healing of your instant cast spells by 2%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-twin-disciplines",
+    "talent": "Twin Disciplines",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage and healing of your instant cast spells by 3%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-twin-disciplines",
+    "talent": "Twin Disciplines",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage and healing of your instant cast spells by 4%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-twin-disciplines",
+    "talent": "Twin Disciplines",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage and healing of your instant cast spells by 5%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-silent-resolve",
+    "talent": "Silent Resolve",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the threat generated by your Holy spells by 10% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 5%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14523",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Silent Resolve"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-silent-resolve",
+    "talent": "Silent Resolve",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the threat generated by your Holy spells by 20% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14523",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Silent Resolve"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-silent-resolve",
+    "talent": "Silent Resolve",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the threat generated by your Holy spells by 30% and reduces the duration of Stun, Fear, and Silence effects inflicted on you by 15%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14523",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Silent Resolve"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-holy-precision",
+    "talent": "Holy Precision",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Holy spells by 6%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-holy-precision",
+    "talent": "Holy Precision",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Holy spells by 12%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-holy-precision",
+    "talent": "Holy Precision",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Holy spells by 18%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-power-word-shield",
+    "talent": "Improved Power Word: Shield",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage absorbed by your Power Word: Shield by 7%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14748",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Power Word: Shield"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-power-word-shield",
+    "talent": "Improved Power Word: Shield",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage absorbed by your Power Word: Shield by 14%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14748",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Power Word: Shield"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-power-word-shield",
+    "talent": "Improved Power Word: Shield",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the damage absorbed by your Power Word: Shield by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14748",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Power Word: Shield"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-martyrdom",
+    "talent": "Martyrdom",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 1,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Gives you a 50% chance to gain Focused Casting for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage and increases your resistance to Interrupt effects by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14531",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Martyrdom"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-martyrdom",
+    "talent": "Martyrdom",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 1,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Gives you a 100% chance to gain Focused Casting for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage and increases your resistance to Interrupt effects by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14531",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Martyrdom"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-agility",
+    "talent": "Mental Agility",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the mana cost of your Smite, Holy Fire, and instant cast spells by 3%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14520",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Agility"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-agility",
+    "talent": "Mental Agility",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the mana cost of your Smite, Holy Fire, and instant cast spells by 7%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14520",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Agility"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-agility",
+    "talent": "Mental Agility",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the mana cost of your Smite, Holy Fire, and instant cast spells by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14520",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Agility"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-inner-focus",
+    "talent": "Inner Focus",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 2,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "When activated, reduces the Mana cost of your next spell by 100% and increases its critical effect chance by 25% if it is capable of a critical effect.",
+    "tooltip_metadata": {
+      "passive": false,
+      "cast_time": "Instant",
+      "cooldown": "3 min cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14751",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Inner Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-meditation",
+    "talent": "Meditation",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Allows 17% of your Mana regeneration to continue while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14521",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Meditation"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-meditation",
+    "talent": "Meditation",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Allows 33% of your Mana regeneration to continue while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14521",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Meditation"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-meditation",
+    "talent": "Meditation",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Allows 50% of your Mana regeneration to continue while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14521",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Meditation"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-inner-fire",
+    "talent": "Improved Inner Fire",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases the Armor bonus of your Inner Fire spell by 15% and increases its total charges by 4.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14747",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Inner Fire"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-inner-fire",
+    "talent": "Improved Inner Fire",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases the Armor bonus of your Inner Fire spell by 30% and increases its total charges by 8.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14747",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Inner Fire"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-inner-fire",
+    "talent": "Improved Inner Fire",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases the Armor bonus of your Inner Fire spell by 45% and increases its total charges by 12.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14747",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Inner Fire"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-strength",
+    "talent": "Mental Strength",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your total Intellect by 3%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18551",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Strength"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-strength",
+    "talent": "Mental Strength",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your total Intellect by 6%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18551",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Strength"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-strength",
+    "talent": "Mental Strength",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your total Intellect by 9%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18551",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Strength"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-strength",
+    "talent": "Mental Strength",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your total Intellect by 12%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18551",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Strength"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-mental-strength",
+    "talent": "Mental Strength",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases your total Intellect by 15%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18551",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mental Strength"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-soul-warding",
+    "talent": "Soul Warding",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 3,
+    "column_zero_based": 2,
+    "prerequisite": "Improved Power Word: Shield",
+    "effect_text": "Reduces the cooldown on your Power Word: Shield spell by 4 sec and reduces its mana cost by 15%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-mana-burn",
+    "talent": "Improved Mana Burn",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Mana Burn spell by 0.5 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14750",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mana Burn"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-improved-mana-burn",
+    "talent": "Improved Mana Burn",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Mana Burn spell by 1.0 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14750",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mana Burn"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-penance",
+    "talent": "Penance",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 4,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Launches a volley of holy light at the target, causing 81 Holy damage to an enemy, or 184 healing to an ally, instantly and every 1 sec for 2 sec.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "100 Mana",
+      "range": "36 yd range",
+      "cast_time": "Channeled",
+      "cooldown": "12 sec cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-renewed-hope",
+    "talent": "Renewed Hope",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": "Soul Warding",
+    "effect_text": "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 2% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 1 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-renewed-hope",
+    "talent": "Renewed Hope",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": "Soul Warding",
+    "effect_text": "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 4% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 2 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-renewed-hope",
+    "talent": "Renewed Hope",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": "Soul Warding",
+    "effect_text": "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 6% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-renewed-hope",
+    "talent": "Renewed Hope",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": "Soul Warding",
+    "effect_text": "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 8% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 4 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-renewed-hope",
+    "talent": "Renewed Hope",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": "Soul Warding",
+    "effect_text": "Your heals from Flash Heal, Binding Heal, Lesser Heal, Heal, Greater Heal, and Penance gain 10% increased critical strike chance when cast on targets with Weakened Soul, and reduce the remaining duration of Weakened Soul on their target by 5 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-divine-aegis",
+    "talent": "Divine Aegis",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Your critical heals create a protective shield on the target, absorbing 5% of the amount healed. Lasts 12 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-divine-aegis",
+    "talent": "Divine Aegis",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Your critical heals create a protective shield on the target, absorbing 10% of the amount healed. Lasts 12 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-divine-aegis",
+    "talent": "Divine Aegis",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Your critical heals create a protective shield on the target, absorbing 15% of the amount healed. Lasts 12 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Discipline",
+    "entry_id": "calc-priest-discipline-power-infusion",
+    "talent": "Power Infusion",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 6,
+    "column_zero_based": 1,
+    "prerequisite": "Penance",
+    "effect_text": "Infuses the target with power, increasing their spell damage and healing done by 20% for 15 sec.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "20% of base mana",
+      "range": "30 yd range",
+      "cast_time": "Instant",
+      "cooldown": "3 min cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=10060",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Power Infusion"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-twilight-focus",
+    "talent": "Twilight Focus",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Gives you a 23% chance to avoid interruption caused by damage while casting any spell.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14913",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Healing Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-twilight-focus",
+    "talent": "Twilight Focus",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Gives you a 47% chance to avoid interruption caused by damage while casting any spell.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14913",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Healing Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-twilight-focus",
+    "talent": "Twilight Focus",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Gives you a 70% chance to avoid interruption caused by damage while casting any spell.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14913",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Healing Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-improved-renew",
+    "talent": "Improved Renew",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases the amount healed by your Renew spell by 5%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14908",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Renew"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-improved-renew",
+    "talent": "Improved Renew",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases the amount healed by your Renew spell by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14908",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Renew"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-improved-renew",
+    "talent": "Improved Renew",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Increases the amount healed by your Renew spell by 15%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14908",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Renew"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-specialization",
+    "talent": "Holy Specialization",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the critical effect chance of your Holy spells by 1%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14889",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-specialization",
+    "talent": "Holy Specialization",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the critical effect chance of your Holy spells by 2%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14889",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-specialization",
+    "talent": "Holy Specialization",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the critical effect chance of your Holy spells by 3%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14889",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-specialization",
+    "talent": "Holy Specialization",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the critical effect chance of your Holy spells by 4%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14889",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-specialization",
+    "talent": "Holy Specialization",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the critical effect chance of your Holy spells by 5%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14889",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Specialization"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spell-warding",
+    "talent": "Spell Warding",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces all spell damage taken by 2%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27900",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spell Warding"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spell-warding",
+    "talent": "Spell Warding",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces all spell damage taken by 4%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27900",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spell Warding"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spell-warding",
+    "talent": "Spell Warding",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces all spell damage taken by 6%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27900",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spell Warding"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spell-warding",
+    "talent": "Spell Warding",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces all spell damage taken by 8%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27900",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spell Warding"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spell-warding",
+    "talent": "Spell Warding",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces all spell damage taken by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27900",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spell Warding"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-divine-fury",
+    "talent": "Divine Fury",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.1 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18530",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Divine Fury"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-divine-fury",
+    "talent": "Divine Fury",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.2 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18530",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Divine Fury"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-divine-fury",
+    "talent": "Divine Fury",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18530",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Divine Fury"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-divine-fury",
+    "talent": "Divine Fury",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.4 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18530",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Divine Fury"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-divine-fury",
+    "talent": "Divine Fury",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the casting time of your Smite, Holy Fire, Heal, and Greater Heal spells by 0.5 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=18530",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Divine Fury"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-nova",
+    "talent": "Holy Nova",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Causes an explosion of holy light around the caster, causing 25 to 29 Holy damage to all enemy targets within 10 yards and healing all party members within 10 yards for 47 to 55. These effects cause no threat.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "185 Mana",
+      "cast_time": "Instant"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15237",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Nova"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-blessed-recovery",
+    "talent": "Blessed Recovery",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "After being struck by a melee or ranged critical hit, or suffering more than 30% of your maximum Health from a single attack, heal 8% of the damage taken over 6 sec. Refreshing this effect carries over any remaining healing.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27811",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blessed Recovery"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-blessed-recovery",
+    "talent": "Blessed Recovery",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "After being struck by a melee or ranged critical hit, or suffering more than 30% of your maximum Health from a single attack, heal 17% of the damage taken over 6 sec. Refreshing this effect carries over any remaining healing.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27811",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blessed Recovery"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-blessed-recovery",
+    "talent": "Blessed Recovery",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "After being struck by a melee or ranged critical hit, or suffering more than 30% of your maximum Health from a single attack, heal 25% of the damage taken over 6 sec. Refreshing this effect carries over any remaining healing.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27811",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blessed Recovery"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-inspiration",
+    "talent": "Inspiration",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Your non-periodic critical heals increase your target's Armor by 8% for 15 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14892",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Inspiration"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-inspiration",
+    "talent": "Inspiration",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Your non-periodic critical heals increase your target's Armor by 17% for 15 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14892",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Inspiration"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-inspiration",
+    "talent": "Inspiration",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Your non-periodic critical heals increase your target's Armor by 25% for 15 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14892",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Inspiration"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-reach",
+    "talent": "Holy Reach",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases the range of your Smite and Holy Fire spells and the radius of your Prayer of Healing and Holy Nova spells by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27789",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Reach"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-holy-reach",
+    "talent": "Holy Reach",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases the range of your Smite and Holy Fire spells and the radius of your Prayer of Healing and Holy Nova spells by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=27789",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Holy Reach"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-improved-healing",
+    "talent": "Improved Healing",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces the Mana cost of your Lesser Heal, Heal, Greater Heal, Penance, and Prayer of Mending spells by 5%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14912",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Healing"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-improved-healing",
+    "talent": "Improved Healing",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces the Mana cost of your Lesser Heal, Heal, Greater Heal, Penance, and Prayer of Mending spells by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14912",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Healing"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-improved-healing",
+    "talent": "Improved Healing",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Reduces the Mana cost of your Lesser Heal, Heal, Greater Heal, Penance, and Prayer of Mending spells by 15%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14912",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Healing"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-searing-light",
+    "talent": "Searing Light",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 2,
+    "prerequisite": "Divine Fury",
+    "effect_text": "Increases your Holy damage done by 2%, and gives a 5% chance each time your Holy Fire spell deals periodic damage for your next Holy Nova to cost no Mana.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14909",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Searing Light"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-searing-light",
+    "talent": "Searing Light",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 2,
+    "prerequisite": "Divine Fury",
+    "effect_text": "Increases your Holy damage done by 5%, and gives a 10% chance each time your Holy Fire spell deals periodic damage for your next Holy Nova to cost no Mana.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14909",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Searing Light"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-binding-heal",
+    "talent": "Binding Heal",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 3,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Heals a friendly target and the caster for 223 to 271. Low threat.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "155 Mana",
+      "range": "40 yd range",
+      "cast_time": "1.5 sec cast"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-litany-of-light",
+    "talent": "Litany of Light",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 4,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "When you cast a healing spell, gain Mana equal to 5% of the base cost of the spell if your previous heal was a different spell.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-litany-of-light",
+    "talent": "Litany of Light",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 4,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "When you cast a healing spell, gain Mana equal to 10% of the base cost of the spell if your previous heal was a different spell.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spirit-of-redemption",
+    "talent": "Spirit of Redemption",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 4,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Upon death, the priest becomes the Spirit of Redemption for 15 sec. The Spirit of Redemption cannot move, attack, be attacked or targeted by any spells or effects. While in this form the priest can cast any healing spell free of cost. When the effect ends, the priest dies.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=20711",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spirit of Redemption"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-guidance",
+    "talent": "Spiritual Guidance",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your spell healing by up to 5% of your total Spirit and your spell damage by up to 1% of your total Spirit.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14901",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Guidance"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-guidance",
+    "talent": "Spiritual Guidance",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your spell healing by up to 10% of your total Spirit and your spell damage by up to 3% of your total Spirit.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14901",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Guidance"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-guidance",
+    "talent": "Spiritual Guidance",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your spell healing by up to 15% of your total Spirit and your spell damage by up to 5% of your total Spirit.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14901",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Guidance"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-guidance",
+    "talent": "Spiritual Guidance",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your spell healing by up to 20% of your total Spirit and your spell damage by up to 6% of your total Spirit.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14901",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Guidance"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-guidance",
+    "talent": "Spiritual Guidance",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your spell healing by up to 25% of your total Spirit and your spell damage by up to 8% of your total Spirit.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14901",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Guidance"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-healing",
+    "talent": "Spiritual Healing",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the amount healed by your spells by 3%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14898",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Healing"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-healing",
+    "talent": "Spiritual Healing",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the amount healed by your spells by 7%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14898",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Healing"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-spiritual-healing",
+    "talent": "Spiritual Healing",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the amount healed by your spells by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=14898",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spiritual Healing"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Holy",
+    "entry_id": "calc-priest-holy-prayer-of-mending",
+    "talent": "Prayer of Mending",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 6,
+    "column_zero_based": 1,
+    "prerequisite": "Spirit of Redemption",
+    "effect_text": "Places a spell on the target that heals them for 172 the next time they take damage or receive non-periodic healing. When the heal occurs, Prayer of Mending jumps to a party or raid member within 20 yards. Jumps up to 5 times and lasts 30 sec after each jump. This spell can only be placed on one target at a time per caster.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "210 Mana",
+      "range": "40 yd range",
+      "cast_time": "Instant",
+      "cooldown": "10 sec cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-focus",
+    "talent": "Shadow Focus",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Shadow spells by 1%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15260",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-focus",
+    "talent": "Shadow Focus",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Shadow spells by 2%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15260",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-focus",
+    "talent": "Shadow Focus",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Shadow spells by 3%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15260",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-focus",
+    "talent": "Shadow Focus",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Shadow spells by 4%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15260",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-focus",
+    "talent": "Shadow Focus",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Improves your chance to hit with Shadow spells by 5%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15260",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Focus"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-blackout",
+    "talent": "Blackout",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Gives your Shadow damage spells a 2% chance to stun the target for 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15268",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blackout"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-blackout",
+    "talent": "Blackout",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Gives your Shadow damage spells a 4% chance to stun the target for 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15268",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blackout"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-blackout",
+    "talent": "Blackout",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Gives your Shadow damage spells a 6% chance to stun the target for 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15268",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blackout"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-blackout",
+    "talent": "Blackout",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Gives your Shadow damage spells a 8% chance to stun the target for 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15268",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blackout"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-blackout",
+    "talent": "Blackout",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Gives your Shadow damage spells a 10% chance to stun the target for 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15268",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Blackout"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-spirit-tap",
+    "talent": "Spirit Tap",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Gives you a 20% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15270",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spirit Tap"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-spirit-tap",
+    "talent": "Spirit Tap",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Gives you a 40% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15270",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spirit Tap"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-spirit-tap",
+    "talent": "Spirit Tap",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Gives you a 60% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15270",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spirit Tap"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-spirit-tap",
+    "talent": "Spirit Tap",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Gives you a 80% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15270",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spirit Tap"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-spirit-tap",
+    "talent": "Spirit Tap",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 0,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Gives you a 100% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15270",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Spirit Tap"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-affinity",
+    "talent": "Shadow Affinity",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the threat generated by your Shadow spells by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15318",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Affinity"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-affinity",
+    "talent": "Shadow Affinity",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the threat generated by your Shadow spells by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15318",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Affinity"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-affinity",
+    "talent": "Shadow Affinity",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 1,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the threat generated by your Shadow spells by 30%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15318",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Affinity"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-shadow-word-pain",
+    "talent": "Improved Shadow Word: Pain",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the duration of your Shadow Word: Pain spell by 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15275",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Shadow Word: Pain"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-shadow-word-pain",
+    "talent": "Improved Shadow Word: Pain",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 1,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases the duration of your Shadow Word: Pain spell by 6 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15275",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Shadow Word: Pain"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-reach",
+    "talent": "Shadow Reach",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 1,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Increases the range of your offensive Shadow spells by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=17322",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Reach"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-reach",
+    "talent": "Shadow Reach",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 1,
+    "column_zero_based": 3,
+    "prerequisite": null,
+    "effect_text": "Increases the range of your offensive Shadow spells by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=17322",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Reach"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-blast",
+    "talent": "Improved Mind Blast",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the cooldown of your Mind Blast spell by 0.5 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15273",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mind Blast"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-blast",
+    "talent": "Improved Mind Blast",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the cooldown of your Mind Blast spell by 1 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15273",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mind Blast"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-blast",
+    "talent": "Improved Mind Blast",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the cooldown of your Mind Blast spell by 1.5 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15273",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mind Blast"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-blast",
+    "talent": "Improved Mind Blast",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the cooldown of your Mind Blast spell by 2 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15273",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mind Blast"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-blast",
+    "talent": "Improved Mind Blast",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 2,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Reduces the cooldown of your Mind Blast spell by 2.5 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15273",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Mind Blast"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-psychic-scream",
+    "talent": "Improved Psychic Scream",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 2,
+    "column_zero_based": 1,
+    "prerequisite": "Blackout",
+    "effect_text": "Reduces the cooldown of your Psychic Scream spell by 2 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15392",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Psychic Scream"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-psychic-scream",
+    "talent": "Improved Psychic Scream",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 2,
+    "column_zero_based": 1,
+    "prerequisite": "Blackout",
+    "effect_text": "Reduces the cooldown of your Psychic Scream spell by 4 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15392",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Psychic Scream"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-mind-flay",
+    "talent": "Mind Flay",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 2,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Assault the target's mind with Shadow energy, causing 63 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "45 Mana",
+      "range": "20 yd range",
+      "cast_time": "Channeled"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15407",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Mind Flay"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-flay",
+    "talent": "Improved Mind Flay",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": "Mind Flay",
+    "effect_text": "Your Mind Flay now deals 10% more damage, gains 5 yards increased range, but slows the target's movement speed by 35%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-mind-flay",
+    "talent": "Improved Mind Flay",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 2,
+    "column_zero_based": 3,
+    "prerequisite": "Mind Flay",
+    "effect_text": "Your Mind Flay now deals 20% more damage, gains 10 yards increased range, but slows the target's movement speed by 20%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-fade",
+    "talent": "Improved Fade",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Decreases the cooldown of your Fade ability by 3 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15274",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Fade"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-improved-fade",
+    "talent": "Improved Fade",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 3,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Decreases the cooldown of your Fade ability by 6 sec.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15274",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Improved Fade"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-vampiric-embrace",
+    "talent": "Vampiric Embrace",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 3,
+    "column_zero_based": 1,
+    "prerequisite": null,
+    "effect_text": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec. Vampiric Embrace also grants a chance for your Spirit Tap talent to trigger when enemies afflicted by it die.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "40 Mana",
+      "range": "30 yd range",
+      "cast_time": "Instant",
+      "cooldown": "1 min cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15286",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Vampiric Embrace"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-weaving",
+    "talent": "Shadow Weaving",
+    "rank": 1,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Your Shadow damage spells have a 33% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15257",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Weaving"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-weaving",
+    "talent": "Shadow Weaving",
+    "rank": 2,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Your Shadow damage spells have a 67% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15257",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Weaving"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadow-weaving",
+    "talent": "Shadow Weaving",
+    "rank": 3,
+    "max_rank": 3,
+    "tier_zero_based": 3,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Your Shadow damage spells have a 100% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15257",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadow Weaving"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-silence",
+    "talent": "Silence",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 4,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Silences the target, preventing them from casting spells for 5 sec and interrupting their spellcasts for 3 sec.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "225 Mana",
+      "range": "20 yd range",
+      "cast_time": "Instant",
+      "cooldown": "45 sec cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15487",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Silence"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-devouring-contagion",
+    "talent": "Devouring Contagion",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the mana cost of your Devouring Plague by 25%.\n\nTargets that die while Devouring Plague it is active spreads it, jumping to a nearby enemy within 5 yards for the remaining duration.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-devouring-contagion",
+    "talent": "Devouring Contagion",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 4,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague it is active spreads it, jumping to a nearby enemy within 10 yards for the remaining duration.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-early-demise",
+    "talent": "Early Demise",
+    "rank": 1,
+    "max_rank": 2,
+    "tier_zero_based": 5,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases Shadow Word: Death's critical strike chance on targets at or below 20% health by 15%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-early-demise",
+    "talent": "Early Demise",
+    "rank": 2,
+    "max_rank": 2,
+    "tier_zero_based": 5,
+    "column_zero_based": 0,
+    "prerequisite": null,
+    "effect_text": "Increases Shadow Word: Death's critical strike chance on targets at or below 20% health by 30%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-darkness",
+    "talent": "Darkness",
+    "rank": 1,
+    "max_rank": 5,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your Shadow damage done by 2%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15259",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Darkness"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-darkness",
+    "talent": "Darkness",
+    "rank": 2,
+    "max_rank": 5,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your Shadow damage done by 4%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15259",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Darkness"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-darkness",
+    "talent": "Darkness",
+    "rank": 3,
+    "max_rank": 5,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your Shadow damage done by 6%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15259",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Darkness"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-darkness",
+    "talent": "Darkness",
+    "rank": 4,
+    "max_rank": 5,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your Shadow damage done by 8%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15259",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Darkness"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-darkness",
+    "talent": "Darkness",
+    "rank": 5,
+    "max_rank": 5,
+    "tier_zero_based": 5,
+    "column_zero_based": 2,
+    "prerequisite": null,
+    "effect_text": "Increases your Shadow damage done by 10%.",
+    "tooltip_metadata": {
+      "passive": true
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15259",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Darkness"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  },
+  {
+    "class": "priest",
+    "tree": "Shadow Magic",
+    "entry_id": "calc-priest-shadow-magic-shadowform",
+    "talent": "Shadowform",
+    "rank": 1,
+    "max_rank": 1,
+    "tier_zero_based": 6,
+    "column_zero_based": 1,
+    "prerequisite": "Vampiric Embrace",
+    "effect_text": "Assume Shadowform, increasing your Shadow damage by 10%, reducing the Mana cost of all Shadow spells by 50%, increasing the critical strike damage bonus of your Shadow spells by 100%, and reducing Physical damage taken by you by 15%. However, you may not cast healing spells while in this form.",
+    "tooltip_metadata": {
+      "passive": false,
+      "resource_cost": "40% of base mana",
+      "cast_time": "Instant",
+      "cooldown": "1.5 sec cooldown"
+    },
+    "evidence": "client_data",
+    "sources": [
+      {
+        "url": "https://wago.tools/db2/TraitNode?build=1.60.1.69893",
+        "type": "client_data",
+        "title": "WoW Forever beta client, build 1.60.1.69893"
+      },
+      {
+        "url": "https://www.wowhead.com/classic/spell=15473",
+        "type": "classic_client_data",
+        "title": "Classic Era client, build 1.15.9.69722: Shadowform"
+      }
+    ],
+    "source_url": "https://foreverchanges.pro/talents/priest",
+    "build": "1.60.1.69893"
+  }
+]

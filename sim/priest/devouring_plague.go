@@ -10,6 +10,7 @@ import (
 const DevouringPlagueRanks = 6
 
 var DevouringPlagueSpellId = [DevouringPlagueRanks + 1]int32{0, 2944, 19276, 19277, 19278, 19279, 19280}
+
 // Forever beta client 1.60.1.69893.
 var DevouringPlagueBaseDamage = [DevouringPlagueRanks + 1]float64{0, 128, 232, 344, 488, 656, 848}
 var DevouringPlagueManaCost = [DevouringPlagueRanks + 1]float64{0, 215, 350, 495, 645, 810, 985}
@@ -39,6 +40,11 @@ func (priest *Priest) getDevouringPlagueConfig(rank int, cdTimer *core.Timer) co
 	level := DevouringPlagueLevel[rank]
 
 	spellCoeff := 0.1 // per tick
+	healthMetrics := priest.NewHealthMetrics(core.ActionID{SpellID: spellId})
+	manaOptions := core.ManaCostOptions{FlatCost: manaCost, Multiplier: 100 - 25*priest.Talents.DevouringContagion}
+	if priest.Env.IsForever() {
+		manaOptions = core.ManaCostOptions{FlatCost: manaCost * (1 - .25*float64(priest.Talents.DevouringContagion))}
+	}
 
 	return core.SpellConfig{
 		SpellCode:   SpellCode_PriestDevouringPlague,
@@ -51,11 +57,10 @@ func (priest *Priest) getDevouringPlagueConfig(rank int, cdTimer *core.Timer) co
 		Rank:          rank,
 		RequiredLevel: level,
 
-		// Devouring Contagion, 25/50% in the beta client.
-		ManaCost: core.ManaCostOptions{
-			FlatCost:   manaCost,
-			Multiplier: 100 - 25*priest.Talents.DevouringContagion,
-		},
+		// Devouring Contagion, 25/50% in the beta client. Apply to the base
+		// cost so Shadowform's separate 50% discount cannot make Plague free.
+		// Multiplicative stacking follows the current model, not verified rounding.
+		ManaCost: manaOptions,
 		Cast: core.CastConfig{
 			DefaultCast: core.Cast{
 				GCD: core.GCDDefault,
@@ -82,7 +87,14 @@ func (priest *Priest) getDevouringPlagueConfig(rank int, cdTimer *core.Timer) co
 				dot.Snapshot(target, baseDotDamage, isRollover)
 			},
 			OnTick: func(sim *core.Simulation, target *core.Unit, dot *core.Dot) {
-				dot.CalcAndDealPeriodicSnapshotDamage(sim, target, dot.OutcomeTick)
+				result := dot.CalcSnapshotDamage(sim, target, dot.OutcomeTick)
+				damage := result.Damage
+				dot.Spell.DealPeriodicDamage(sim, result)
+				if sim.IsForever() {
+					// The tooltip returns the damage actually dealt, including crits
+					// and mitigation, rather than a separate healing-power roll.
+					priest.GainHealth(sim, damage, healthMetrics)
+				}
 			},
 		},
 

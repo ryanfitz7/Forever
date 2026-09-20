@@ -1,0 +1,218 @@
+{
+  "build": "1.60.1.69893",
+  "source": "https://foreverchanges.pro/spellbook/priest",
+  "spells": {
+    "10894": [
+      {
+        "spellId": 589,
+        "rank": 1,
+        "level": 4
+      },
+      {
+        "spellId": 594,
+        "rank": 2,
+        "level": 10
+      },
+      {
+        "spellId": 970,
+        "rank": 3,
+        "level": 18
+      },
+      {
+        "spellId": 992,
+        "rank": 4,
+        "level": 26
+      },
+      {
+        "spellId": 2767,
+        "rank": 5,
+        "level": 34
+      },
+      {
+        "spellId": 10892,
+        "rank": 6,
+        "level": 42
+      },
+      {
+        "spellId": 10893,
+        "rank": 7,
+        "level": 50
+      },
+      {
+        "spellId": 10894,
+        "rank": 8,
+        "level": 58
+      }
+    ],
+    "10947": [
+      {
+        "spellId": 8092,
+        "rank": 1,
+        "level": 10
+      },
+      {
+        "spellId": 8102,
+        "rank": 2,
+        "level": 16
+      },
+      {
+        "spellId": 8103,
+        "rank": 3,
+        "level": 22
+      },
+      {
+        "spellId": 8104,
+        "rank": 4,
+        "level": 28
+      },
+      {
+        "spellId": 8105,
+        "rank": 5,
+        "level": 34
+      },
+      {
+        "spellId": 8106,
+        "rank": 6,
+        "level": 40
+      },
+      {
+        "spellId": 10945,
+        "rank": 7,
+        "level": 46
+      },
+      {
+        "spellId": 10946,
+        "rank": 8,
+        "level": 52
+      },
+      {
+        "spellId": 10947,
+        "rank": 9,
+        "level": 58
+      }
+    ],
+    "18807": [
+      {
+        "spellId": 15407,
+        "rank": 1,
+        "level": 20
+      },
+      {
+        "spellId": 17311,
+        "rank": 2,
+        "level": 28
+      },
+      {
+        "spellId": 17312,
+        "rank": 3,
+        "level": 36
+      },
+      {
+        "spellId": 17313,
+        "rank": 4,
+        "level": 44
+      },
+      {
+        "spellId": 17314,
+        "rank": 5,
+        "level": 52
+      },
+      {
+        "spellId": 18807,
+        "rank": 6,
+        "level": 60
+      }
+    ],
+    "19280": [
+      {
+        "spellId": 2944,
+        "rank": 1,
+        "level": 20
+      },
+      {
+        "spellId": 19276,
+        "rank": 2,
+        "level": 28
+      },
+      {
+        "spellId": 19277,
+        "rank": 3,
+        "level": 36
+      },
+      {
+        "spellId": 19278,
+        "rank": 4,
+        "level": 44
+      },
+      {
+        "spellId": 19279,
+        "rank": 5,
+        "level": 52
+      },
+      {
+        "spellId": 19280,
+        "rank": 6,
+        "level": 60
+      }
+    ],
+    "19305": [
+      {
+        "spellId": 10797,
+        "rank": 1,
+        "level": 10
+      },
+      {
+        "spellId": 19296,
+        "rank": 2,
+        "level": 18
+      },
+      {
+        "spellId": 19299,
+        "rank": 3,
+        "level": 26
+      },
+      {
+        "spellId": 19302,
+        "rank": 4,
+        "level": 34
+      },
+      {
+        "spellId": 19303,
+        "rank": 5,
+        "level": 42
+      },
+      {
+        "spellId": 19304,
+        "rank": 6,
+        "level": 50
+      },
+      {
+        "spellId": 19305,
+        "rank": 7,
+        "level": 58
+      }
+    ],
+    "1309636": [
+      {
+        "spellId": 1309595,
+        "rank": 1,
+        "level": 32
+      },
+      {
+        "spellId": 1309633,
+        "rank": 2,
+        "level": 40
+      },
+      {
+        "spellId": 1309635,
+        "rank": 3,
+        "level": 48
+      },
+      {
+        "spellId": 1309636,
+        "rank": 4,
+        "level": 56
+      }
+    ]
+  }
+}

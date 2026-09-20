@@ -4,17 +4,23 @@ import * as Mechanics from '../core/constants/mechanics.js';
 import { ClassicPhase } from '../core/constants/other.js';
 import { IndividualSimUI, registerSpecConfig } from '../core/individual_sim_ui.js';
 import { Player } from '../core/player.js';
+import { APLRotation } from '../core/proto/apl.js';
 import { Class, Faction, PartyBuffs, PseudoStat, Race, Spec, Stat } from '../core/proto/common.js';
 import { Stats } from '../core/proto_utils/stats.js';
 import { getSpecIcon, specNames } from '../core/proto_utils/utils.js';
 import * as ShadowPriestInputs from './inputs.js';
 import * as Presets from './presets.js';
+import { foreverAutoRotation } from './rotation.js';
 
 const SPEC_CONFIG = registerSpecConfig(Spec.SpecShadowPriest, {
 	cssClass: 'shadow-priest-sim-ui',
 	cssScheme: 'priest',
 	// List any known bugs / issues here and they'll be shown on the site.
-	knownIssues: ['The Homunculi Rune is not currently implemented until more data is available'],
+	knownIssues: [
+		'Forever beta model: spell and talent inputs are source-backed, while some racial, proc and timing interactions still need combat-log verification.',
+		'Auto is a level-60 starting priority, not a universally optimal rotation. It uses Death during and outside execute and includes Starshards for Night Elves. Compare the full-channel and clipped-Flay presets for your encounter.',
+		'Equipment presets, item effects, buffs and default EP weights retain inherited assumptions and are not a verified Forever best-in-slot ranking. Recalculate stat weights for your own setup.',
+	],
 
 	// All stats for which EP should be calculated.
 	epStats: [
@@ -52,7 +58,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecShadowPriest, {
 
 	modifyDisplayStats: (player: Player<Spec.SpecShadowPriest>) => {
 		let stats = new Stats();
-		stats = stats.addPseudoStat(PseudoStat.PseudoStatSchoolHitShadow, player.getTalents().shadowFocus * 2 * Mechanics.SPELL_HIT_RATING_PER_HIT_CHANCE);
+		stats = stats.addPseudoStat(PseudoStat.PseudoStatSchoolHitShadow, player.getTalents().shadowFocus * Mechanics.SPELL_HIT_RATING_PER_HIT_CHANCE);
 
 		return {
 			talents: stats,
@@ -70,7 +76,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecShadowPriest, {
 			[Stat.StatSpellDamage]: 1,
 			[Stat.StatShadowPower]: 1,
 			[Stat.StatSpellHit]: 5.51,
-			[Stat.StatSpellCrit]: 5.99, // Averaged between using and not using Despair for dot crits
+			[Stat.StatSpellCrit]: 5.99, // Inherited sorting weight; recalculate for this Forever setup.
 			[Stat.StatSpellHaste]: 1.65,
 			[Stat.StatMP5]: 0.0,
 			[Stat.StatFireResistance]: 0.5,
@@ -109,7 +115,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecShadowPriest, {
 	},
 	encounterPicker: {
 		// Whether to include 'Execute Duration (%)' in the 'Encounter' section of the settings tab.
-		showExecuteProportion: false,
+		showExecuteProportion: true,
 	},
 
 	presets: {
@@ -119,7 +125,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecShadowPriest, {
 	},
 
 	autoRotation: player => {
-		return Presets.DefaultAPL.rotation.rotation!;
+		return APLRotation.fromJson(foreverAutoRotation(Mechanics.CURRENT_LEVEL_CAP, player.getRace() === Race.RaceNightElf, player.getTalents()));
 	},
 
 	raidSimPresets: [

@@ -1,0 +1,189 @@
+{
+  "type": "TypeAPL",
+  "prepullActions": [
+    {
+      "action": {
+        "castSpell": {
+          "spellId": {
+            "spellId": 15473
+          }
+        }
+      },
+      "doAtValue": {
+        "const": {
+          "val": "-1s"
+        }
+      }
+    }
+  ],
+  "priorityList": [
+    {
+      "notes": "Use configured cooldowns. This is a starting priority, not a universal DPS optimum.",
+      "action": {
+        "autocastOtherCooldowns": {}
+      }
+    },
+    {
+      "notes": "Maintain Pain when enough encounter time remains to deliver several ticks.",
+      "action": {
+        "condition": {
+          "and": {
+            "vals": [
+              {
+                "not": {
+                  "val": {
+                    "dotIsActive": {
+                      "spellId": {
+                        "spellId": 10894,
+                        "rank": 8
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "cmp": {
+                  "op": "OpGe",
+                  "lhs": {
+                    "remainingTime": {}
+                  },
+                  "rhs": {
+                    "const": {
+                      "val": "10s"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "castSpell": {
+          "spellId": {
+            "spellId": 10894,
+            "rank": 8
+          }
+        }
+      }
+    },
+    {
+      "notes": "Use Inner Focus for Plague when talented. Plague also works without Inner Focus.",
+      "action": {
+        "condition": {
+          "and": {
+            "vals": [
+              {
+                "not": {
+                  "val": {
+                    "auraIsActive": {
+                      "auraId": {
+                        "spellId": 14751
+                      }
+                    }
+                  }
+                }
+              },
+              {
+                "spellIsReady": {
+                  "spellId": {
+                    "spellId": 19280,
+                    "rank": 6
+                  }
+                }
+              },
+              {
+                "cmp": {
+                  "op": "OpGe",
+                  "lhs": {
+                    "remainingTime": {}
+                  },
+                  "rhs": {
+                    "const": {
+                      "val": "9s"
+                    }
+                  }
+                }
+              }
+            ]
+          }
+        },
+        "castSpell": {
+          "spellId": {
+            "spellId": 14751
+          }
+        }
+      }
+    },
+    {
+      "notes": "Devouring Plague is available to every Priest race in Forever.",
+      "action": {
+        "condition": {
+          "cmp": {
+            "op": "OpGe",
+            "lhs": {
+              "remainingTime": {}
+            },
+            "rhs": {
+              "const": {
+                "val": "9s"
+              }
+            }
+          }
+        },
+        "castSpell": {
+          "spellId": {
+            "spellId": 19280,
+            "rank": 6
+          }
+        }
+      }
+    },
+    {
+      "notes": "Prioritize Death during the <=20% execute phase, where Early Demise increases critical chance.",
+      "action": {
+        "condition": {
+          "isExecutePhase": {
+            "threshold": "E20"
+          }
+        },
+        "castSpell": {
+          "spellId": {
+            "spellId": 1309636,
+            "rank": 4
+          }
+        }
+      }
+    },
+    {
+      "action": {
+        "castSpell": {
+          "spellId": {
+            "spellId": 10947,
+            "rank": 9
+          }
+        }
+      }
+    },
+    {
+      "notes": "Death is usable outside execute as well.",
+      "action": {
+        "castSpell": {
+          "spellId": {
+            "spellId": 1309636,
+            "rank": 4
+          }
+        }
+      }
+    },
+    {
+      "notes": "Complete the three-tick Mind Flay channel. Compare the clipped preset for other cooldown alignments.",
+      "action": {
+        "castSpell": {
+          "spellId": {
+            "spellId": 18807,
+            "rank": 6
+          }
+        }
+      }
+    }
+  ]
+}

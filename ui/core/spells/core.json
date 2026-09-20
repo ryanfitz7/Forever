@@ -475,6 +475,19 @@
 		"source": "assumed",
 		"tooltip": "Passive\nYour spells and attacks have a 5% chance to drain Health from the target, up to 5% of your maximum Health."
 	},
+	"1259823": {
+		"ability": "Eureka! (Priest)",
+		"file": "sim/core/racials.go",
+		"foreverId": 1259823,
+		"source": "assumed",
+		"tooltip": "Instant\n2 min cooldown\nYour next 3 damaging or healing abilities cost 15% less Mana and do 10% more damage or healing.",
+		"note": "Priest-family SpellEffect and SpellAuraOptions in beta 1.60.1.69913 establish the 15% cost reduction, 10% bonus and three charges. Beta observation confirms damage updates dynamically for existing DoTs. Other snapshot multipliers are unchanged.",
+		"assumptions": [
+			"Charges are consumed on application for instants and channels, and on completion for cast-time spells. Channel timing still needs a live test.",
+			"Shadow Word: Death remains eligible as a damaging cast, although its class mask does not intersect Eureka's displayed modifier masks; the dummy effect's server behavior is unresolved.",
+			"Mana reductions multiply existing spell and school discounts; server rounding and stacking still need verification."
+		]
+	},
 	"460550": {
 		"ability": "Eureka!",
 		"assumptions": [
@@ -482,7 +495,7 @@
 		],
 		"file": "sim/core/racials.go",
 		"foreverId": 460550,
-		"note": "A Forever-only gnome racial; 460550 is Forever’s own id and the Classic database cannot name or draw it. Both figures come from the racials guide, read from the demo.",
+		"note": "Legacy generic racial identifier retained for other classes. Both figures come from the demo racials guide. Priest uses its verified class-specific spell 1259823 instead.",
 		"source": "assumed",
 		"tooltip": "Instant\n2 min cooldown\nYour next 3 damaging or healing abilities cost 50% less Mana and do 10% more damage or healing."
 	},

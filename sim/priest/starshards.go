@@ -13,6 +13,7 @@ const StarshardsTicks = 6
 
 var StarshardsSpellId = [StarshardsRanks + 1]int32{0, 10797, 19296, 19299, 19302, 19303, 19304, 19305}
 var StarshardsTickSpellId = [StarshardsRanks + 1]int32{0, 19350, 19351, 19352, 19353, 19354, 19355, 19356}
+
 // Forever beta client 1.60.1.69893, about double Classic's, at .167 a tick for every rank.
 var StarshardsBaseDamage = [StarshardsRanks + 1]float64{0, 162, 300, 528, 762, 1068, 1440, 1800}
 var StarshardsManaCost = [StarshardsRanks + 1]float64{0, 50, 85, 140, 190, 245, 300, 350}
@@ -24,13 +25,14 @@ func (priest *Priest) registerStarshardsSpell() {
 	}
 
 	priest.Starshards = make([][]*core.Spell, StarshardsRanks+1)
+	cdTimer := priest.NewTimer()
 
 	for rank := 1; rank <= StarshardsRanks; rank++ {
 		priest.Starshards[rank] = make([]*core.Spell, StarshardsTicks+1)
 
 		var tick int32
 		for tick = 0; tick < StarshardsTicks; tick++ {
-			config := priest.newStarshardsSpellConfig(rank, tick)
+			config := priest.newStarshardsSpellConfig(rank, tick, cdTimer)
 
 			if config.RequiredLevel <= int(priest.Level) {
 				priest.Starshards[rank][tick] = priest.RegisterSpell(config)
@@ -39,7 +41,7 @@ func (priest *Priest) registerStarshardsSpell() {
 	}
 }
 
-func (priest *Priest) newStarshardsSpellConfig(rank int, tickIdx int32) core.SpellConfig {
+func (priest *Priest) newStarshardsSpellConfig(rank int, tickIdx int32, cdTimer *core.Timer) core.SpellConfig {
 	ticks := tickIdx
 	flags := SpellFlagPriest | core.SpellFlagChanneled | core.SpellFlagBinary
 	if tickIdx == 0 {
@@ -55,6 +57,11 @@ func (priest *Priest) newStarshardsSpellConfig(rank int, tickIdx int32) core.Spe
 	spellCoeff := 0.167
 
 	tickLength := time.Second
+	var cooldown core.Cooldown
+	if priest.Env.IsForever() {
+		// Client SpellCooldowns: 30 seconds, shared across ranks and clipped casts.
+		cooldown = core.Cooldown{Timer: cdTimer, Duration: 30 * time.Second}
+	}
 
 	return core.SpellConfig{
 		SpellCode:   SpellCode_PriestStarshards,
@@ -72,6 +79,7 @@ func (priest *Priest) newStarshardsSpellConfig(rank int, tickIdx int32) core.Spe
 		},
 
 		Cast: core.CastConfig{
+			CD: cooldown,
 			DefaultCast: core.Cast{
 				GCD: core.GCDDefault,
 			},
