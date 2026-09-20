@@ -40,6 +40,9 @@ export type SpellSource = {
 	file: string;
 	source: 'classic' | 'forever' | 'assumed' | 'unreviewed';
 	foreverId?: number;
+	/** Client icon name and rank for abilities absent from the Classic database. */
+	icon?: string;
+	rank?: number;
 	tooltip?: string;
 	note?: string;
 	assumptions?: Array<string>;

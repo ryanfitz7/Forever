@@ -267,11 +267,12 @@ export class ActionId {
 		}
 
 		const tooltipData = await ActionId.getTooltipData(this);
+		const source = this.spellId ? spellSource(this.spellId) : undefined;
 
 		// Wowhead has no entry for an ability Forever invented, and its fetch resolves to a row
 		// with no name, which reaches the damage table as a blank line. The spell manifest knows
 		// what the sim calls every id it registers, so fall back to that.
-		const baseName: string = tooltipData['name'] || (this.spellId && spellSource(this.spellId)?.ability) || '';
+		const baseName: string = tooltipData['name'] || source?.ability || '';
 		let name = baseName;
 		switch (baseName) {
 			case 'Master Demonologist':
@@ -404,9 +405,10 @@ export class ActionId {
 				break;
 		}
 
-		const iconUrl = ActionId.makeIconUrl(tooltipData['icon']);
+		const icon = tooltipData['icon'] || source?.icon;
+		const iconUrl = icon ? ActionId.makeIconUrl(icon) : '';
 
-		return new ActionId(this.itemId, this.spellId, this.otherId, this.tag, baseName, name, iconUrl, this.rank || tooltipData.rank, this.randomSuffixId);
+		return new ActionId(this.itemId, this.spellId, this.otherId, this.tag, baseName, name, iconUrl, this.rank || tooltipData.rank || source?.rank || 0, this.randomSuffixId);
 	}
 
 	toString(): string {

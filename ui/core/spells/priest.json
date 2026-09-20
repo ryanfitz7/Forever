@@ -579,6 +579,8 @@
 	},
 	"1277324": {
 		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 1,
 		"file": "sim/priest/dark_sacrifice.go",
 		"foreverId": 1277324,
 		"source": "assumed",
@@ -591,6 +593,8 @@
 	},
 	"1277325": {
 		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 2,
 		"file": "sim/priest/dark_sacrifice.go",
 		"foreverId": 1277325,
 		"source": "assumed",
@@ -603,6 +607,8 @@
 	},
 	"1277326": {
 		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 3,
 		"file": "sim/priest/dark_sacrifice.go",
 		"foreverId": 1277326,
 		"source": "assumed",
@@ -615,6 +621,8 @@
 	},
 	"1277327": {
 		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 4,
 		"file": "sim/priest/dark_sacrifice.go",
 		"foreverId": 1277327,
 		"source": "assumed",
@@ -627,6 +635,8 @@
 	},
 	"1277328": {
 		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 5,
 		"file": "sim/priest/dark_sacrifice.go",
 		"foreverId": 1277328,
 		"source": "assumed",
@@ -639,6 +649,8 @@
 	},
 	"1309595": {
 		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 1,
 		"file": "sim/priest/shadow_word_death.go",
 		"foreverId": 1309595,
 		"source": "assumed",
@@ -651,6 +663,8 @@
 	},
 	"1309633": {
 		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 2,
 		"file": "sim/priest/shadow_word_death.go",
 		"foreverId": 1309633,
 		"source": "assumed",
@@ -663,6 +677,8 @@
 	},
 	"1309635": {
 		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 3,
 		"file": "sim/priest/shadow_word_death.go",
 		"foreverId": 1309635,
 		"source": "assumed",
@@ -675,6 +691,8 @@
 	},
 	"1309636": {
 		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 4,
 		"file": "sim/priest/shadow_word_death.go",
 		"foreverId": 1309636,
 		"source": "assumed",

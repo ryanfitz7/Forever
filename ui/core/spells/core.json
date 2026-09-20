@@ -477,6 +477,7 @@
 	},
 	"1259823": {
 		"ability": "Eureka! (Priest)",
+		"icon": "inv_gizmo_02",
 		"file": "sim/core/racials.go",
 		"foreverId": 1259823,
 		"source": "assumed",
