@@ -29,6 +29,10 @@ export class Timeline extends ResultComponent {
 	private readonly rotationTimeline: HTMLElement;
 	private readonly rotationHiddenIdsContainer: HTMLElement;
 	private readonly chartPicker: HTMLSelectElement;
+	private readonly rotationRange: HTMLElement;
+	private readonly rotationFitButton: HTMLButtonElement;
+	private fitRotation = false;
+	private pixelsPerSecond = 100;
 
 	private resultData: SimResultData | null;
 	private rendered: boolean;
@@ -74,6 +78,12 @@ export class Timeline extends ResultComponent {
 			<div className="timeline-plots-container">
 				<div className="timeline-plot dps-resources-plot hide"></div>
 				<div className="timeline-plot rotation-plot">
+					<div className="rotation-view-controls d-flex align-items-center flex-wrap gap-2 mb-2">
+						<button className="rotation-fit-button btn btn-sm btn-outline-primary">Fit full fight</button>
+						<button className="rotation-start-button btn btn-sm btn-outline-primary">Start</button>
+						<button className="rotation-end-button btn btn-sm btn-outline-primary">End</button>
+						<span className="rotation-visible-range small" attributes={{ 'aria-live': 'polite' }}></span>
+					</div>
 					<div className="rotation-container">
 						<div className="rotation-labels"></div>
 						<div className="rotation-timeline" draggable={true}></div>
@@ -131,6 +141,29 @@ export class Timeline extends ResultComponent {
 		this.rotationLabels = this.rootElem.querySelector('.rotation-labels')!;
 		this.rotationTimeline = this.rootElem.querySelector('.rotation-timeline')!;
 		this.rotationHiddenIdsContainer = this.rootElem.querySelector('.rotation-hidden-ids')!;
+		this.rotationRange = this.rootElem.querySelector('.rotation-visible-range')!;
+		this.rotationFitButton = this.rootElem.querySelector('.rotation-fit-button')!;
+		this.rotationFitButton.addEventListener('click', () => {
+			this.fitRotation = !this.fitRotation;
+			this.rotationFitButton.textContent = this.fitRotation ? 'Detail view' : 'Fit full fight';
+			this.rotationPlotElem.classList.toggle('rotation-fit', this.fitRotation);
+			this.updatePlot();
+			this.rotationTimeline.scrollLeft = 0;
+			this.updateRotationRange();
+		});
+		this.rootElem.querySelector('.rotation-start-button')!.addEventListener('click', () => {
+			this.rotationTimeline.scrollLeft = 0;
+		});
+		this.rootElem.querySelector('.rotation-end-button')!.addEventListener('click', () => {
+			this.rotationTimeline.scrollLeft = this.rotationTimeline.scrollWidth;
+		});
+		this.rotationTimeline.addEventListener('scroll', () => this.updateRotationRange());
+		const resizeObserver = new ResizeObserver(() => {
+			if (this.fitRotation && this.rotationTimeline.clientWidth > 0) this.updatePlot();
+			this.updateRotationRange();
+		});
+		resizeObserver.observe(this.rotationTimeline);
+		this.addOnDisposeCallback(() => resizeObserver.disconnect());
 
 		let isMouseDown = false;
 		let startX = 0;
@@ -506,6 +539,7 @@ export class Timeline extends ResultComponent {
 			return;
 		}
 		const target = targets[0];
+		this.pixelsPerSecond = this.fitRotation ? Math.max(1, this.rotationTimeline.clientWidth - 8) / duration : 100;
 
 		this.clearRotationChart();
 
@@ -571,6 +605,15 @@ export class Timeline extends ResultComponent {
 			this.addSeparatorRow(duration);
 			debuffsToShow.forEach(auraUptimeLogs => this.addAuraRow(auraUptimeLogs, duration));
 		}
+		this.updateRotationRange();
+	}
+
+	private updateRotationRange() {
+		const duration = this.resultData?.result.result.firstIterationDuration;
+		if (!duration) return;
+		const start = Math.min(duration, this.rotationTimeline.scrollLeft / this.pixelsPerSecond);
+		const end = Math.min(duration, (this.rotationTimeline.scrollLeft + this.rotationTimeline.clientWidth) / this.pixelsPerSecond);
+		this.rotationRange.textContent = `Showing ${start.toFixed(1)}–${end.toFixed(1)}s of ${duration.toFixed(1)}s`;
 	}
 
 	private getSortedCastsByAbility(player: UnitMetrics): Array<Array<CastLog>> {
@@ -1004,7 +1047,7 @@ export class Timeline extends ResultComponent {
 	}
 
 	private timeToPxValue(time: number): number {
-		return time * 100;
+		return time * this.pixelsPerSecond;
 	}
 	private timeToPx(time: number): string {
 		return this.timeToPxValue(time) + 'px';
@@ -1027,10 +1070,14 @@ export class Timeline extends ResultComponent {
 		ctx.moveTo(0, height);
 		ctx.lineTo(canvas.width, height);
 
-		// Tick lines
-		const numTicks = 1 + Math.floor(duration * 10);
+		// Keep labels readable when the full fight is fitted into the viewport.
+		const desiredStep = Math.max(1, 85 / this.pixelsPerSecond);
+		const magnitude = Math.pow(10, Math.floor(Math.log10(desiredStep)));
+		const majorStep = [1, 2, 5, 10].find(step => step * magnitude >= desiredStep)! * magnitude;
+		const minorStep = majorStep / 10;
+		const numTicks = Math.floor(duration / minorStep);
 		for (let i = 0; i <= numTicks; i++) {
-			const time = i * 0.1;
+			const time = i * minorStep;
 			let x = this.timeToPxValue(time);
 			if (i == 0) {
 				ctx.textAlign = 'left';
@@ -1045,7 +1092,7 @@ export class Timeline extends ResultComponent {
 			let lineHeight = 0;
 			if (i % 10 == 0) {
 				lineHeight = height * 0.5;
-				ctx.fillText(time + 's', x, height - height * 0.6);
+				if (i == 0 || x < canvas.width - 85) ctx.fillText(Math.round(time) + 's', x, height - height * 0.6);
 			} else if (i % 5 == 0) {
 				lineHeight = height * 0.25;
 			} else {
@@ -1054,6 +1101,8 @@ export class Timeline extends ResultComponent {
 			ctx.moveTo(x, height);
 			ctx.lineTo(x, height - lineHeight);
 		}
+		ctx.textAlign = 'right';
+		ctx.fillText(duration.toFixed(1) + 's', canvas.width - 1, height - height * 0.6);
 		ctx.stroke();
 	}
 

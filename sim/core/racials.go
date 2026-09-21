@@ -315,17 +315,24 @@ func (character *Character) registerEureka() {
 	})
 }
 
-// Touch of the Grave, the undead's Forever racial, which replaces Classic's Shadow
-// Resistance: spells and attacks have a 5% chance to drain health from the target, up to
-// 5% of the undead's own maximum health.
-// TODO: assumed baseline, beta will confirm - the tooltip's "up to 5% of your maximum
-// Health" is read as a roll between half and full, the way every other ranged damage
-// value in the sim is, and the drain is taken to be Shadow damage that can be resisted.
-// Whether it can crit, and whether it shares a cooldown between procs, are both unknown.
-// Beta observation confirms triggering from applications, not periodic ticks;
-// only OnSpellHitDealt is registered below. Channel eligibility remains assumed.
+// Priest's Touch of the Grave uses client aura 1260201: a 10% chance and 1 second
+// proc recovery. The 5% aura 1260189 belongs to physical classes. Other classes
+// retain the inherited model pending their own review. Damage spell 1260198 is
+// a health leech; the uniform 2.5-5% max-health roll, Shadow mitigation and inability
+// to crit remain assumptions. Beta observation excludes periodic tick triggers;
+// channel application eligibility remains assumed.
 func (character *Character) registerTouchOfTheGrave() {
 	actionID := ActionID{SpellID: 460540}
+	auraID := actionID
+	priestRacial := character.Class == proto.Class_ClassPriest
+	procChance := 0.05
+	var procCD Cooldown
+	if priestRacial {
+		actionID = ActionID{SpellID: 1260198}
+		auraID = ActionID{SpellID: 1260201}
+		procChance = 0.10
+		procCD = Cooldown{Timer: character.NewTimer(), Duration: time.Second}
+	}
 	healthMetrics := character.NewHealthMetrics(actionID)
 
 	drain := character.RegisterSpell(SpellConfig{
@@ -354,12 +361,18 @@ func (character *Character) registerTouchOfTheGrave() {
 
 	MakePermanent(character.RegisterAura(Aura{
 		Label:    "Touch of the Grave",
-		ActionID: actionID,
+		ActionID: auraID,
 		OnSpellHitDealt: func(_ *Aura, sim *Simulation, spell *Spell, result *SpellResult) {
 			if !result.Landed() || spell == drain {
 				return
 			}
-			if sim.RandomFloat("Touch of the Grave") < 0.05 {
+			if priestRacial && (!spell.ProcMask.Matches(ProcMaskDirect) || !procCD.IsReady(sim)) {
+				return
+			}
+			if sim.RandomFloat("Touch of the Grave") < procChance {
+				if priestRacial {
+					procCD.Use(sim)
+				}
 				drain.Cast(sim, result.Target)
 			}
 		},
@@ -369,7 +382,7 @@ func (character *Character) registerTouchOfTheGrave() {
 // Elune's Light, the night elf's Forever racial cooldown: 10% critical strike for 15
 // seconds on a three minute cooldown.
 func (character *Character) registerElunesLight() {
-	actionID := ActionID{SpellID: 460520}
+	actionID := ActionID{SpellID: 1259799}
 
 	aura := character.RegisterAura(Aura{
 		Label:    "Elune's Light",
@@ -473,6 +486,10 @@ func (character *Character) mobTypeDamageAura(mobType proto.MobType, multiplier 
 // otherwise create a cooldown hard-coded to the custom percentage.
 func makeBerserkingCooldown(character *Character, customPercentage float64, timer *Timer) {
 	actionID := ActionID{SpellID: 26297, Tag: int32(customPercentage * 20)}
+	priestForever := character.Env.IsForever() && character.Class == proto.Class_ClassPriest
+	if priestForever {
+		actionID = ActionID{SpellID: 20554}
+	}
 
 	label := "Berserking"
 	if customPercentage != 0 {
@@ -504,6 +521,12 @@ func makeBerserkingCooldown(character *Character, customPercentage float64, time
 			Duration: time.Second * 10,
 			OnGain: func(aura *Aura, sim *Simulation) {
 				berserkingHaste = 1 / (1 - calcBerserkingPct())
+				if priestForever {
+					// Client 20554 has +10 casting/melee/ranged haste, rather than the
+					// inherited 10% time reduction. A 1.10 speed multiplier models that
+					// wording; exact server stacking still needs a timing measurement.
+					berserkingHaste = 1.10
+				}
 
 				character.MultiplyCastSpeed(berserkingHaste)
 				character.MultiplyAttackSpeed(sim, berserkingHaste)
@@ -554,6 +577,8 @@ func makeBerserkingCooldown(character *Character, customPercentage float64, time
 	}
 
 	switch {
+	case priestForever:
+		// The exact-build SpellPower query for 20554 is empty: no resource cost.
 	case character.HasManaBar():
 		config.ManaCost = ManaCostOptions{BaseCost: 0.07}
 	case character.HasRageBar():

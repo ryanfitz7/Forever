@@ -383,7 +383,7 @@
 	"26297": {
 		"ability": "Berserking",
 		"file": "sim/core/racials.go",
-		"note": "Forever's Berserking is a flat 10% instead of scaling from 10% to 30% as health drops (racials guide, commit 'rework the racials the way Forever reworked them'); the 10 sec duration, the 3 min cooldown and the resource costs are Classic's. Mana users are implemented as a 10% cast-time and swing-time cut, i.e. 11.1% haste, while rage and energy users get a flat 10% attack speed.",
+		"note": "Classic and unaudited non-Priest classes retain this inherited Berserking model: Forever uses a flat 10% setting, 10-second duration, 3-minute cooldown and Classic resource costs. Mana users receive an inherited 10% cast-time cut (11.1% haste); non-mana users gain 10% attack speed. Forever Priest instead uses verified client ID 20554 and its separate metadata.",
 		"source": "forever",
 		"tooltip": "7% of base mana, 5 Rage or 10 Energy\nInstant\n3 min cooldown\nIncreases your attack and casting speed by 10% for 10 sec."
 	},
@@ -442,14 +442,6 @@
 		"note": "A Season of Discovery id that the Classic database does not carry. The aura is a 30% bleed damage taken increase for 1 min, but its only caller is sim/core/exclusive_effect_test.go - the druid's Mangle registers 33876 and 33878 and never applies it - so no bleed amplification reaches the sim and the UI never resolves this id.",
 		"source": "classic"
 	},
-	"460520": {
-		"ability": "Elune's Light",
-		"file": "sim/core/racials.go",
-		"foreverId": 460520,
-		"note": "A Forever-only night elf racial; 460520 is Forever's own id and the Classic database cannot name or draw it, so the UI has to render this entry itself. Magnitude and duration come from the racials guide, and docs/forever_rules.md records the 3 min cooldown as confirmed by search.",
-		"source": "forever",
-		"tooltip": "Instant\n3 min cooldown\nIncreases your critical strike chance with spells and attacks by 10% for 15 sec."
-	},
 	"460530": {
 		"ability": "Windshaper",
 		"assumptions": [
@@ -471,7 +463,7 @@
 		],
 		"file": "sim/core/racials.go",
 		"foreverId": 460540,
-		"note": "A Forever-only undead racial that replaces Classic's Shadow Resistance; 460540 is Forever's own id and the Classic database cannot name or draw it. The tooltip is quoted from the racials guide; how the drain rolls is not published, so the roll and the resist behaviour are assumptions the beta pass has to settle.",
+		"note": "Legacy synthetic identifier retained for unaudited non-Priest classes. Priest uses client aura 1260201 and damage spell 1260198. This legacy model keeps a 5% chance with no internal cooldown; its drain roll and mitigation are assumptions.",
 		"source": "assumed",
 		"tooltip": "Passive\nYour spells and attacks have a 5% chance to drain Health from the target, up to 5% of your maximum Health."
 	},
@@ -574,5 +566,55 @@
 		"file": "sim/core/buffs.go",
 		"note": "18 Nature damage per melee hit taken, +25% per point of Brambles; unchanged from upstream Classic.",
 		"source": "classic"
+	},
+	"1259799": {
+		"ability": "Elune's Light",
+		"icon": "spell_holy_elunesgrace",
+		"file": "sim/core/racials.go",
+		"foreverId": 1259799,
+		"source": "forever",
+		"note": "Beta client 1.60.1.69913 SpellEffect has +10 MOD_CRIT_PCT; SpellMisc DurationIndex 8 resolves to 15 seconds, and SpellCooldowns gives 180 seconds. Replaces the inherited synthetic ID 460520.",
+		"tooltip": "Instant\n3 min cooldown\nIncreases your critical strike chance with spells and attacks by 10% for 15 sec."
+	},
+	"1260201": {
+		"ability": "Touch of the Grave",
+		"icon": "spell_shadow_deathpact",
+		"file": "sim/core/racials.go",
+		"source": "assumed",
+		"tooltip": "Passive\nYour damaging spell applications have a 10% chance to drain Health from the target. Cannot trigger more than once per second.",
+		"note": "Priest client aura 1260201 has 10% ProcChance and 1000 ms ProcCategoryRecovery in build 1.60.1.69913. SkillLineAbility ClassMask 400 includes Priest. Damage child 1260198 is a health leech. Periodic damage ticks are excluded according to beta observation.",
+		"assumptions": [
+			"The health drain is modeled as a uniform roll of 2.5% to 5% of maximum health; the exact server amount and scaling are not established.",
+			"The drain is Shadow damage that can miss or be partially resisted and cannot crit.",
+			"Landed direct attacks and damaging spell applications, including channel applications, are eligible; other passive damage procs are excluded."
+		],
+		"foreverId": 1260201
+	},
+	"1260198": {
+		"ability": "Touch of the Grave (drain)",
+		"icon": "spell_shadow_deathpact",
+		"file": "sim/core/racials.go",
+		"source": "assumed",
+		"tooltip": "Passive\nYour damaging spell applications have a 10% chance to drain Health from the target. Cannot trigger more than once per second.",
+		"note": "Priest client aura 1260201 has 10% ProcChance and 1000 ms ProcCategoryRecovery in build 1.60.1.69913. SkillLineAbility ClassMask 400 includes Priest. Damage child 1260198 is a health leech. Periodic damage ticks are excluded according to beta observation.",
+		"assumptions": [
+			"The health drain is modeled as a uniform roll of 2.5% to 5% of maximum health; the exact server amount and scaling are not established.",
+			"The drain is Shadow damage that can miss or be partially resisted and cannot crit.",
+			"Landed direct attacks and damaging spell applications, including channel applications, are eligible; other passive damage procs are excluded."
+		],
+		"foreverId": 1260198
+	},
+	"20554": {
+		"ability": "Berserking",
+		"icon": "racial_troll_berserk",
+		"file": "sim/core/racials.go",
+		"foreverId": 20554,
+		"source": "assumed",
+		"tooltip": "Instant\n3 min cooldown\nIncreases attack and casting speed by 10% for 10 sec.",
+		"note": "Forever Priest uses client spell 20554: +10 melee haste, ranged haste and casting speed. Duration is 10 seconds, cooldown 180 seconds, and SpellPower has no rows in build 1.60.1.69913. Other classes retain their inherited 26297 model.",
+		"assumptions": [
+			"The displayed 10% speed bonus is modeled as a 1.10 speed multiplier; exact server timing and stacking have not been measured.",
+			"Mind Flay and Starshards retain their current fixed channel tick intervals; Berserking shortens eligible hard casts, not these channels or the global cooldown."
+		]
 	}
 }

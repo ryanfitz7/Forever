@@ -17,7 +17,7 @@ func init() {
 			agent.EnableManaBar()
 			agent.AddStat(stats.Mana, 10000)
 			agent.Init = func() {
-				for _, id := range []int32{900001, 900002, 900003} {
+				for _, id := range []int32{900001, 900002, 900003, 900004} {
 					config := SpellConfig{
 						ActionID: ActionID{SpellID: id}, SpellSchool: SpellSchoolShadow,
 						DefenseType: DefenseTypeMagic, ProcMask: ProcMaskSpellDamage,
@@ -45,6 +45,9 @@ func init() {
 						// A damage proc has no mana cost and must neither benefit nor consume.
 						config.ManaCost = ManaCostOptions{}
 						config.Cast = CastConfig{}
+					}
+					if id == 900004 {
+						config.Cast.DefaultCast.CastTime = 1500 * time.Millisecond
 					}
 					agent.RegisterSpell(config)
 				}
@@ -167,17 +170,122 @@ func TestForeverTouchOfTheGraveExcludesPeriodicTicks(t *testing.T) {
 	sim, character := setupRacialTestSim(proto.Race_RaceUndead, proto.Class_ClassPriest, proto.Ruleset_RulesetForever)
 	spell := character.GetSpell(ActionID{SpellID: 900002})
 	dot := spell.CurDot()
-	drain := character.GetSpell(ActionID{SpellID: 460540})
+	drain := character.GetSpell(ActionID{SpellID: 1260198})
 	dot.Apply(sim)
 	for i := 0; i < 1000; i++ {
 		dot.TickOnce(sim)
 	}
 	requireRacialValue(t, "periodic-triggered drain", drain.SpellMetrics[0].TotalDamage, 0)
-	// Landed application events can trigger the existing assumed 5% chance.
+	// Landed application events can trigger the Priest client's 10% chance.
 	for i := 0; i < 1000; i++ {
 		spell.CalcAndDealOutcome(sim, character.CurrentTarget, spell.OutcomeAlwaysHit)
 	}
 	if drain.SpellMetrics[0].TotalDamage <= 0 {
 		t.Fatal("landed applications never triggered drain")
+	}
+}
+
+func TestForeverPriestTouchOfTheGraveRecoveryAndChance(t *testing.T) {
+	sim, character := setupRacialTestSim(proto.Race_RaceUndead, proto.Class_ClassPriest, proto.Ruleset_RulesetForever)
+	drain := character.GetSpell(ActionID{SpellID: 1260198})
+	if drain == nil || character.GetAura("Touch of the Grave").ActionID.SpellID != 1260201 {
+		t.Fatal("Priest Touch of the Grave must use its client aura and damage IDs")
+	}
+	application := character.GetSpell(ActionID{SpellID: 900001})
+	applyMany := func(count int) {
+		for i := 0; i < count; i++ {
+			application.CalcAndDealOutcome(sim, character.CurrentTarget, application.OutcomeAlwaysHit)
+		}
+	}
+	applyMany(1000)
+	if got := drain.SpellMetrics[0].Casts; got != 1 {
+		t.Fatalf("same-timestamp applications procced %d times, want 1", got)
+	}
+	sim.CurrentTime += 999 * time.Millisecond
+	applyMany(1000)
+	if drain.SpellMetrics[0].Casts != 1 {
+		t.Fatal("Touch of the Grave ignored its one-second recovery")
+	}
+	sim.CurrentTime += time.Millisecond
+	applyMany(1000)
+	if drain.SpellMetrics[0].Casts != 2 {
+		t.Fatal("Touch of the Grave failed to recover at one second")
+	}
+	// A triggered damage proc must not create additional application opportunities.
+	proc := character.GetSpell(ActionID{SpellID: 900003})
+	proc.ProcMask = ProcMaskEmpty
+	sim.CurrentTime += time.Second
+	for i := 0; i < 1000; i++ {
+		proc.CalcAndDealDamage(sim, character.CurrentTarget, 1, proc.OutcomeAlwaysHit)
+	}
+	if drain.SpellMetrics[0].Casts != 2 {
+		t.Fatal("Touch of the Grave triggered from another passive damage proc")
+	}
+	before := drain.SpellMetrics[0].Casts
+	for i := 0; i < 10000; i++ {
+		sim.CurrentTime += time.Second
+		applyMany(1)
+	}
+	// Fixed seed, wide bounds: distinguishes the caster variant's 10% from the
+	// physical variant's 5% without depending on an exact PRNG sequence.
+	if procs := drain.SpellMetrics[0].Casts - before; procs < 800 || procs > 1200 {
+		t.Fatalf("got %d procs in 10000 eligible applications, expected about 1000", procs)
+	}
+	_, other := setupRacialTestSim(proto.Race_RaceUndead, proto.Class_ClassMage, proto.Ruleset_RulesetForever)
+	if other.GetSpell(ActionID{SpellID: 460540}) == nil {
+		t.Fatal("changed the unaudited non-Priest racial registration")
+	}
+}
+
+func TestForeverElunesLightCritAndRecovery(t *testing.T) {
+	sim, character := setupRacialTestSim(proto.Race_RaceNightElf, proto.Class_ClassPriest, proto.Ruleset_RulesetForever)
+	spell := character.GetSpell(ActionID{SpellID: 1259799})
+	aura := character.GetAura("Elune's Light")
+	if spell == nil || aura == nil || aura.Duration != 15*time.Second || spell.CD.Duration != 3*time.Minute {
+		t.Fatal("Elune's Light registration does not match the client ID and timings")
+	}
+	crit := character.GetStat(stats.SpellCrit)
+	spell.Cast(sim, character.CurrentTarget)
+	requireRacialValue(t, "Elune crit", character.GetStat(stats.SpellCrit)-crit, 10*SpellCritRatingPerCritChance)
+	if spell.IsReady(sim) {
+		t.Fatal("Elune's Light did not start its cooldown")
+	}
+	aura.Deactivate(sim)
+	requireRacialValue(t, "Elune crit after expiry", character.GetStat(stats.SpellCrit), crit)
+	sim.CurrentTime = 3 * time.Minute
+	if !spell.IsReady(sim) {
+		t.Fatal("Elune's Light failed to recover after three minutes")
+	}
+}
+
+func TestForeverPriestBerserkingSpeedCostAndRecovery(t *testing.T) {
+	sim, character := setupRacialTestSim(proto.Race_RaceTroll, proto.Class_ClassPriest, proto.Ruleset_RulesetForever)
+	berserking := character.GetSpell(ActionID{SpellID: 20554})
+	if berserking == nil || berserking.Cost != nil || berserking.CD.Duration != 3*time.Minute {
+		t.Fatal("Priest Berserking must use client ID 20554, no resource cost, and 180-second cooldown")
+	}
+	hardcast := character.GetSpell(ActionID{SpellID: 900004})
+	before := hardcast.CastTime()
+	mana := character.CurrentMana()
+	berserking.Cast(sim, character.CurrentTarget)
+	requireRacialValue(t, "Berserking mana", character.CurrentMana(), mana)
+	if got, want := hardcast.CastTime(), time.Duration(float64(before)/1.1); got != want {
+		t.Fatalf("1.5-second cast while Berserking: got %s, want %s", got, want)
+	}
+	aura := character.GetAura("Berserking (10)")
+	if aura == nil || aura.Duration != 10*time.Second {
+		t.Fatal("Berserking must last ten seconds")
+	}
+	aura.Deactivate(sim)
+	if hardcast.CastTime() != before {
+		t.Fatal("Berserking speed did not restore on expiry")
+	}
+	_, classic := setupRacialTestSim(proto.Race_RaceTroll, proto.Class_ClassPriest, proto.Ruleset_RulesetClassic)
+	if classic.GetSpell(ActionID{SpellID: 26297}) == nil || classic.GetSpell(ActionID{SpellID: 20554}) != nil {
+		t.Fatal("changed Classic Berserking registration")
+	}
+	_, other := setupRacialTestSim(proto.Race_RaceTroll, proto.Class_ClassMage, proto.Ruleset_RulesetForever)
+	if other.GetSpell(ActionID{SpellID: 26297, Tag: 2}) == nil {
+		t.Fatal("changed the unaudited non-Priest Berserking registration")
 	}
 }

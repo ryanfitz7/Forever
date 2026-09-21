@@ -18,6 +18,7 @@ const SPEC_CONFIG = registerSpecConfig(Spec.SpecShadowPriest, {
 	// List any known bugs / issues here and they'll be shown on the site.
 	knownIssues: [
 		'Forever beta model: spell and talent inputs are source-backed, while some racial, proc and timing interactions still need combat-log verification.',
+		'Troll comparisons are provisional: Berserking speeds up casts, but this model keeps the global cooldown and channel tick intervals fixed. Beta haste behavior still needs verification.',
 		'Auto is a level-60 starting priority, not a universally optimal rotation. It uses Death during and outside execute and includes Starshards for Night Elves. Compare the full-channel and clipped-Flay presets for your encounter.',
 		'Equipment presets, item effects, buffs and default EP weights retain inherited assumptions and are not a verified Forever best-in-slot ranking. Recalculate stat weights for your own setup.',
 	],

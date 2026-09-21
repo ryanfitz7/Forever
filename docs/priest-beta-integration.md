@@ -38,6 +38,9 @@ timestamps, and available hashes. The archive contains 239 Priest spell variants
 | Shadow Word: Death | Four Forever spell ranks; .429 coefficient, 15-second shared cooldown, Early Demise's 15/30 percentage-point execute crit bonus, and 10%-maximum-health backlash after a non-killing landed hit. |
 | Starshards | Six Arcane ticks, .167 per tick; 30-second cooldown shared across ranks and channel variants. Shadow-only bonuses do not apply. |
 | Eureka | Priest spell 1259823: 15% mana reduction, 10% damage, three charges. Damage changes while the buff is active, including on already-running DoTs, and stops when it expires. |
+| Touch of the Grave | Priest passive 1260201 triggers drain 1260198. The caster record specifies 10% proc chance and a one-second internal cooldown. Periodic ticks do not trigger it. Drain magnitude/mitigation remain explicit modeling assumptions. |
+| Elune's Light | Spell 1259799 grants 10 percentage points of crit for 15 seconds, with a three-minute cooldown. |
+| Berserking | Priest uses beta spell 20554: ten seconds, three-minute cooldown, no client resource cost. The model interprets the 10% speed effects as a 1.10 speed multiplier. |
 | Dark Sacrifice | Five Undead-only ranks, ten-minute shared cooldown. Rank five transfers 320 health to mana every three seconds for five ticks. Available for explicit APL use. |
 
 Mental Agility and Twin Disciplines distinguish instant spells from channels.
@@ -116,6 +119,23 @@ conditional on the channel landing; they do not apply the initial hit chance aga
 The inherited default equipment includes an Engineering-only Green Lens. The default
 profession selection now satisfies that requirement; this is not a profession ranking.
 
+## Comparing races and reading results
+
+Changing a race or other settings does not automatically rerun the simulation. The
+previous result is retained for inspection and is marked stale until a new matching
+run completes. Auto uses the selected race's available major cooldowns.
+
+Touch of the Grave appears as its own action under **Results → Damage**. Eureka,
+Elune's Light, and Berserking appear under **Results → Buffs** and **Casts**; their
+benefits are included in the ordinary spells' damage and timing. Similar total DPS
+does not imply the abilities were unused. The short duration or three-charge limit
+can make their average contribution small, and random variation can obscure it.
+
+The rotation timeline contains the full logged iteration but opens at a detailed
+horizontal scale. **Fit full fight** shows its complete duration; **Detail view**,
+**Start**, and **End** make the individual casts and later fight sections accessible.
+The timeline represents one iteration, while the damage tables average all iterations.
+
 ## Validation
 
 The complete `go test --tags=with_db ./sim/...` suite passes. Priest integration tests
@@ -124,6 +144,11 @@ casts, reject APL warnings, and verify actual two-tick Flay clipping. Separate t
 cover rank records, mana stacking, Eureka expiry, execute crits, backlash, healing,
 resource ticks, and shared cooldowns. Source-manifest/talent consistency checks,
 TypeScript, and `node tools/check_shadow_presets.cjs` also pass.
+
+Racial tests cover Touch of the Grave's proc rate and internal cooldown, Elune's
+crit bonus and expiry, and Berserking's cost and cast-speed effect. Controlled
+1,000-iteration runs verify racial damage or aura activation for all five Priest
+races. The Shadow and Smite baselines include the corrected Undead proc rate.
 
 The Windows production build is tested in the browser through the normal Simulate
 button. These checks validate the implementation against the stated model, not
@@ -138,8 +163,18 @@ against a complete set of controlled beta combat logs.
 - Mana discounts use multiplicative stacking for the reviewed Priest interactions.
   The exact beta server's stacking and rounding still require combat-log verification.
 - Touch of the Grave excludes periodic tick callbacks, consistent with the reported
-  application-only behavior. Its inherited 5% proc chance, damage range, mitigation,
-  and lack of an internal cooldown remain assumptions; racial rankings are provisional.
+  application-only behavior. Priest now uses the caster-specific 10% proc record and
+  one-second internal cooldown. Its inherited roll of 2.5–5% of maximum health,
+  interaction with damage modifiers, extra hit check, and mitigation still need live
+  verification; racial rankings are provisional. Other classes retain the inherited
+  generic model pending their own review.
+- Berserking uses the literal 10% speed interpretation. Mind Flay and Starshards still
+  use fixed tick intervals, and the inherited spell global cooldown stays at 1.5
+  seconds. Thus a faster Mind Blast can still be constrained by that global cooldown,
+  making Berserking's modeled benefit negligible in this rotation. Whether beta haste
+  should shorten these channels or the global cooldown remains unverified. The test
+  checks the implemented cast-time change without asserting a fully validated server
+  haste model; do not treat the current Troll result as a settled racial ranking.
 - Ordinary DoT damage snapshots remain inherited except for Eureka. Live periodic crit
   is already part of the Forever ruleset. No universal no-snapshot rule is claimed.
 - Mind Blast's cooldown starts on cast completion in this engine. Client cooldown
