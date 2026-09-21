@@ -121,6 +121,24 @@ profession selection now satisfies that requirement; this is not a profession ra
 
 ## Comparing races and reading results
 
+For optional Undead mana recovery, select **Rotation → Forever · Undead Dark
+Sacrifice**. This level-60 Forever preset uses the full-channel priority and adds
+rank-five Dark Sacrifice after configured automatic cooldowns. It requires all of:
+
+- Mana at or below 50%, with at least 1,600 mana missing.
+- Health above 1,600 and at least 60% of maximum health.
+- More than 15 seconds remaining, allowing all five 320-point transfers.
+
+The **Forever · Undead Dark Sacrifice (clipped)** variant uses the same conditions
+while retaining the two-tick Mind Flay interruption priority.
+
+The action pays 1,600 health for up to 1,600 mana across 15 seconds, with a ten-minute
+cooldown. Its conditions are editable in the APL; **Save Rotation** stores a named
+copy, while the selected rotation also persists across reloads. The default Auto
+rotation remains available separately. Health checks cover this ability's cost;
+they do not forecast incoming damage, Death backlash, or later rune use. A manually
+saved Undead APL should be replaced when switching to another race or Classic.
+
 Changing a race or other settings does not automatically rerun the simulation. The
 previous result is retained for inspection and is marked stale until a new matching
 run completes. Auto uses the selected race's available major cooldowns.

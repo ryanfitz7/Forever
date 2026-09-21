@@ -1,5 +1,7 @@
+import { CURRENT_LEVEL_CAP } from '../core/constants/mechanics.js';
 import { ClassicPhase } from '../core/constants/other.js';
 import * as PresetUtils from '../core/preset_utils.js';
+import { Ruleset } from '../core/proto/api.js';
 import {
 	Conjured,
 	Consumes,
@@ -24,6 +26,8 @@ import { protoToTalentString } from '../core/talents/factory.js';
 import { priestTalentsConfig } from '../core/talents/priest.js';
 import ForeverAPL from './apls/forever.apl.json';
 import ForeverClippedAPL from './apls/forever-clipped.apl.json';
+import ForeverDarkSacrificeAPL from './apls/forever-dark-sacrifice.apl.json';
+import ForeverDarkSacrificeClippedAPL from './apls/forever-dark-sacrifice-clipped.apl.json';
 import ForeverStarshardsAPL from './apls/forever-starshards.apl.json';
 import P1APL from './apls/p1.apl.json';
 import LaunchGearJSON from './gear_sets/launch.gear.json';
@@ -57,6 +61,12 @@ export const DefaultGear = GearP0BIS;
 
 export const APLForever = PresetUtils.makePresetAPLRotation('Forever · Full channels', ForeverAPL);
 export const APLForeverClipped = PresetUtils.makePresetAPLRotation('Forever · Clip Flay after 2 ticks', ForeverClippedAPL);
+export const APLForeverDarkSacrifice = PresetUtils.makePresetAPLRotation('Forever · Undead Dark Sacrifice', ForeverDarkSacrificeAPL, {
+	customCondition: player => player.getRace() === Race.RaceUndead && CURRENT_LEVEL_CAP === 60 && player.sim.getRuleset() === Ruleset.RulesetForever,
+});
+export const APLForeverDarkSacrificeClipped = PresetUtils.makePresetAPLRotation('Forever · Undead Dark Sacrifice (clipped)', ForeverDarkSacrificeClippedAPL, {
+	customCondition: player => player.getRace() === Race.RaceUndead && CURRENT_LEVEL_CAP === 60 && player.sim.getRuleset() === Ruleset.RulesetForever,
+});
 export const APLForeverStarshards = PresetUtils.makePresetAPLRotation('Forever · Night Elf Starshards', ForeverStarshardsAPL, {
 	customCondition: player => player.getRace() === Race.RaceNightElf,
 });
@@ -66,12 +76,16 @@ APLForever.tooltip =
 	'Level-60 starting priority: maintain Pain and Plague, prioritize Death during execute, then Mind Blast, Death and full Mind Flay. Auto includes Starshards for Night Elves. Compare priorities for your own gear and encounter.';
 APLForeverClipped.tooltip =
 	'Level-60 comparison: interrupt Flay after at least two ticks when a higher-priority damage spell is castable. Channel mana is paid in full and channel delay applies. This can trade mana efficiency for cooldown timing.';
+APLForeverDarkSacrifice.tooltip =
+	'Level-60 Undead full-channel rotation with optional Dark Sacrifice: at most 50% mana, at least 1600 missing mana, over 1600 health and at least 60% health, with over 15 seconds remaining. Transfers 1600 health to mana over 15 seconds; 10-minute cooldown. Edit the APL thresholds for your encounter.';
+APLForeverDarkSacrificeClipped.tooltip =
+	'Uses the same Dark Sacrifice mana and health conditions as the full-channel Undead preset, while retaining the two-tick Mind Flay interruption rules. Edit the APL thresholds for your encounter.';
 APLForeverStarshards.tooltip =
 	'Level-60 Night Elf option: cast six-tick Arcane Starshards after the direct spells. Its channel displaces other casts; compare with the full-channel preset without Starshards.';
 APLP1Shadow.tooltip = 'Earlier fork rotation, retained for comparison. It omits Death and requires Inner Focus for its Plague sequence.';
 
 export const APLPresets = {
-	[ClassicPhase.Phase1]: [APLForever, APLForeverClipped, APLForeverStarshards, APLP1Shadow],
+	[ClassicPhase.Phase1]: [APLForever, APLForeverClipped, APLForeverDarkSacrifice, APLForeverDarkSacrificeClipped, APLForeverStarshards, APLP1Shadow],
 };
 
 export const DefaultAPL = APLPresets[ClassicPhase.Phase1][0];
