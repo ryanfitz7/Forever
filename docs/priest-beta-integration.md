@@ -38,7 +38,7 @@ timestamps, and available hashes. The archive contains 239 Priest spell variants
 | Shadow Word: Death | Four Forever spell ranks; .429 coefficient, 15-second shared cooldown, Early Demise's 15/30 percentage-point execute crit bonus, and 10%-maximum-health backlash after a non-killing landed hit. |
 | Starshards | Six Arcane ticks, .167 per tick; 30-second cooldown shared across ranks and channel variants. Shadow-only bonuses do not apply. |
 | Eureka | Priest spell 1259823: 15% mana reduction, 10% damage, three charges. Damage changes while the buff is active, including on already-running DoTs, and stops when it expires. |
-| Touch of the Grave | Priest passive 1260201 triggers drain 1260198. The caster record specifies 10% proc chance and a one-second internal cooldown. Periodic ticks do not trigger it. Drain magnitude/mitigation remain explicit modeling assumptions. |
+| Touch of the Grave | Priest passive 1260201 triggers drain 1260198. The caster record specifies 10% proc chance and a one-second internal cooldown. The drain's base is 5% of maximum health. Periodic ticks do not trigger it; mitigation still needs live verification. |
 | Elune's Light | Spell 1259799 grants 10 percentage points of crit for 15 seconds, with a three-minute cooldown. |
 | Berserking | Priest uses beta spell 20554: ten seconds, three-minute cooldown, no client resource cost. The model interprets the 10% speed effects as a 1.10 speed multiplier. |
 | Dark Sacrifice | Five Undead-only ranks, ten-minute shared cooldown. Rank five transfers 320 health to mana every three seconds for five ticks. Available for explicit APL use. |
@@ -136,6 +136,18 @@ horizontal scale. **Fit full fight** shows its complete duration; **Detail view*
 **Start**, and **End** make the individual casts and later fight sections accessible.
 The timeline represents one iteration, while the damage tables average all iterations.
 
+The DPS graph's blue line is mana remaining after regeneration and consumables,
+not cumulative mana spent. Its summary reports the same iteration's spending,
+actual restored mana, and starting/ending balance. Faction buffs and automatic
+potion/rune timing can change this curve even when spell costs match. A controlled
+120-second comparison with the same gear, talents, and full-channel rotation charged
+Human and Troll the same mana; Gnome's small savings came from Eureka. Night Elf
+Auto also uses Starshards, so selecting that race can change the rotation.
+
+Forever spell icons suppress Classic Wowhead hover content and use local beta
+tooltips. Devouring Plague therefore displays the same one-minute cooldown that
+the engine uses; every rank shares that timer.
+
 ## Validation
 
 The complete `go test --tags=with_db ./sim/...` suite passes. Priest integration tests
@@ -164,8 +176,9 @@ against a complete set of controlled beta combat logs.
   The exact beta server's stacking and rounding still require combat-log verification.
 - Touch of the Grave excludes periodic tick callbacks, consistent with the reported
   application-only behavior. Priest now uses the caster-specific 10% proc record and
-  one-second internal cooldown. Its inherited roll of 2.5–5% of maximum health,
-  interaction with damage modifiers, extra hit check, and mitigation still need live
+  one-second internal cooldown. The drain description specifies 5% of maximum health;
+  the inherited random 2.5–5% roll has been removed for Priest. Its interaction with
+  damage modifiers, extra hit check, and mitigation still need live
   verification; racial rankings are provisional. Other classes retain the inherited
   generic model pending their own review.
 - Berserking uses the literal 10% speed interpretation. Mind Flay and Starshards still

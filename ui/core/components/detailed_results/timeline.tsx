@@ -23,6 +23,7 @@ const threatColor = '#b56d07';
 export class Timeline extends ResultComponent {
 	private readonly dpsResourcesPlotElem: HTMLElement;
 	private dpsResourcesPlot: any;
+	private readonly manaSummary: HTMLElement;
 
 	private readonly rotationPlotElem: HTMLElement;
 	private readonly rotationLabels: HTMLElement;
@@ -76,6 +77,7 @@ export class Timeline extends ResultComponent {
 		);
 		this.rootElem.appendChild(
 			<div className="timeline-plots-container">
+				<div className="timeline-mana-summary small mb-2 hide"></div>
 				<div className="timeline-plot dps-resources-plot hide"></div>
 				<div className="timeline-plot rotation-plot">
 					<div className="rotation-view-controls d-flex align-items-center flex-wrap gap-2 mb-2">
@@ -106,6 +108,7 @@ export class Timeline extends ResultComponent {
 		});
 
 		this.dpsResourcesPlotElem = this.rootElem.querySelector('.dps-resources-plot')!;
+		this.manaSummary = this.rootElem.querySelector('.timeline-mana-summary')!;
 		this.dpsResourcesPlot = new ApexCharts(this.dpsResourcesPlotElem, {
 			chart: {
 				animations: {
@@ -256,6 +259,7 @@ export class Timeline extends ResultComponent {
 		};
 
 		const players = this.resultData!.result.getRaidIndexedPlayers(this.resultData!.filter);
+		this.manaSummary.classList.add('hide');
 		if (players.length == 1) {
 			const player = players[0];
 
@@ -406,6 +410,19 @@ export class Timeline extends ResultComponent {
 			return null;
 		}
 		const maxMana = manaLogs[0].valueBefore;
+		let spent = 0;
+		let restored = 0;
+		for (const group of manaLogs) {
+			for (const log of group.logs) {
+				const change = log.valueAfter - log.valueBefore;
+				if (log.isSpend) spent -= change;
+				else restored += change;
+			}
+		}
+		const endMana = manaLogs[manaLogs.length - 1].valueAfter;
+		const formatMana = (mana: number) => Math.round(mana).toLocaleString();
+		this.manaSummary.textContent = `Mana remaining (blue): ${formatMana(maxMana)} → ${formatMana(endMana)}. Spent ${formatMana(spent)}; restored ${formatMana(restored)} during this iteration.`;
+		this.manaSummary.classList.toggle('hide', this.chartPicker.value !== 'dps');
 
 		options.colors.push(manaColor);
 		options.series.push({
@@ -425,7 +442,7 @@ export class Timeline extends ResultComponent {
 			max: maxMana,
 			tickAmount: 10,
 			title: {
-				text: 'Mana',
+				text: 'Mana remaining',
 				style: {
 					color: manaColor,
 				},
@@ -696,7 +713,7 @@ export class Timeline extends ResultComponent {
 		const event = this.hiddenIdsChangeEmitter.on(updateHidden);
 		updateHidden();
 		actionId.setBackgroundAndHref(labelIcon.value!);
-		actionId.setWowheadDataset(labelIcon.value!, { useBuffAura: isAura });
+		actionId.setWowheadDataset(labelIcon.value!, { useBuffAura: isAura }, this.resultData?.result.request.simOptions?.ruleset);
 
 		this.addOnResetCallback(() => {
 			hideElem.value?.removeEventListener('click', onClickHandler);

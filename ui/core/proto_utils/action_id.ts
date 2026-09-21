@@ -1,14 +1,14 @@
-import { getWowheadLanguagePrefix } from '../constants/lang';
-import { MAX_CHARACTER_LEVEL } from '../constants/mechanics';
-import { ResourceType } from '../proto/api';
-import { ActionID as ActionIdProto, ItemRandomSuffix, OtherAction } from '../proto/common';
-import { IconData, UIItem as Item } from '../proto/ui';
-import { buildWowheadTooltipDataset, WowheadTooltipItemParams, WowheadTooltipSpellParams } from '../wowhead';
 import tippy from 'tippy.js';
 
-import { Database } from './database';
+import { getWowheadLanguagePrefix } from '../constants/lang';
+import { MAX_CHARACTER_LEVEL } from '../constants/mechanics';
 import { WOWHEAD_IMAGES } from '../constants/other';
+import { ResourceType, Ruleset } from '../proto/api';
+import { ActionID as ActionIdProto, ItemRandomSuffix, OtherAction } from '../proto/common';
+import { IconData, UIItem as Item } from '../proto/ui';
 import { spellSource } from '../spells/index';
+import { buildWowheadTooltipDataset, WowheadTooltipItemParams, WowheadTooltipSpellParams } from '../wowhead';
+import { Database } from './database';
 
 // Used to filter action IDs by level
 export interface ActionIdConfig {
@@ -205,12 +205,13 @@ export class ActionId {
 		}
 	}
 
-	async setWowheadDataset(elem: HTMLElement, params?: Omit<WowheadTooltipItemParams, 'itemId'> | Omit<WowheadTooltipSpellParams, 'spellId'>) {
-		// An ability Forever changed is not the ability Wowhead's Classic database describes, and
-		// letting Wowhead's tooltip stand over it is what ui/core/spells was written to stop: the
-		// hover would quote Classic's damage for a spell the sim runs on Forever's. Where the
-		// manifest has a tooltip, show that and leave the Wowhead dataset off, so its script has
-		// nothing to attach to.
+	async setWowheadDataset(
+		elem: HTMLElement,
+		params?: Omit<WowheadTooltipItemParams, 'itemId'> | Omit<WowheadTooltipSpellParams, 'spellId'>,
+		ruleset: Ruleset = Ruleset.RulesetForever,
+	) {
+		// Use the archived client tooltip for Forever abilities. The Classic tooltip remains
+		// available for Classic results; the link still opens its external reference page.
 		const source = this.spellId ? spellSource(this.spellId) : undefined;
 
 		// Where the number came from, on every icon the sim draws. The manifest knows this for
@@ -220,7 +221,11 @@ export class ActionId {
 		// is being plain about what is settled. Styled in scss/shared/_spell_source.scss.
 		if (elem && source) elem.dataset.spellSource = source.source;
 
-		if (elem && source?.tooltip && (source.source === 'forever' || source.source === 'assumed')) {
+		if (elem && ruleset === Ruleset.RulesetForever && source?.tooltip && (source.source === 'forever' || source.source === 'assumed')) {
+			// Wowhead also discovers tooltips from hrefs, even without data-wowhead.
+			// Keep the reference link while explicitly suppressing its Classic hover.
+			elem.dataset.disableWowheadTooltip = 'true';
+			delete elem.dataset.wowhead;
 			const unconfirmed = source.source === 'assumed' ? '\n\nSome numbers here are unconfirmed.' : '';
 			tippy(elem, {
 				content: `${source.ability}\n${source.tooltip}${unconfirmed}`,
@@ -230,6 +235,7 @@ export class ActionId {
 			});
 			return;
 		}
+		delete elem.dataset.disableWowheadTooltip;
 
 		(this.itemId
 			? ActionId.makeItemTooltipData(this.itemId, params)

@@ -53,7 +53,7 @@ stat_weights_results: {
   weights: 0
   weights: 0
   weights: 0
-  weights: 0.60242
+  weights: 0.60365
   weights: 0
   weights: 0.37342
   weights: 0
@@ -63,8 +63,8 @@ stat_weights_results: {
   weights: 0
   weights: 0.37342
   weights: 0
-  weights: 7.51034
-  weights: 5.08633
+  weights: 7.58046
+  weights: 5.08623
   weights: 0
   weights: 0
   weights: 0
@@ -99,85 +99,85 @@ stat_weights_results: {
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-Champion'sInvestiture"
  value: {
-  dps: 574.5492
-  tps: 586.18706
+  dps: 577.03218
+  tps: 588.67004
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-Champion'sRaiment"
  value: {
-  dps: 543.74349
-  tps: 555.42332
+  dps: 546.06099
+  tps: 557.74083
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-Confessor'sRaiment"
  value: {
-  dps: 546.67233
-  tps: 558.22498
+  dps: 548.63647
+  tps: 560.18913
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-FieldMarshal'sRaiment"
  value: {
-  dps: 602.54079
-  tps: 614.29994
+  dps: 605.29645
+  tps: 617.0556
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-GarmentsoftheOracle"
  value: {
-  dps: 578.13922
-  tps: 589.74596
+  dps: 580.25823
+  tps: 591.86496
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-IronweaveBattlesuit"
  value: {
-  dps: 487.78754
-  tps: 499.49935
+  dps: 490.10063
+  tps: 501.81244
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-LieutenantCommander'sInvestiture"
  value: {
-  dps: 574.5492
-  tps: 586.18706
+  dps: 577.03218
+  tps: 588.67004
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-LieutenantCommander'sRaiment"
  value: {
-  dps: 543.74349
-  tps: 555.42332
+  dps: 546.06099
+  tps: 557.74083
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-VestmentsofProphecy"
  value: {
-  dps: 535.6222
-  tps: 547.2404
+  dps: 537.94801
+  tps: 549.56621
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-VestmentsofTranscendence"
  value: {
-  dps: 572.69994
-  tps: 584.37551
+  dps: 574.76046
+  tps: 586.43603
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-AllItems-Warlord'sRaiment"
  value: {
-  dps: 602.54079
-  tps: 614.29994
+  dps: 605.29645
+  tps: 617.0556
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-Average-Default"
  value: {
-  dps: 560.86235
-  tps: 572.36186
+  dps: 562.9527
+  tps: 574.4522
  }
 }
 dps_results: {
@@ -225,49 +225,49 @@ dps_results: {
 dps_results: {
  key: "TestP1Shadow-Phase1-Settings-Undead-p0.bis-Basic-p1-FullBuffs-P1-Consumes-LongMultiTarget"
  value: {
-  dps: 557.26502
-  tps: 787.42002
+  dps: 559.13317
+  tps: 789.28816
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-Settings-Undead-p0.bis-Basic-p1-FullBuffs-P1-Consumes-LongSingleTarget"
  value: {
-  dps: 557.26502
-  tps: 568.77277
+  dps: 559.13317
+  tps: 570.64092
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-Settings-Undead-p0.bis-Basic-p1-FullBuffs-P1-Consumes-ShortSingleTarget"
  value: {
-  dps: 582.76058
-  tps: 589.29439
+  dps: 584.89475
+  tps: 591.42856
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-Settings-Undead-p0.bis-Basic-p1-NoBuffs-P1-Consumes-LongMultiTarget"
  value: {
-  dps: 371.34976
-  tps: 552.09659
+  dps: 372.40694
+  tps: 553.15377
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-Settings-Undead-p0.bis-Basic-p1-NoBuffs-P1-Consumes-LongSingleTarget"
  value: {
-  dps: 371.34976
-  tps: 380.3871
+  dps: 372.40694
+  tps: 381.44428
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-Settings-Undead-p0.bis-Basic-p1-NoBuffs-P1-Consumes-ShortSingleTarget"
  value: {
-  dps: 510.74227
-  tps: 525.92603
+  dps: 512.30781
+  tps: 527.49157
  }
 }
 dps_results: {
  key: "TestP1Shadow-Phase1-SwitchInFrontOfTarget-Default"
  value: {
-  dps: 557.26502
-  tps: 568.77277
+  dps: 559.13317
+  tps: 570.64092
  }
 }

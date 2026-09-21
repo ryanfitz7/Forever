@@ -581,12 +581,11 @@
 		"icon": "spell_shadow_deathpact",
 		"file": "sim/core/racials.go",
 		"source": "assumed",
-		"tooltip": "Passive\nYour damaging spell applications have a 10% chance to drain Health from the target. Cannot trigger more than once per second.",
-		"note": "Priest client aura 1260201 has 10% ProcChance and 1000 ms ProcCategoryRecovery in build 1.60.1.69913. SkillLineAbility ClassMask 400 includes Priest. Damage child 1260198 is a health leech. Periodic damage ticks are excluded according to beta observation.",
+		"tooltip": "Passive\nYour damaging spell applications have a 10% chance to drain Health equal to 5% of your maximum Health. Cannot trigger more than once per second.",
+		"note": "Priest client aura 1260201 has 10% ProcChance and 1000 ms ProcCategoryRecovery in build 1.60.1.69913. SkillLineAbility ClassMask 400 includes Priest. Damage child 1260198 describes a leech equal to 5% of caster maximum health, referencing spell 1260189; SpellMisc identifies Shadow school and CANT_CRIT. Periodic damage ticks are excluded according to beta observation.",
 		"assumptions": [
-			"The health drain is modeled as a uniform roll of 2.5% to 5% of maximum health; the exact server amount and scaling are not established.",
-			"The drain is Shadow damage that can miss or be partially resisted and cannot crit.",
-			"Landed direct attacks and damaging spell applications, including channel applications, are eligible; other passive damage procs are excluded."
+			"The drain retains a separate spell-hit roll and normal Shadow mitigation; these server details are not established by the inspected records.",
+			"Landed direct attacks and damaging spell applications, including channel applications, are eligible; other passive damage procs and periodic ticks are excluded."
 		],
 		"foreverId": 1260201
 	},
@@ -595,12 +594,11 @@
 		"icon": "spell_shadow_deathpact",
 		"file": "sim/core/racials.go",
 		"source": "assumed",
-		"tooltip": "Passive\nYour damaging spell applications have a 10% chance to drain Health from the target. Cannot trigger more than once per second.",
-		"note": "Priest client aura 1260201 has 10% ProcChance and 1000 ms ProcCategoryRecovery in build 1.60.1.69913. SkillLineAbility ClassMask 400 includes Priest. Damage child 1260198 is a health leech. Periodic damage ticks are excluded according to beta observation.",
+		"tooltip": "Passive\nYour damaging spell applications have a 10% chance to drain Health equal to 5% of your maximum Health. Cannot trigger more than once per second.",
+		"note": "Priest client aura 1260201 has 10% ProcChance and 1000 ms ProcCategoryRecovery in build 1.60.1.69913. SkillLineAbility ClassMask 400 includes Priest. Damage child 1260198 describes a leech equal to 5% of caster maximum health, referencing spell 1260189; SpellMisc identifies Shadow school and CANT_CRIT. Periodic damage ticks are excluded according to beta observation.",
 		"assumptions": [
-			"The health drain is modeled as a uniform roll of 2.5% to 5% of maximum health; the exact server amount and scaling are not established.",
-			"The drain is Shadow damage that can miss or be partially resisted and cannot crit.",
-			"Landed direct attacks and damaging spell applications, including channel applications, are eligible; other passive damage procs are excluded."
+			"The drain retains a separate spell-hit roll and normal Shadow mitigation; these server details are not established by the inspected records.",
+			"Landed direct attacks and damaging spell applications, including channel applications, are eligible; other passive damage procs and periodic ticks are excluded."
 		],
 		"foreverId": 1260198
 	},

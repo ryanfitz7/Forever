@@ -264,7 +264,7 @@ export class APLActionIDPicker extends DropdownPicker<Player<any>, ActionID, Act
 				);
 
 				actionId.setBackgroundAndHref(iconRef.value!);
-				actionId.setWowheadDataset(iconRef.value!, { useBuffAura: isAuraType });
+				actionId.setWowheadDataset(iconRef.value!, { useBuffAura: isAuraType }, player.sim.getRuleset());
 			},
 			createMissingValue: value => {
 				if (value.anyId() == 0) {
@@ -295,9 +295,11 @@ export class APLActionIDPicker extends DropdownPicker<Player<any>, ActionID, Act
 		updateValues();
 		const unitMetaEvent = player.sim.unitMetadataEmitter.on(updateValues);
 		const rotationChangeEvent = player.rotationChangeEmitter.on(updateValues);
+		const rulesetChangeEvent = player.sim.rulesetChangeEmitter.on(updateValues);
 		this.addOnDisposeCallback(() => {
 			unitMetaEvent.dispose();
 			rotationChangeEvent.dispose();
+			rulesetChangeEvent.dispose();
 		});
 	}
 }

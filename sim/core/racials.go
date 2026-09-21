@@ -318,8 +318,8 @@ func (character *Character) registerEureka() {
 // Priest's Touch of the Grave uses client aura 1260201: a 10% chance and 1 second
 // proc recovery. The 5% aura 1260189 belongs to physical classes. Other classes
 // retain the inherited model pending their own review. Damage spell 1260198 is
-// a health leech; the uniform 2.5-5% max-health roll, Shadow mitigation and inability
-// to crit remain assumptions. Beta observation excludes periodic tick triggers;
+// a health leech whose client description specifies 5% of caster maximum health.
+// Its separate hit roll and Shadow mitigation remain assumptions. Beta observation excludes periodic tick triggers;
 // channel application eligibility remains assumed.
 func (character *Character) registerTouchOfTheGrave() {
 	actionID := ActionID{SpellID: 460540}
@@ -349,7 +349,11 @@ func (character *Character) registerTouchOfTheGrave() {
 
 		ApplyEffects: func(sim *Simulation, target *Unit, spell *Spell) {
 			maxHealth := character.MaxHealth()
-			result := spell.CalcAndDealDamage(sim, target, sim.Roll(maxHealth*0.025, maxHealth*0.05), spell.OutcomeMagicHit)
+			baseDamage := maxHealth * 0.05
+			if !priestRacial {
+				baseDamage = sim.Roll(maxHealth*0.025, maxHealth*0.05)
+			}
+			result := spell.CalcAndDealDamage(sim, target, baseDamage, spell.OutcomeMagicHit)
 
 			// Only the specs that track a health bar can be healed; for everyone else the
 			// drain is still damage, it just has nothing to return the health to.
