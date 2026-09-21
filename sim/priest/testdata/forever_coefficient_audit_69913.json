@@ -1,0 +1,211 @@
+{
+  "build": "1.60.1.69913",
+  "retrieved_date": "2026-09-20",
+  "archived_at_utc": "2026-09-20T23:45:22.164312+00:00",
+  "scope_note": "Selected damage-effect fields transcribed from 18 fresh exact-build Wago responses. Every response confirmed currentVersion 1.60.1.69913. This is a bounded rank sample, not all ranks. Identical raw low-rank coefficients do not prove the server omits further level penalties. SpellEffect records and talent tooltips do not independently establish server-side multiplier stacking, snapshotting, rounding, or undocumented hotfixes.",
+  "tables": [
+    {
+      "table": "SpellEffect",
+      "records": [
+        {
+          "SpellID": 589,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A589",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 5,
+          "EffectBonusCoefficient": 0.20000000298,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 3000
+        },
+        {
+          "SpellID": 594,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A594",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 10,
+          "EffectBonusCoefficient": 0.20000000298,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 3000
+        },
+        {
+          "SpellID": 970,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A970",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 18,
+          "EffectBonusCoefficient": 0.20000000298,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 3000
+        },
+        {
+          "SpellID": 992,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A992",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 30,
+          "EffectBonusCoefficient": 0.20000000298,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 3000
+        },
+        {
+          "SpellID": 8092,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A8092",
+          "EffectIndex": 0,
+          "Effect": 2,
+          "EffectAura": 0,
+          "EffectBasePointsF": 39,
+          "EffectBonusCoefficient": 0.42899999022,
+          "EffectRealPointsPerLevel": 0.60000002384,
+          "EffectAuraPeriod": 0
+        },
+        {
+          "SpellID": 8102,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A8102",
+          "EffectIndex": 0,
+          "Effect": 2,
+          "EffectAura": 0,
+          "EffectBasePointsF": 68,
+          "EffectBonusCoefficient": 0.42899999022,
+          "EffectRealPointsPerLevel": 0.89999997616,
+          "EffectAuraPeriod": 0
+        },
+        {
+          "SpellID": 8103,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A8103",
+          "EffectIndex": 0,
+          "Effect": 2,
+          "EffectAura": 0,
+          "EffectBasePointsF": 101,
+          "EffectBonusCoefficient": 0.42899999022,
+          "EffectRealPointsPerLevel": 1.10000002384,
+          "EffectAuraPeriod": 0
+        },
+        {
+          "SpellID": 10947,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A10947",
+          "EffectIndex": 0,
+          "Effect": 2,
+          "EffectAura": 0,
+          "EffectBasePointsF": 485,
+          "EffectBonusCoefficient": 0.42899999022,
+          "EffectRealPointsPerLevel": 2.59999990463,
+          "EffectAuraPeriod": 0
+        },
+        {
+          "SpellID": 15407,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A15407",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 21,
+          "EffectBonusCoefficient": 0.16699999571,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 1000
+        },
+        {
+          "SpellID": 17311,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A17311",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 34,
+          "EffectBonusCoefficient": 0.16699999571,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 1000
+        },
+        {
+          "SpellID": 18807,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A18807",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 130,
+          "EffectBonusCoefficient": 0.16699999571,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 1000
+        },
+        {
+          "SpellID": 2944,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A2944",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 53,
+          "EffectBasePointsF": 16,
+          "EffectBonusCoefficient": 0.10000000149,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 3000
+        },
+        {
+          "SpellID": 19280,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A19280",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 53,
+          "EffectBasePointsF": 106,
+          "EffectBonusCoefficient": 0.10000000149,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 3000
+        },
+        {
+          "SpellID": 10797,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A10797",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 27,
+          "EffectBonusCoefficient": 0.16699999571,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 1000
+        },
+        {
+          "SpellID": 19296,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A19296",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 50,
+          "EffectBonusCoefficient": 0.16699999571,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 1000
+        },
+        {
+          "SpellID": 19305,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A19305",
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAura": 3,
+          "EffectBasePointsF": 300,
+          "EffectBonusCoefficient": 0.16699999571,
+          "EffectRealPointsPerLevel": 0,
+          "EffectAuraPeriod": 1000
+        },
+        {
+          "SpellID": 1309595,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1309595",
+          "EffectIndex": 0,
+          "Effect": 2,
+          "EffectAura": 0,
+          "EffectBasePointsF": 295,
+          "EffectBonusCoefficient": 0.42899999022,
+          "EffectRealPointsPerLevel": 1.5,
+          "EffectAuraPeriod": 0
+        },
+        {
+          "SpellID": 1309636,
+          "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1309636",
+          "EffectIndex": 0,
+          "Effect": 2,
+          "EffectAura": 0,
+          "EffectBasePointsF": 448,
+          "EffectBonusCoefficient": 0.42899999022,
+          "EffectRealPointsPerLevel": 2.5,
+          "EffectAuraPeriod": 0
+        }
+      ]
+    }
+  ]
+}

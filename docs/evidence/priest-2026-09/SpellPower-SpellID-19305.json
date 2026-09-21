@@ -1,0 +1,27 @@
+{
+  "source_url": "https://wago.tools/db2/SpellPower?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A19305",
+  "build": "1.60.1.69913",
+  "retrieved_at_utc": "2026-09-19T04:30:01.198516+00:00",
+  "html_sha256": "5e58ba39722267026fcb1fc01a6fadf88cee0245a6326169d1daed6c10e9a9d9",
+  "records": [
+    {
+      "ID": 183140,
+      "OrderIndex": 0,
+      "ManaCost": 350,
+      "ManaCostPerLevel": 0,
+      "ManaPerSecond": 0,
+      "PowerDisplayID": 0,
+      "AltPowerBarID": 0,
+      "PowerCostPct": 0,
+      "PowerCostMaxPct": 0,
+      "OptionalCostPct": 0,
+      "PowerPctPerSecond": 0,
+      "PowerType": 0,
+      "RequiredAuraSpellID": 0,
+      "OptionalCost": 0,
+      "SpellID": 19305
+    }
+  ],
+  "field_definitions": [],
+  "threat_table_names": []
+}

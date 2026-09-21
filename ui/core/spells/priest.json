@@ -9,9 +9,9 @@
 	"10797": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "50 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 162 Arcane damage over 6 sec."
+		"tooltip": "50 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 162 Arcane damage over 6 sec."
 	},
 	"10892": {
 		"ability": "Shadow Word: Pain",
@@ -51,23 +51,35 @@
 	"10945": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "265 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 325 to 344 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "265 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 315 to 333 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 10945,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"10946": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "310 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 406 to 428 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "310 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 394 to 416 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 10946,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"10947": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "350 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 477 to 504 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "350 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 472 to 498 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 10947,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"1316995": {
 		"ability": "Penance",
@@ -294,44 +306,44 @@
 	"19296": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "85 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 300 Arcane damage over 6 sec."
+		"tooltip": "85 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 300 Arcane damage over 6 sec."
 	},
 	"19299": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "140 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 528 Arcane damage over 6 sec."
+		"tooltip": "140 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 528 Arcane damage over 6 sec."
 	},
 	"19302": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "190 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 762 Arcane damage over 6 sec."
+		"tooltip": "190 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 762 Arcane damage over 6 sec."
 	},
 	"19303": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "245 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 1068 Arcane damage over 6 sec."
+		"tooltip": "245 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 1068 Arcane damage over 6 sec."
 	},
 	"19304": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "300 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 1440 Arcane damage over 6 sec."
+		"tooltip": "300 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 1440 Arcane damage over 6 sec."
 	},
 	"19305": {
 		"ability": "Starshards",
 		"file": "sim/priest/starshards.go",
-		"note": "Beta client 1.60.1.69893: about double Classic's damage (rank 7 936 -> 1800 over 6 ticks) at .167 a tick for every rank. Still Night Elf only.",
+		"note": "Client builds 1.60.1.69893 and 1.60.1.69913: six one-second Arcane ticks, .167 coefficient per tick, 30-second cooldown shared across ranks and clipped variants. Night Elf Priest only; excluded from Shadowform, Darkness and instant-spell talents.",
 		"source": "forever",
-		"tooltip": "350 Mana\nChanneled\nRains starshards down on the enemy target's head, causing 1800 Arcane damage over 6 sec."
+		"tooltip": "350 Mana\nChanneled\n30 sec cooldown\nRains starshards down on the enemy target's head, causing 1800 Arcane damage over 6 sec."
 	},
 	"23455": {
 		"ability": "Holy Nova (healing)",
@@ -467,50 +479,74 @@
 	"8092": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "50 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 40 to 44 Shadow damage.",
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "50 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 37 to 41 Shadow damage, but causes a high amount of threat.",
 		"measured": {
 			"date": "2026-09-19",
 			"how": "the client's own damage meter, levelling sessions on the beta",
 			"client": "37-41 +0.6/level",
 			"biggest": 46
-		}
+		},
+		"foreverId": 8092,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"8102": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "80 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 69 to 76 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "80 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 65 to 71 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 8102,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"8103": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "110 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 103 to 110 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "110 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 98 to 104 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 8103,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"8104": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "150 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 154 to 162 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "150 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 147 to 155 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 8104,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"8105": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "185 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 198 to 210 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "185 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 190 to 202 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 8105,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"8106": {
 		"ability": "Mind Blast",
 		"file": "sim/priest/mind_blast.go",
-		"note": "Beta client 1.60.1.69893: lower at every rank (rank 9 508-537 -> 477-504), ranks 1-2 coefficient .268/.364 -> .429. Cast, cost and cooldown unchanged.",
-		"source": "forever",
-		"tooltip": "225 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 259 to 276 Shadow damage."
+		"note": "Client build 1.60.1.69893 SpellEffect and SpellLevels per rank, archived in sim/priest/testdata/forever_direct_spell_records.json. Uses rank-specific mean, variance, .429 spell coefficient and growth up to MaxLevel; rank 9 mean is 490.2 at level 60.",
+		"source": "assumed",
+		"tooltip": "225 Mana\n1.5 sec cast\n8 sec cooldown\nBlasts the target for 250 to 266 Shadow damage, but causes a high amount of threat.",
+		"foreverId": 8106,
+		"assumptions": [
+			"Linear post-training level growth is applied to the mean before client variance, without integer rounding; exact beta rounding is unverified."
+		]
 	},
 	"970": {
 		"ability": "Shadow Word: Pain",
@@ -540,5 +576,131 @@
 		"foreverId": 15258,
 		"tooltip": "Increases the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
 		"note": "Beta client 1.60.1 (spell 15258): aura 270 at 2 a stack, 15 sec. Era 15258 is \"Shadow Vulnerability\", aura 87 at 3, a damage taken debuff on the target - Forever turned it into a buff on the priest. The talent 15257 is a single spell whose three tree ranks only move the proc chance, 33/67/100%."
+	},
+	"1277324": {
+		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 1,
+		"file": "sim/priest/dark_sacrifice.go",
+		"foreverId": 1277324,
+		"source": "assumed",
+		"tooltip": "Instant\n10 min cooldown\nCannibalize 400 of your own Health over 15 sec to gain 400 Mana.",
+		"note": "Client build 1.60.1.69893, SpellEffect/SpellLevels and research/dark-sacrifice-client-records.json: Undead Priest only; five health-to-mana transfers three seconds apart, ten-minute shared cooldown, instant with GCD. Available for explicit APL use; no automatic use.",
+		"assumptions": [
+			"Linear rank-level growth follows client fields; exact server rounding is unverified.",
+			"The engine accounts for health spent but does not enforce survival at zero health. No spell-power, crit or damage multipliers apply to this fixed resource transfer."
+		]
+	},
+	"1277325": {
+		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 2,
+		"file": "sim/priest/dark_sacrifice.go",
+		"foreverId": 1277325,
+		"source": "assumed",
+		"tooltip": "Instant\n10 min cooldown\nCannibalize 680 of your own Health over 15 sec to gain 680 Mana.",
+		"note": "Client build 1.60.1.69893, SpellEffect/SpellLevels and research/dark-sacrifice-client-records.json: Undead Priest only; five health-to-mana transfers three seconds apart, ten-minute shared cooldown, instant with GCD. Available for explicit APL use; no automatic use.",
+		"assumptions": [
+			"Linear rank-level growth follows client fields; exact server rounding is unverified.",
+			"The engine accounts for health spent but does not enforce survival at zero health. No spell-power, crit or damage multipliers apply to this fixed resource transfer."
+		]
+	},
+	"1277326": {
+		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 3,
+		"file": "sim/priest/dark_sacrifice.go",
+		"foreverId": 1277326,
+		"source": "assumed",
+		"tooltip": "Instant\n10 min cooldown\nCannibalize 980 of your own Health over 15 sec to gain 980 Mana.",
+		"note": "Client build 1.60.1.69893, SpellEffect/SpellLevels and research/dark-sacrifice-client-records.json: Undead Priest only; five health-to-mana transfers three seconds apart, ten-minute shared cooldown, instant with GCD. Available for explicit APL use; no automatic use.",
+		"assumptions": [
+			"Linear rank-level growth follows client fields; exact server rounding is unverified.",
+			"The engine accounts for health spent but does not enforce survival at zero health. No spell-power, crit or damage multipliers apply to this fixed resource transfer."
+		]
+	},
+	"1277327": {
+		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 4,
+		"file": "sim/priest/dark_sacrifice.go",
+		"foreverId": 1277327,
+		"source": "assumed",
+		"tooltip": "Instant\n10 min cooldown\nCannibalize 1290 of your own Health over 15 sec to gain 1290 Mana.",
+		"note": "Client build 1.60.1.69893, SpellEffect/SpellLevels and research/dark-sacrifice-client-records.json: Undead Priest only; five health-to-mana transfers three seconds apart, ten-minute shared cooldown, instant with GCD. Available for explicit APL use; no automatic use.",
+		"assumptions": [
+			"Linear rank-level growth follows client fields; exact server rounding is unverified.",
+			"The engine accounts for health spent but does not enforce survival at zero health. No spell-power, crit or damage multipliers apply to this fixed resource transfer."
+		]
+	},
+	"1277328": {
+		"ability": "Dark Sacrifice",
+		"icon": "spell_holy_powerinfusion_shadow",
+		"rank": 5,
+		"file": "sim/priest/dark_sacrifice.go",
+		"foreverId": 1277328,
+		"source": "assumed",
+		"tooltip": "Instant\n10 min cooldown\nCannibalize 1600 of your own Health over 15 sec to gain 1600 Mana.",
+		"note": "Client build 1.60.1.69893, SpellEffect/SpellLevels and research/dark-sacrifice-client-records.json: Undead Priest only; five health-to-mana transfers three seconds apart, ten-minute shared cooldown, instant with GCD. Available for explicit APL use; no automatic use.",
+		"assumptions": [
+			"Linear rank-level growth follows client fields; exact server rounding is unverified.",
+			"The engine accounts for health spent but does not enforce survival at zero health. No spell-power, crit or damage multipliers apply to this fixed resource transfer."
+		]
+	},
+	"1309595": {
+		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 1,
+		"file": "sim/priest/shadow_word_death.go",
+		"foreverId": 1309595,
+		"source": "assumed",
+		"tooltip": "175 Mana\nInstant\n15 sec cooldown\nA word of dark binding that inflicts 286 to 304 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+		"note": "Client build 1.60.1.69893 ranks in sim/priest/testdata/forever_direct_spell_records.json: .429 coefficient, 15-second shared cooldown; Early Demise adds 15/30 percentage points of crit in the encounter execute phase. Landed non-killing hits cost 10% maximum health.",
+		"assumptions": [
+			"Linear post-training growth and variance without integer rounding are modeled; server rounding is unverified.",
+			"The encounter execute phase approximates target health. Duration-based and multi-target encounters assume the target survives. Health loss is accounted for but does not stop DPS at zero health."
+		]
+	},
+	"1309633": {
+		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 2,
+		"file": "sim/priest/shadow_word_death.go",
+		"foreverId": 1309633,
+		"source": "assumed",
+		"tooltip": "205 Mana\nInstant\n15 sec cooldown\nA word of dark binding that inflicts 359 to 381 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+		"note": "Client build 1.60.1.69893 ranks in sim/priest/testdata/forever_direct_spell_records.json: .429 coefficient, 15-second shared cooldown; Early Demise adds 15/30 percentage points of crit in the encounter execute phase. Landed non-killing hits cost 10% maximum health.",
+		"assumptions": [
+			"Linear post-training growth and variance without integer rounding are modeled; server rounding is unverified.",
+			"The encounter execute phase approximates target health. Duration-based and multi-target encounters assume the target survives. Health loss is accounted for but does not stop DPS at zero health."
+		]
+	},
+	"1309635": {
+		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 3,
+		"file": "sim/priest/shadow_word_death.go",
+		"foreverId": 1309635,
+		"source": "assumed",
+		"tooltip": "250 Mana\nInstant\n15 sec cooldown\nA word of dark binding that inflicts 391 to 415 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+		"note": "Client build 1.60.1.69893 ranks in sim/priest/testdata/forever_direct_spell_records.json: .429 coefficient, 15-second shared cooldown; Early Demise adds 15/30 percentage points of crit in the encounter execute phase. Landed non-killing hits cost 10% maximum health.",
+		"assumptions": [
+			"Linear post-training growth and variance without integer rounding are modeled; server rounding is unverified.",
+			"The encounter execute phase approximates target health. Duration-based and multi-target encounters assume the target survives. Health loss is accounted for but does not stop DPS at zero health."
+		]
+	},
+	"1309636": {
+		"ability": "Shadow Word: Death",
+		"icon": "spell_shadow_demonicfortitude",
+		"rank": 4,
+		"file": "sim/priest/shadow_word_death.go",
+		"foreverId": 1309636,
+		"source": "assumed",
+		"tooltip": "340 Mana\nInstant\n15 sec cooldown\nA word of dark binding that inflicts 434 to 462 Shadow damage to the target. If your target is not killed by Shadow Word: Death, you take backlash damage equal to 10% of your maximum health.",
+		"note": "Client build 1.60.1.69893 ranks in sim/priest/testdata/forever_direct_spell_records.json: .429 coefficient, 15-second shared cooldown; Early Demise adds 15/30 percentage points of crit in the encounter execute phase. Landed non-killing hits cost 10% maximum health.",
+		"assumptions": [
+			"Linear post-training growth and variance without integer rounding are modeled; server rounding is unverified.",
+			"The encounter execute phase approximates target health. Duration-based and multi-target encounters assume the target survives. Health loss is accounted for but does not stop DPS at zero health."
+		]
 	}
 }

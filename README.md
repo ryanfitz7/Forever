@@ -1,5 +1,20 @@
 # WoW: Forever sim
 
+## Priest-focused fork
+
+This fork preserves the existing simulator interface while integrating the Priest
+beta research: ranked Shadow Word: Death, Early Demise, Starshards cooldowns,
+level-aware direct damage, corrected Priest Eureka, and Forever Auto/APL presets.
+Start with the [integration notes and evidence](docs/priest-beta-integration.md)
+for exact scope, sources, assumptions, and native Windows build instructions.
+
+On Windows with the prerequisites installed, run `./tools/build_windows.ps1`, then
+`python -m http.server 8766 --bind 127.0.0.1 --directory dist`, and open
+http://127.0.0.1:8766/classic/shadow_priest/ .
+
+The sections below describe the inherited upstream project; dated upstream claims
+should be read alongside the integration notes.
+
 A fork of [wowsims/classic](https://github.com/wowsims/classic) being converted from WoW Classic Era to **World of Warcraft: Forever**, the Classic+ game announced at BlizzCon 2026.
 
 Everything the original project does still works. What this fork adds is a second set of engine rules behind a switch, a replacement talent tree for all nine classes, and the race changes. The switch is what makes the conversion reviewable: every rule can be turned off to show exactly what it was worth.

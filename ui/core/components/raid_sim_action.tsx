@@ -120,6 +120,7 @@ export class RaidSimResultsManager {
 
 	readonly currentChangeEmitter: TypedEvent<void> = new TypedEvent<void>();
 	readonly referenceChangeEmitter: TypedEvent<void> = new TypedEvent<void>();
+	readonly freshnessChangeEmitter: TypedEvent<void> = new TypedEvent<void>();
 
 	readonly changeEmitter: TypedEvent<void> = new TypedEvent<void>();
 
@@ -127,11 +128,41 @@ export class RaidSimResultsManager {
 
 	private currentData: ReferenceData | null = null;
 	private referenceData: ReferenceData | null = null;
+	private resultsStale = false;
+	private readonly staleNotice: HTMLElement;
 
 	constructor(simUI: SimUI) {
 		this.simUI = simUI;
+		this.staleNotice = (
+			<div className="results-stale-notice alert alert-warning py-2 mb-2" attributes={{ role: 'status' }}>
+				Settings changed. Simulate again to update these results.
+			</div>
+		) as HTMLElement;
+		this.staleNotice.hidden = true;
+		this.simUI.resultsViewer.rootElem.prepend(this.staleNotice);
+		this.simUI.sim.changeEmitter.on(eventID => this.updateFreshness(eventID));
 
 		[this.currentChangeEmitter, this.referenceChangeEmitter].forEach(emitter => emitter.on(eventID => this.changeEmitter.emit(eventID)));
+	}
+
+	isResultStale(): boolean {
+		return this.resultsStale;
+	}
+
+	private updateFreshness(eventID: EventID) {
+		const request = this.currentData?.simResult.request;
+		// Compare the inputs actually simulated, including resolved Auto rotations.
+		// This also catches settings edited while a simulation was running.
+		const stale = !!request && (
+			!RaidProto.equals(request.raid, this.simUI.sim.getModifiedRaidProto()) ||
+			!EncounterProto.equals(request.encounter, this.simUI.sim.encounter.toProto()) ||
+			request.simOptions?.ruleset !== this.simUI.sim.getRuleset()
+		);
+		this.staleNotice.hidden = !stale;
+		if (this.resultsStale !== stale) {
+			this.resultsStale = stale;
+			this.freshnessChangeEmitter.emit(eventID);
+		}
 	}
 
 	setSimProgress(progress: ProgressMetrics) {
@@ -168,6 +199,7 @@ export class RaidSimResultsManager {
 			raidProto: RaidProto.clone(simResult.request.raid || RaidProto.create()),
 			encounterProto: EncounterProto.clone(simResult.request.encounter || EncounterProto.create()),
 		};
+		this.updateFreshness(eventID);
 		this.currentChangeEmitter.emit(eventID);
 
 		this.simUI.resultsViewer.setContent(

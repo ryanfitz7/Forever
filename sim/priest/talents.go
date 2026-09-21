@@ -89,7 +89,8 @@ func (priest *Priest) applyTwinDisciplines() {
 
 	points := float64(priest.Talents.TwinDisciplines)
 	priest.OnSpellRegistered(func(spell *core.Spell) {
-		if spell.Flags.Matches(SpellFlagPriest) && spell.DefaultCast.CastTime == 0 {
+		if spell.Flags.Matches(SpellFlagPriest) && spell.DefaultCast.CastTime == 0 &&
+			(!priest.Env.IsForever() || !spell.Flags.Matches(core.SpellFlagChanneled)) {
 			spell.DamageMultiplierAdditive += 0.01 * points
 		}
 	})
@@ -119,8 +120,18 @@ func (priest *Priest) applyMentalAgility() {
 			return
 		}
 
-		if spell.DefaultCast.CastTime == 0 || slices.Contains(affectedSpellCodes, spell.SpellCode) {
-			spell.Cost.Multiplier -= []int32{0, 3, 7, 10}[priest.Talents.MentalAgility]
+		// Channels begin with zero hard-cast time, but are not instant spells.
+		instant := spell.DefaultCast.CastTime == 0 && !spell.Flags.Matches(core.SpellFlagChanneled)
+		if !priest.Env.IsForever() {
+			if spell.DefaultCast.CastTime == 0 || slices.Contains(affectedSpellCodes, spell.SpellCode) {
+				spell.Cost.Multiplier -= []int32{0, 3, 7, 10}[priest.Talents.MentalAgility]
+			}
+			return
+		}
+		if instant || slices.Contains(affectedSpellCodes, spell.SpellCode) {
+			// Keep this separate from Shadowform/Inner Focus so discounts combine
+			// multiplicatively and a fully discounted cast stays free.
+			spell.Cost.BaseCost *= []float64{1, .97, .93, .90}[priest.Talents.MentalAgility]
 		}
 	})
 }

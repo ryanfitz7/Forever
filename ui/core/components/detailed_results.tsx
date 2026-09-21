@@ -404,6 +404,17 @@ export class EmbeddedDetailedResults extends DetailedResults {
 		);
 
 		this.rootElem.prepend(newTabBtn);
+		const staleNotice = (
+			<div className="results-stale-notice alert alert-warning py-2 mb-2" attributes={{ role: 'status' }}>
+				Settings changed. Simulate again to update these results.
+			</div>
+		) as HTMLElement;
+		staleNotice.hidden = !simResultsManager.isResultStale();
+		this.rootElem.prepend(staleNotice);
+		const freshnessListener = simResultsManager.freshnessChangeEmitter.on(() => {
+			staleNotice.hidden = !simResultsManager.isResultStale();
+		});
+		this.addOnDisposeCallback(() => freshnessListener.dispose());
 
 		const url = new URL(`${window.location.protocol}//${window.location.host}${SITE_BASE}detailed_results/index.html`);
 		url.searchParams.append('cssClass', simUI.cssClass);

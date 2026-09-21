@@ -6,13 +6,14 @@
 // because a failed upload should say so and offer the file back rather than quietly
 // trying again with bytes the sender has stopped watching.
 
-export const UPLOAD_URL = 'https://forever-uploads.gigaflare-elliot.workers.dev/upload';
+export const UPLOAD_URL = import.meta.env.VITE_UPLOAD_URL || '';
 
 export type UploadKind = 'dbcache' | 'damagemeter' | 'screenshot';
 
 export type UploadResult = { ok: true; receipt: string } | { ok: false; error: string };
 
 export async function upload(kind: UploadKind, bytes: Uint8Array, note: string): Promise<UploadResult> {
+	if (!UPLOAD_URL) return { ok: false, error: 'Uploads are not configured for this site. Save the file locally instead.' };
 	const url = `${UPLOAD_URL}?kind=${kind}&note=${encodeURIComponent(note.slice(0, 200))}`;
 	try {
 		const response = await fetch(url, {

@@ -23,6 +23,10 @@ type APLRotation struct {
 	// If true, can recast channel when interrupted.
 	allowChannelRecastOnInterrupt bool
 
+	// Check the action that could follow an interruption without hiding the
+	// current channel from predicates such as spellChanneledTicks.
+	evaluatingChannelInterrupt bool
+
 	// Used inside of actions/value to determine whether they will occur during the prepull or regular rotation.
 	parsingPrepull bool
 
@@ -167,6 +171,7 @@ func (rot *APLRotation) reset(sim *Simulation) {
 	rot.inLoop = false
 	rot.interruptChannelIf = nil
 	rot.allowChannelRecastOnInterrupt = false
+	rot.evaluatingChannelInterrupt = false
 	for _, action := range rot.allAPLActions() {
 		action.impl.Reset(sim)
 	}
@@ -250,6 +255,13 @@ func (apl *APLRotation) shouldInterruptChannel(sim *Simulation) bool {
 		// Channel has ended, but apl.unit.ChanneledDot hasn't been cleared yet meaning the aura is still active.
 		return false
 	}
+
+	// CanCast ordinarily rejects casts during a channel. While choosing whether
+	// to interrupt, only that restriction is lifted; cooldowns, GCD, resources,
+	// movement and other cast conditions still apply. Restore it before execution.
+	wasEvaluating := apl.evaluatingChannelInterrupt
+	apl.evaluatingChannelInterrupt = true
+	defer func() { apl.evaluatingChannelInterrupt = wasEvaluating }()
 
 	if apl.interruptChannelIf == nil || !apl.interruptChannelIf.GetBool(sim) {
 		// Continue the channel.

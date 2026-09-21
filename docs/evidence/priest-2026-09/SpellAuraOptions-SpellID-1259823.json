@@ -1,0 +1,22 @@
+{
+  "source_url": "https://wago.tools/db2/SpellAuraOptions?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1259823",
+  "build": "1.60.1.69913",
+  "retrieved_at_utc": "2026-09-19T04:31:39.706357+00:00",
+  "html_sha256": "106dbf4dbe85fadc5ad1db07bcd778843135fa4ce90e6a265c9a615367d1ebda",
+  "records": [
+    {
+      "ID": 243706,
+      "DifficultyID": 0,
+      "CumulativeAura": 0,
+      "ProcCategoryRecovery": 0,
+      "ProcChance": 100,
+      "ProcCharges": 3,
+      "SpellProcsPerMinuteID": 0,
+      "ProcTypeMask_0": 87376,
+      "ProcTypeMask_1": 0,
+      "SpellID": 1259823
+    }
+  ],
+  "field_definitions": [],
+  "threat_table_names": []
+}

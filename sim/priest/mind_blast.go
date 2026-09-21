@@ -9,7 +9,9 @@ import (
 const MindBlastRanks = 9
 
 var MindBlastSpellId = [MindBlastRanks + 1]int32{0, 8092, 8102, 8103, 8104, 8105, 8106, 10945, 10946, 10947}
-// Forever beta client 1.60.1.69893: lower at every rank, and ranks 1 and 2 lose their downranking penalty.
+
+// Forever beta client 1.60.1.69893: lower base damage at every rank. Low ranks have
+// the same raw coefficient; no additional server-side downranking penalty is modeled.
 var MindBlastBaseDamage = [MindBlastRanks + 1][]float64{{0}, {40, 44}, {69, 76}, {103, 110}, {154, 162}, {198, 210}, {259, 276}, {325, 344}, {406, 428}, {477, 504}}
 var MindBlastSpellCoef = [MindBlastRanks + 1]float64{0, .429, .429, .429, .429, .429, .429, .429, .429, .429}
 var MindBlastManaCost = [MindBlastRanks + 1]float64{0, 50, 80, 110, 150, 185, 225, 265, 310, 350}
@@ -32,6 +34,9 @@ func (priest *Priest) getMindBlastBaseConfig(rank int, cdTimer *core.Timer) core
 	spellId := MindBlastSpellId[rank]
 	baseDamageLow := MindBlastBaseDamage[rank][0]
 	baseDamageHigh := MindBlastBaseDamage[rank][1]
+	if priest.Env.IsForever() {
+		baseDamageLow, baseDamageHigh = mindBlastForeverRanks[rank].damageRange(int(priest.Level))
+	}
 	spellCoeff := MindBlastSpellCoef[rank]
 	castTime := time.Millisecond * 1500
 	manaCost := MindBlastManaCost[rank]
