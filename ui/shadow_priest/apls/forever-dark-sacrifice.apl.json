@@ -156,7 +156,7 @@
       }
     },
     {
-      "notes": "Use Inner Focus for Plague when talented. Plague also works without Inner Focus.",
+      "notes": "Use Inner Focus to make Plague free when talented. It adds no periodic crit chance. Plague also works without Inner Focus.",
       "action": {
         "condition": {
           "and": {

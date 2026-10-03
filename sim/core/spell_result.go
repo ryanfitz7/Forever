@@ -222,6 +222,9 @@ func (spell *Spell) spellCritRating(_ *Unit) float64 {
 		spell.BonusCritRating
 }
 func (spell *Spell) SpellCritChance(target *Unit) float64 {
+	return spell.PeriodicSpellCritChance(target) + spell.BonusDirectCritRating/(SpellCritRatingPerCritChance*100)
+}
+func (spell *Spell) PeriodicSpellCritChance(target *Unit) float64 {
 	// TODO: Classic verify crit suppression
 	return spell.spellCritRating(target)/(SpellCritRatingPerCritChance*100) +
 		target.GetSchoolCritTakenChance(spell) +
@@ -239,7 +242,7 @@ func (spell *Spell) HealingPower(target *Unit) float64 {
 		target.PseudoStats.BonusHealingTaken
 }
 func (spell *Spell) healingCritRating() float64 {
-	return spell.Unit.GetStat(stats.SpellCrit) + spell.BonusCritRating
+	return spell.Unit.GetStat(stats.SpellCrit) + spell.BonusCritRating + spell.BonusDirectCritRating
 }
 func (spell *Spell) HealingCritChance() float64 {
 	return spell.healingCritRating() / (CritRatingPerCritChance * 100)
@@ -276,6 +279,9 @@ func (spell *Spell) calcDamageInternal(sim *Simulation, target *Unit, baseDamage
 	result.Damage = baseDamage
 	result.Damage *= attackerMultiplier
 	result.Damage *= spell.DynamicDamageMultiplier
+	if !isPeriodic {
+		result.Damage *= spell.DynamicDirectDamageMultiplier
+	}
 
 	if sim.Log == nil {
 		result.applyResistances(sim, spell, isPeriodic, attackTable)
@@ -392,7 +398,7 @@ func (dot *Dot) Snapshot(target *Unit, baseDamage float64, isRollover bool) {
 		if dot.Spell.SchoolIndex == stats.SchoolIndexPhysical {
 			dot.SnapshotCritChance = dot.Spell.PhysicalCritChance(attackTable)
 		} else {
-			dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
+			dot.SnapshotCritChance = dot.Spell.PeriodicSpellCritChance(target)
 		}
 	}
 }
@@ -545,7 +551,7 @@ func (dot *Dot) SnapshotHeal(target *Unit, baseHealing float64, isRollover bool)
 		dot.SnapshotAttackerMultiplier = dot.Spell.AttackerDamageMultiplier(attackTable, true)
 		dot.SnapshotAttackerMultiplier *= dot.DamageMultiplier
 
-		dot.SnapshotCritChance = dot.Spell.SpellCritChance(target)
+		dot.SnapshotCritChance = dot.Spell.PeriodicSpellCritChance(target)
 	}
 }
 

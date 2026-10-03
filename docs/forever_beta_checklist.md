@@ -2,6 +2,13 @@
 
 **The pass has happened.** This file was written before the beta client was datamined, when every number in the Forever ruleset came off a BlizzCon 2026 demo tooltip. Since 17 September the client has been the source: build `1.60.1.69913` on wago.tools, read against Classic Era `1.15.9.69722` and diffed spell by spell, with per-class write-ups in `docs/beta-pass/`. Most of what follows is history, kept because it records what each number used to rest on.
 
+**Priest update, 2026-10-02:** Priest Eureka's reviewed client variant grants 15%
+mana saving, rather than the generic 50% demo figure below. User beta observations
+now exclude Eureka's damage bonus and Inner Focus's critical chance bonus from
+Priest periodic damage, including Mind Flay. Their mana benefits remain. See
+[the Priest integration review](priest-beta-integration.md) for the current model
+and evidence limits; no new client capture accompanied these observations.
+
 Where it stands, counted from `ui/core/spells/*.json`:
 
 | | |

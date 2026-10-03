@@ -1,10 +1,14 @@
-# Priest beta integration — 20 September 2026
+# Priest beta integration — updated 2 October 2026
 
 This fork builds on [ElliotWood/Forever](https://github.com/ElliotWood/Forever) at
 `b2e6a49ef`, preserving its equipment editor, talent trees, encounter settings,
 simulation results, and editable APL interface. Priest is the first class reviewed
 against the local research archive. The other class modules remain available, but
 have not received the same review in this fork.
+
+The original integration and fork comparison date to 20 September. The 2 October
+update below changes the reviewed Priest periodic-damage interactions; it does not
+claim a fresh audit of the other projects or a newer client-data capture.
 
 ## Choosing the base
 
@@ -29,6 +33,14 @@ recapture. [The archived inputs](evidence/priest-2026-09/) retain source URLs,
 timestamps, and available hashes. The archive contains 239 Priest spell variants and
 148 talent-rank descriptions; archiving a spell does not imply the engine models it.
 
+**User-reported beta observations, 2026-10-02:** Eureka no longer increases Priest
+periodic damage, and Inner Focus no longer increases its critical strike chance.
+Both exclusions include Mind Flay ticks and apply whether the periodic effect was
+started before or during the buff. Eureka's mana discount and Inner Focus's free-spell
+benefit remain. These observations supersede the September report of Eureka affecting
+existing DoTs. No new client build or combat-log archive accompanied this update;
+the original September source captures remain unchanged.
+
 | Ability | Reviewed inputs and changes |
 |---|---|
 | Mind Blast | Nine client rank records; .429 coefficient; damage growth evaluated at the selected character level rather than precomputed at the rank cap. |
@@ -37,7 +49,8 @@ timestamps, and available hashes. The archive contains 239 Priest spell variants
 | Devouring Plague | Every Priest race; eight ticks, .10 per tick, 60-second cooldown. Damage returns health. |
 | Shadow Word: Death | Four Forever spell ranks; .429 coefficient, 15-second shared cooldown, Early Demise's 15/30 percentage-point execute crit bonus, and 10%-maximum-health backlash after a non-killing landed hit. |
 | Starshards | Six Arcane ticks, .167 per tick; 30-second cooldown shared across ranks and channel variants. Shadow-only bonuses do not apply. |
-| Eureka | Priest spell 1259823: 15% mana reduction, 10% damage, three charges. Damage changes while the buff is active, including on already-running DoTs, and stops when it expires. |
+| Eureka | Priest spell 1259823: 15% mana reduction, 10% eligible direct damage, three charges. No bonus to periodic damage, including Mind Flay; mana savings remain. Periodic exclusion follows the 2026-10-02 user observation. |
+| Inner Focus | The next eligible spell is free and retains its eligible direct critical chance bonus. No periodic damage critical chance bonus, including Mind Flay, following the 2026-10-02 user observation. |
 | Touch of the Grave | Priest passive 1260201 triggers drain 1260198. The caster record specifies 10% proc chance and a one-second internal cooldown. The drain's base is 5% of maximum health. Periodic ticks do not trigger it; mitigation still needs live verification. |
 | Elune's Light | Spell 1259799 grants 10 percentage points of crit for 15 seconds, with a three-minute cooldown. |
 | Berserking | Priest uses beta spell 20554: ten seconds, three-minute cooldown, no client resource cost. The model interprets the 10% speed effects as a 1.10 speed multiplier. |
@@ -46,7 +59,8 @@ timestamps, and available hashes. The archive contains 239 Priest spell variants
 Mental Agility and Twin Disciplines distinguish instant spells from channels.
 Devouring Contagion and Mental Agility use multiplicative mana discounts under the
 Forever model, avoiding the inherited additive combination that made Plague free
-with Shadowform. Inner Focus still makes its eligible next spell free.
+with Shadowform. Inner Focus still makes its eligible next spell free. The Forever
+APLs pair it with Plague to save mana, without giving Plague extra periodic crit chance.
 
 Fresh Wago SpellEffect and SpellLevels rows for every Mind Blast and Death rank live
 in `sim/priest/testdata/forever_direct_spell_records.json`. Linear growth up to the
@@ -108,12 +122,14 @@ The regression tests in `sim/priest/forever_damage_formula_test.go` check the ac
 damage pipeline and archived coefficient records. They establish that the engine
 implements this formula; client records alone do not prove every beta server stacking
 or snapshot rule. In particular, ordinary periodic spells retain the spell power and
-Shadow Weaving multiplier from application; only the reviewed Eureka damage bonus is
-dynamic. A full no-snapshot model still requires controlled combat-log evidence.
+Shadow Weaving multiplier from application. Eureka contributes no Priest periodic
+damage bonus under the 2 October update. A full no-snapshot model still requires
+controlled combat-log evidence.
 
 The Mind Flay and Starshards APL expected-tick helpers now include Forever's periodic
 critical hits and honor the request to estimate an existing snapshot. Current crit
-chance is still used, matching actual Forever ticks. These helpers estimate damage
+chance is still used, excluding Inner Focus's bonus, matching actual Forever ticks.
+Eureka does not increase these periodic estimates. These helpers estimate damage
 conditional on the channel landing; they do not apply the initial hit chance again.
 
 The inherited default equipment includes an Engineering-only Green Lens. The default
@@ -171,7 +187,8 @@ the engine uses; every rank shares that timer.
 The complete `go test --tags=with_db ./sim/...` suite passes. Priest integration tests
 exercise 13 rotation/race combinations (20 iterations each), require Death and Plague
 casts, reject APL warnings, and verify actual two-tick Flay clipping. Separate tests
-cover rank records, mana stacking, Eureka expiry, execute crits, backlash, healing,
+cover rank records, mana stacking, Eureka's direct/periodic distinction, Inner Focus's
+periodic crit exclusion and preserved free-spell benefit, execute crits, backlash, healing,
 resource ticks, and shared cooldowns. Source-manifest/talent consistency checks,
 TypeScript, and `node tools/check_shadow_presets.cjs` also pass.
 
@@ -186,8 +203,10 @@ against a complete set of controlled beta combat logs.
 
 ## Limits that still affect conclusions
 
-- Eureka's no-snapshot damage behavior comes from user-reported beta testing. Its
-  channel charge timing remains an assumption (consumption at channel start).
+- Eureka's periodic damage exclusion and Inner Focus's periodic crit exclusion follow
+  the user-reported 2026-10-02 beta observations, not a new datamine or attached log.
+  The changes are scoped to Forever Priest; other classes retain their existing model.
+  Eureka's channel charge timing remains an assumption (consumption at channel start).
   Death's client mask does not overlap the displayed Eureka modifiers; generic
   damaging-spell eligibility is retained as an explicit uncertainty pending a live test.
 - Mana discounts use multiplicative stacking for the reviewed Priest interactions.
@@ -206,8 +225,9 @@ against a complete set of controlled beta combat logs.
   should shorten these channels or the global cooldown remains unverified. The test
   checks the implemented cast-time change without asserting a fully validated server
   haste model; do not treat the current Troll result as a settled racial ranking.
-- Ordinary DoT damage snapshots remain inherited except for Eureka. Live periodic crit
-  is already part of the Forever ruleset. No universal no-snapshot rule is claimed.
+- Ordinary DoT damage snapshots remain inherited. Live periodic crit is already part
+  of the Forever ruleset, with Inner Focus excluded for Priest periodic damage.
+  No universal no-snapshot rule is claimed.
 - Mind Blast's cooldown starts on cast completion in this engine. Client cooldown
   fields alone do not prove that timing on the beta server.
 - The damage simulator does not halt a Priest's rotation at zero health. Death backlash

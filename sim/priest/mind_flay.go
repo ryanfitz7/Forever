@@ -112,7 +112,7 @@ func (priest *Priest) newMindFlaySpellConfig(rank int, tickIdx int32) core.Spell
 				outcome := spell.OutcomeExpectedMagicAlwaysHit
 				if !spell.Flags.Matches(core.SpellFlagNoPeriodicCrit) {
 					// Forever ticks use current crit even when their damage is snapshotted.
-					outcome = spell.OutcomeExpectedMagicCrit
+					outcome = spell.OutcomeExpectedMagicPeriodicCrit
 				}
 				if useSnapshot {
 					return spell.Dot(target).CalcSnapshotDamage(sim, target, outcome)

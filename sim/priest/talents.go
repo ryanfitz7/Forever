@@ -324,7 +324,13 @@ func (priest *Priest) registerInnerFocus() {
 			for _, spell := range priest.Spellbook {
 				if spell.Flags.Matches(SpellFlagPriest) && spell.Cost != nil {
 					spell.Cost.Multiplier -= 100
-					spell.BonusCritRating += 25 * core.SpellCritRatingPerCritChance
+					if sim.IsForever() {
+						// The 2026-10-02 observed fix excludes periodic crits, including
+						// already-running DoTs while Inner Focus is held.
+						spell.BonusDirectCritRating += 25 * core.SpellCritRatingPerCritChance
+					} else {
+						spell.BonusCritRating += 25 * core.SpellCritRatingPerCritChance
+					}
 				}
 			}
 		},
@@ -332,7 +338,11 @@ func (priest *Priest) registerInnerFocus() {
 			for _, spell := range priest.Spellbook {
 				if spell.Flags.Matches(SpellFlagPriest) && spell.Cost != nil {
 					spell.Cost.Multiplier += 100
-					spell.BonusCritRating -= 25 * core.SpellCritRatingPerCritChance
+					if sim.IsForever() {
+						spell.BonusDirectCritRating -= 25 * core.SpellCritRatingPerCritChance
+					} else {
+						spell.BonusCritRating -= 25 * core.SpellCritRatingPerCritChance
+					}
 				}
 			}
 		},

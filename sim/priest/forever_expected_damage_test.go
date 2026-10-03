@@ -44,7 +44,7 @@ func TestForeverExpectedChannelTicksMatchActualDamage(t *testing.T) {
 			// would use the larger power/buff values, so the two estimates must differ.
 			priest.AddStatDynamic(sim, stats.SpellPower, 200)
 			priest.PseudoStats.DamageDealtMultiplier *= 1.2
-			// Eureka's separate dynamic multiplier affects even the existing snapshot.
+			// Generic periodic multipliers still affect an existing snapshot.
 			spell.DynamicDamageMultiplier *= 1.1
 			normalTick := dealtTestTick(sim, spell, target)
 			closeEnough(t, "ordinary snapshot with live damage multiplier", normalTick, baseTick*1.1)

@@ -3,6 +3,13 @@
 Beta client `1.60.1.69893` against Classic Era `1.15.9.69722`, read with `tools/data_watch/spell_client.py`, the
 talent curves with `tools/data_watch/trait_curve.mjs`, and `../beta/priest.json`.
 
+**Later observation, 2026-10-02:** the user reports that Eureka does not increase
+Priest periodic damage and Inner Focus does not add periodic damage crit chance,
+including Mind Flay ticks. Mana benefits remain, including a free Plague with Inner
+Focus. This supersedes the periodic interaction assumptions used after this original
+pass; the archived client figures below are unchanged. See
+[the current Priest integration review](../priest-beta-integration.md).
+
 ## How the numbers were read
 
 Same rule as the mage pass: a rank's damage is the client's base plus `EffectRealPointsPerLevel` for every level from

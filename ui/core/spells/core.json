@@ -473,8 +473,8 @@
 		"file": "sim/core/racials.go",
 		"foreverId": 1259823,
 		"source": "assumed",
-		"tooltip": "Instant\n2 min cooldown\nYour next 3 damaging or healing abilities cost 15% less Mana and do 10% more damage or healing.",
-		"note": "Priest-family SpellEffect and SpellAuraOptions in beta 1.60.1.69913 establish the 15% cost reduction, 10% bonus and three charges. Beta observation confirms damage updates dynamically for existing DoTs. Other snapshot multipliers are unchanged.",
+		"tooltip": "Instant\n2 min cooldown\nYour next 3 damaging or healing abilities cost 15% less Mana and do 10% more damage or healing. The damage bonus does not apply to periodic damage, including Mind Flay ticks. The Mana reduction still applies.",
+		"note": "Priest-family SpellEffect and SpellAuraOptions in beta 1.60.1.69913 establish the 15% cost reduction, 10% bonus and three charges. User-reported beta observation dated 2026-10-02 supersedes the September report: Eureka does not increase Priest periodic damage, including Mind Flay, whether applied before or during the buff. The mana benefit remains. This observation is not a new client-data capture or archived combat-log measurement.",
 		"assumptions": [
 			"Charges are consumed on application for instants and channels, and on completion for cast-time spells. Channel timing still needs a live test.",
 			"Shadow Word: Death remains eligible as a damaging cast, although its class mask does not intersect Eureka's displayed modifier masks; the dummy effect's server behavior is unresolved.",

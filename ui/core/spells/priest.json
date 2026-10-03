@@ -95,8 +95,12 @@
 	"14751": {
 		"ability": "Inner Focus",
 		"file": "sim/priest/talents.go",
-		"note": "Forever's demo tooltip is word for word Classic's 14751 and the sim matches it exactly: 100% off the next priest spell, +25% critical effect chance, 3 min cooldown.",
-		"source": "classic"
+		"note": "The archived client retains the 100% mana reduction, 25% critical effect chance and three-minute cooldown. User-reported beta observation dated 2026-10-02 excludes periodic damage from the critical chance bonus, including Mind Flay ticks. The mana-free eligible spell benefit remains, so Inner Focus can still make Devouring Plague free.",
+		"source": "assumed",
+		"tooltip": "Instant\n3 min cooldown\nReduces the Mana cost of your next eligible spell by 100% and increases its critical effect chance by 25% if it is capable of a critical effect. The critical chance bonus does not apply to periodic damage, including Mind Flay ticks. Devouring Plague can still be cast for no Mana.",
+		"assumptions": [
+			"The periodic critical chance exclusion follows the user's 2026-10-02 beta observation; no new client build or combat-log archive was supplied."
+		]
 	},
 	"14909": {
 		"ability": "Searing Light",

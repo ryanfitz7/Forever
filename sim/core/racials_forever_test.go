@@ -115,13 +115,13 @@ func TestForeverPriestEurekaChargesAndCost(t *testing.T) {
 	// Includes the instant cast at the activation timestamp and the final charged hit.
 	requireRacialValue(t, "three charged hits", damage.SpellMetrics[0].TotalDamage, 330)
 	requireRacialValue(t, "restored mana", damage.Cost.GetCurrentCost(), 45)
-	requireRacialValue(t, "restored damage", damage.DynamicDamageMultiplier, 1)
+	requireRacialValue(t, "restored direct damage", damage.DynamicDirectDamageMultiplier, 1)
 	if aura.IsActive() {
 		t.Fatal("Eureka remained active after its third charge")
 	}
 }
 
-func TestForeverPriestEurekaPeriodicDamageIsDynamic(t *testing.T) {
+func TestForeverPriestEurekaExcludesPeriodicDamage(t *testing.T) {
 	sim, character := setupRacialTestSim(proto.Race_RaceGnome, proto.Class_ClassPriest, proto.Ruleset_RulesetForever)
 	spell := character.GetSpell(ActionID{SpellID: 900002})
 	dot := spell.CurDot()
@@ -130,15 +130,18 @@ func TestForeverPriestEurekaPeriodicDamageIsDynamic(t *testing.T) {
 	dot.Apply(sim)
 	expectDotTickDamage(t, sim, dot, 100)
 	activate()
-	expectDotTickDamage(t, sim, dot, 110)
+	expectDotTickDamage(t, sim, dot, 100)
+	direct := spell.CalcDamage(sim, character.CurrentTarget, 100, spell.OutcomeAlwaysHit)
+	requireRacialValue(t, "direct part of a mixed spell", direct.Damage, 110)
+	spell.DisposeResult(direct)
 	aura.Deactivate(sim)
 	expectDotTickDamage(t, sim, dot, 100)
 
-	// A DoT applied during Eureka loses only that bonus; ordinary snapshots stay.
+	// New applications exclude Eureka too; ordinary snapshot multipliers still apply.
 	activate()
 	spell.DamageMultiplier = 2
 	dot.Apply(sim)
-	expectDotTickDamage(t, sim, dot, 220)
+	expectDotTickDamage(t, sim, dot, 200)
 	spell.DamageMultiplier = 1
 	aura.Deactivate(sim)
 	expectDotTickDamage(t, sim, dot, 200)

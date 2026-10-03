@@ -138,10 +138,14 @@ type Spell struct {
 	// Applied when damage is evaluated, including periodic ticks, rather than at
 	// DoT snapshot time. Ordinary damage multipliers retain their snapshot rules.
 	DynamicDamageMultiplier float64
+	// Live multiplier for direct damage only; periodic snapshots and ticks exclude it.
+	DynamicDirectDamageMultiplier float64
 
-	BonusHitRating     float64
-	BonusCritRating    float64
-	CastTimeMultiplier float64
+	BonusHitRating  float64
+	BonusCritRating float64
+	// Additional crit rating for direct spells, excluded from periodic crit rolls.
+	BonusDirectCritRating float64
+	CastTimeMultiplier    float64
 
 	BaseDamageMultiplierAdditive     float64 // Applies an additive multiplier to spell base damage
 	DamageMultiplier                 float64 // Applies a multiplicative multiplier to full spell damage
@@ -263,10 +267,11 @@ func (unit *Unit) RegisterSpell(config SpellConfig) *Spell {
 		expectedInitialDamageInternal: config.ExpectedInitialDamage,
 		expectedTickDamageInternal:    config.ExpectedTickDamage,
 
-		BonusHitRating:          config.BonusHitRating,
-		BonusCritRating:         config.BonusCritRating,
-		CastTimeMultiplier:      1,
-		DynamicDamageMultiplier: 1,
+		BonusHitRating:                config.BonusHitRating,
+		BonusCritRating:               config.BonusCritRating,
+		CastTimeMultiplier:            1,
+		DynamicDamageMultiplier:       1,
+		DynamicDirectDamageMultiplier: 1,
 
 		CritDamageBonus: 1 + config.CritDamageBonus,
 

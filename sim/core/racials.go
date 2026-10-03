@@ -220,7 +220,8 @@ func applyRaceEffects(agent Agent) {
 
 // Eureka! has class-specific client spells. Priest's 1259823 grants 15% lower
 // mana cost, 10% more damage/healing and three charges (beta 1.60.1.69913).
-// Its damage bonus is dynamic for Priest DoTs, confirmed by beta observation.
+// User-observed 2026-10-02 correction: the Priest damage bonus affects direct
+// damage only. Periodic spells still receive the mana discount and spend charges.
 // Channel charges are consumed at application; Death remains eligible under
 // the generic damaging-cast assumption despite its class-mask mismatch. Both
 // charge details still need a live test. Other classes retain the fork's model.
@@ -254,7 +255,7 @@ func (character *Character) registerEureka() {
 			for _, spell := range affected {
 				if priestEureka {
 					spell.Cost.FinalMultiplier *= 0.85
-					spell.DynamicDamageMultiplier *= 1.1
+					spell.DynamicDirectDamageMultiplier *= 1.1
 				} else {
 					spell.Cost.Multiplier -= 50
 				}
@@ -267,7 +268,7 @@ func (character *Character) registerEureka() {
 			for _, spell := range affected {
 				if priestEureka {
 					spell.Cost.FinalMultiplier /= 0.85
-					spell.DynamicDamageMultiplier /= 1.1
+					spell.DynamicDirectDamageMultiplier /= 1.1
 				} else {
 					spell.Cost.Multiplier += 50
 				}
