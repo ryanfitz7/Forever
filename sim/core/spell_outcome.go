@@ -983,6 +983,10 @@ func (spell *Spell) OutcomeExpectedMagicCrit(_ *Simulation, result *SpellResult,
 	result.Damage *= averageMultiplier
 }
 
+func (spell *Spell) OutcomeExpectedMagicPeriodicCrit(_ *Simulation, result *SpellResult, attackTable *AttackTable) {
+	result.Damage *= 1 + spell.PeriodicSpellCritChance(result.Target)*(spell.CritMultiplier(attackTable)-1)
+}
+
 func (spell *Spell) OutcomeExpectedMagicHitAndCrit(_ *Simulation, result *SpellResult, attackTable *AttackTable) {
 	averageMultiplier := 1.0
 	averageMultiplier -= spell.SpellChanceToMiss(attackTable)

@@ -13,7 +13,7 @@ below is gated on `IsForever()` unless it says the class code is Forever-only.
 
 | Rule | Source | Here |
 |---|---|---|
-| Periodic damage can crit: dots and bleeds roll for critical strikes using the snapshot crit chance. Spells that must not (Ignite) carry `SpellFlagNoPeriodicCrit`. | Tooltip wording ("non-periodic" qualifiers on Nature's Grace, Primal Fury; Pandemic exists) | `sim/core/ruleset.go`, `sim/core/dot.go` |
+| Periodic damage can crit. The reviewed Priest model uses current periodic crit chance, excluding Inner Focus's bonus. Spells that must not crit (Ignite) carry `SpellFlagNoPeriodicCrit`. | Tooltip wording ("non-periodic" qualifiers on Nature's Grace, Primal Fury; Pandemic exists); Priest exclusion follows the user observation dated 2026-10-02 | `sim/core/ruleset.go`, `sim/core/dot.go`, `sim/priest/talents.go` |
 | Hit and crit from gear apply to every kind of attack: an item's melee/spell hit and crit are summed and paid into both pools. Attribute conversions unchanged. | Panel | `sim/core/ruleset.go` `unifyEquipHitAndCrit` |
 | Bonus healing on gear carries a damage component: `SpellDamage += HealingPower / 3`. | Panel | `sim/core/ruleset.go` `addHealingSpellDamage` |
 | Improved Shadow Bolt and Stormstrike are personal: they raise only their caster's damage and are no longer raid debuffs. | Panel, confirmed by search | `sim/core/debuffs.go`, `sim/shaman/stormstrike.go` |
@@ -30,7 +30,7 @@ below is gated on `IsForever()` unless it says the class code is Forever-only.
 | Weapon skill racials become +1% crit (both pools) while the matching weapon is held; Mace Specialization moves to Dwarves. | Racials guide, *demo* | `sim/core/specializations.go` |
 | Dwarf gains Beast Slaying-style +5% vs Beasts ("Big Game Hunter"). Troll keeps Beast Slaying; both ranged specializations removed. | Racials guide | `sim/core/racials.go` |
 | Orc: Command removed (Shatter Curse replaces it). Blood Fury: 10% attack power and spell power. | Racials guide, *demo* | `sim/core/racials.go` |
-| Gnome Expansive Mind raises the resource pool (mana modelled) rather than Intellect. Eureka! cooldown/cost figures unpublished. | Racials guide | `sim/core/racials.go` |
+| Gnome Expansive Mind raises the resource pool (mana modelled) rather than Intellect. Priest Eureka uses spell 1259823: 2 min cooldown, 15% mana saving, three charges, 10% eligible direct damage; periodic damage is excluded. | Racial client capture 1.60.1.69913; periodic exclusion from user observation dated 2026-10-02 | `sim/core/racials.go` |
 | Night Elf Elune's Light: +10% crit for 15 s, 3 min cooldown. | Racials guide, cooldown confirmed by search | `sim/core/racials.go` |
 | Skyborne (both factions) racials incl. Elemental Insight +5% vs Elementals; Windshaper and High Order variants by faction. | Skyborne first look | `sim/core/racials.go` |
 | Racial cooldowns with no published cooldown assume 3 minutes. | Assumption | `forever_beta_checklist.md` |
@@ -79,12 +79,16 @@ below is gated on `IsForever()` unless it says the class code is Forever-only.
 
 ## Priest
 
+See [the Priest integration review](priest-beta-integration.md) for the later rank
+audit and the 2026-10-02 user observations. The original demo notes below are historical.
+
 | Rule | Source | Here |
 |---|---|---|
 | Shadow Weaving buffs the priest, not the target. | Panel | `sim/priest/talents.go` |
 | Divine Spirit and Improved Power Word: Fortitude are gone from the trees; assumed baseline raid buffs. | Tree | `sim/priest/priest.go` |
 | Mind Flay base damage per tick from the rank 1 tooltip (119 vs 75), other ranks by ratio. | *demo* | `sim/priest/mind_flay.go` |
 | Devouring Plague is castable by every race, not just the Undead: Devouring Contagion sits in the Shadow tree and does nothing otherwise. | Tree | `sim/priest/priest.go` |
+| Eureka adds no Priest periodic damage, and Inner Focus adds no periodic damage crit chance, including Mind Flay ticks. Their mana benefits remain; Inner Focus can still make Plague free. | User-reported beta observations, 2026-10-02; no new client capture or combat-log archive supplied | `sim/core/racials.go`, `sim/priest/talents.go` |
 
 ## Mage
 

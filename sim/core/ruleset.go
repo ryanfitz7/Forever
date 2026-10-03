@@ -24,7 +24,7 @@ func (dot *Dot) critCheck(sim *Simulation, target *Unit, attackTable *AttackTabl
 	if dot.Spell.SchoolIndex == stats.SchoolIndexPhysical {
 		return dot.Spell.PhysicalCritCheck(sim, attackTable)
 	}
-	return dot.Spell.MagicCritCheck(sim, target)
+	return sim.RandomFloat("Magical Crit Roll") < dot.Spell.PeriodicSpellCritChance(target)
 }
 
 // Bonus healing on Forever gear carries a damage component with it, so that healing

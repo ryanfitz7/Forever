@@ -1,0 +1,19 @@
+{
+  "source_url": "https://wago.tools/db2/SpellCooldowns?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A19305",
+  "build": "1.60.1.69913",
+  "retrieved_at_utc": "2026-09-19T04:30:01.370176+00:00",
+  "html_sha256": "b61d79aa4c760c7e33a82027c51b143fd1c07889f8f4fab77d71ca43c1d99133",
+  "records": [
+    {
+      "ID": 55267,
+      "DifficultyID": 0,
+      "CategoryRecoveryTime": 30000,
+      "RecoveryTime": 0,
+      "StartRecoveryTime": 1500,
+      "AuraSpellID": 0,
+      "SpellID": 19305
+    }
+  ],
+  "field_definitions": [],
+  "threat_table_names": []
+}

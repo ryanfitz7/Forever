@@ -3,6 +3,16 @@
   "class": "priest",
   "overrides": [
     {
+      "talent": "inner-focus",
+      "tree": "discipline",
+      "set": {
+        "description": "When activated, reduces the Mana cost of your next spell by {0}% and increases its critical effect chance by {1}% if it is capable of a critical effect. The critical chance bonus does not apply to periodic damage, including Mind Flay ticks. The Mana reduction still applies."
+      },
+      "reason": "User-reported beta observation dated 2026-10-02: Inner Focus no longer increases periodic damage critical chance, including Mind Flay. Mana reduction is preserved; no new client capture or combat-log archive was supplied.",
+      "by": "beta-observation",
+      "at": "2026-10-02"
+    },
+    {
       "talent": "mental-agility",
       "tree": "discipline",
       "set": {

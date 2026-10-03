@@ -2,6 +2,7 @@ import tippy from 'tippy.js';
 import { ref } from 'tsx-vanilla';
 
 import { TOOLTIP_METRIC_LABELS } from '../../../constants/tooltips';
+import { Ruleset } from '../../../proto/api';
 import { ActionId } from '../../../proto_utils/action_id';
 import { ActionMetrics, AuraMetrics, ResourceMetrics, UnitMetrics } from '../../../proto_utils/sim_result';
 import { TypedEvent } from '../../../typed_event';
@@ -26,7 +27,7 @@ export interface MetricsColumnConfig<T> {
 
 	// Either getDisplayString or fillCell must be specified.
 	getDisplayString?: (metric: T, isChildRow?: boolean) => string;
-	fillCell?: (metric: T, cellElem: HTMLElement, rowElem: HTMLElement, isChildRow?: boolean) => void;
+	fillCell?: (metric: T, cellElem: HTMLElement, rowElem: HTMLElement, isChildRow?: boolean, ruleset?: Ruleset) => void;
 }
 
 export abstract class MetricsTable<T extends ActionMetrics | AuraMetrics | UnitMetrics | ResourceMetrics> extends ResultComponent {
@@ -112,7 +113,7 @@ export abstract class MetricsTable<T extends ActionMetrics | AuraMetrics | UnitM
 				cellElem.classList.add(...columnConfig.columnClass.split(' '));
 			}
 			if (columnConfig.fillCell) {
-				columnConfig.fillCell(metric, cellElem, rowElem, isChildRow);
+				columnConfig.fillCell(metric, cellElem, rowElem, isChildRow, this.lastSimResult?.result.request.simOptions?.ruleset);
 			} else if (columnConfig.getDisplayString) {
 				cellElem.textContent = columnConfig.getDisplayString(metric, isChildRow);
 			} else {
@@ -200,7 +201,7 @@ export abstract class MetricsTable<T extends ActionMetrics | AuraMetrics | UnitM
 	): MetricsColumnConfig<T> {
 		return {
 			name: 'Name',
-			fillCell: (metric: T, cellElem: HTMLElement, rowElem: HTMLElement) => {
+			fillCell: (metric: T, cellElem: HTMLElement, _rowElem: HTMLElement, _isChildRow?: boolean, ruleset?: Ruleset) => {
 				const data = getData(metric);
 				const iconElem = ref<HTMLAnchorElement>();
 				cellElem.appendChild(
@@ -213,9 +214,7 @@ export abstract class MetricsTable<T extends ActionMetrics | AuraMetrics | UnitM
 				);
 				if (iconElem.value) {
 					data.actionId.setBackgroundAndHref(iconElem.value);
-					data.actionId.setWowheadDataset(iconElem.value, {
-						useBuffAura: data.metricType === 'AuraMetrics',
-					});
+					data.actionId.setWowheadDataset(iconElem.value, { useBuffAura: data.metricType === 'AuraMetrics' }, ruleset);
 				}
 			},
 		};

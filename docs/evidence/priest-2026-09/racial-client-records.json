@@ -1,0 +1,2351 @@
+{
+  "build": "1.60.1.69913",
+  "archived_at_utc": "2026-09-21T01:09:02.950686+00:00",
+  "scope_note": "Exact-build racial identity, proc, damage, timing and cost evidence. Sources retain their own retrieval timestamps. The drain child description establishes base damage of 5% caster maximum health, referencing spell 1260189. Client fields do not resolve additional hit rolls or mitigation, exact haste arithmetic/stacking, or channel eligibility.",
+  "tables": [
+    {
+      "table": "SpellName",
+      "source_url": "https://wago.tools/db2/SpellName?build=1.60.1.69913&filter%5BName_lang%5D=exact%3AElune%27s+Light",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T20:17:58.401846+00:00",
+      "html_sha256": "486b729bdc5a61564499157230dd487c8c8e634ddeee4dc7daf5abea0a60a87f",
+      "records": [
+        {
+          "ID": 1259799,
+          "Name_lang": "Elune's Light"
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellName",
+      "source_url": "https://wago.tools/db2/SpellName?build=1.60.1.69913&filter%5BName_lang%5D=exact%3ATouch+of+the+Grave",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T20:17:58.406960+00:00",
+      "html_sha256": "3a27e876b8ea9628918a9369280c248e6f870b2abfe287597207bb6518ec0a1d",
+      "records": [
+        {
+          "ID": 1260189,
+          "Name_lang": "Touch of the Grave"
+        },
+        {
+          "ID": 1260198,
+          "Name_lang": "Touch of the Grave"
+        },
+        {
+          "ID": 1260201,
+          "Name_lang": "Touch of the Grave"
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellName",
+      "source_url": "https://wago.tools/db2/SpellName?build=1.60.1.69913&filter%5BName_lang%5D=exact%3ABerserking",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T20:17:58.404245+00:00",
+      "html_sha256": "7dc71deddff3ba52edd7bd89fa096946d3a3d3c1bad867ee85f7d3f49904d098",
+      "records": [
+        {
+          "ID": 20554,
+          "Name_lang": "Berserking"
+        },
+        {
+          "ID": 23505,
+          "Name_lang": "Berserking"
+        },
+        {
+          "ID": 24378,
+          "Name_lang": "Berserking"
+        },
+        {
+          "ID": 1286304,
+          "Name_lang": "Berserking"
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SkillLineAbility",
+      "source_url": "https://wago.tools/db2/SkillLineAbility?build=1.60.1.69913&filter%5BSpell%5D=exact%3A1260201",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:07:37.833027+00:00",
+      "html_sha256": "d7f52c595a0f4a22765bab04a26b3c02a31aa69c72d58636aea4ceed918306ed",
+      "records": [
+        {
+          "AbilityVerb_lang": "",
+          "AbilityAllVerb_lang": "",
+          "ID": 55924,
+          "SkillLine": 220,
+          "Spell": 1260201,
+          "MinSkillLineRank": 1,
+          "ClassMask": 400,
+          "SupercedesSpell": 0,
+          "AcquireMethod": 2,
+          "TrivialSkillLineRankHigh": 0,
+          "TrivialSkillLineRankLow": 0,
+          "Flags": 0,
+          "NumSkillUps": 1,
+          "UniqueBit": 0,
+          "TradeSkillCategoryID": 0,
+          "SkillupSkillLineID": 0,
+          "Field_5_5_4_67090_014_0": 0,
+          "Field_5_5_4_67090_014_1": 0,
+          "RaceMasks_0": 16,
+          "RaceMasks_1": 0
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellAuraOptions",
+      "source_url": "https://wago.tools/db2/SpellAuraOptions?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1260201",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:47.241544+00:00",
+      "html_sha256": "cde19ec3a7f3ed4fb1d4c61300b402cdc6e51b7683569ef97335c7ba38122b0b",
+      "records": [
+        {
+          "ID": 243733,
+          "DifficultyID": 0,
+          "CumulativeAura": 0,
+          "ProcCategoryRecovery": 1000,
+          "ProcChance": 10,
+          "ProcCharges": 0,
+          "SpellProcsPerMinuteID": 0,
+          "ProcTypeMask_0": 69972,
+          "ProcTypeMask_1": 0,
+          "SpellID": 1260201
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellEffect",
+      "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1260198",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:48.087797+00:00",
+      "html_sha256": "f1e35fb93fa0a431a9388ad832fa9ae48b3a6046113d2aa11404a27358c1fb56",
+      "records": [
+        {
+          "ID": 1269548,
+          "EffectAura": 0,
+          "DifficultyID": 0,
+          "EffectIndex": 0,
+          "Effect": 9,
+          "EffectAmplitude": 1,
+          "EffectAttributes": 0,
+          "EffectAuraPeriod": 0,
+          "EffectBonusCoefficient": 0,
+          "EffectChainAmplitude": 1,
+          "EffectChainTargets": 0,
+          "EffectItemType": 0,
+          "EffectMechanic": 0,
+          "EffectPointsPerResource": 0,
+          "EffectPos_facing": 0,
+          "EffectRealPointsPerLevel": 0,
+          "EffectTriggerSpell": 0,
+          "BonusCoefficientFromAP": 0,
+          "PvpMultiplier": 1,
+          "Coefficient": 0,
+          "Variance": 0,
+          "ResourceCoefficient": 0,
+          "GroupSizeBasePointsCoefficient": 1,
+          "EffectBasePointsF": 5,
+          "ScalingClass": 0,
+          "Node__Field_12_0_0_63534_001": 0,
+          "EffectMiscValue_0": 0,
+          "EffectMiscValue_1": 0,
+          "EffectRadiusIndex_0": 0,
+          "EffectRadiusIndex_1": 0,
+          "EffectSpellClassMask_0": 0,
+          "EffectSpellClassMask_1": 0,
+          "EffectSpellClassMask_2": 0,
+          "EffectSpellClassMask_3": 0,
+          "ImplicitTarget_0": 6,
+          "ImplicitTarget_1": 0,
+          "SpellID": 1260198
+        }
+      ],
+      "field_definitions": [
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "Effect",
+          "field": "SpellEffect::Effect",
+          "name": "SpellEffect",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "9",
+              "name": "HEALTH_LEECH",
+              "isVerified": true,
+              "comment": null,
+              "line": 9
+            },
+            {
+              "value": "51",
+              "name": "FORCE_CRITICAL_HIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "63",
+              "name": "THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 63
+            },
+            {
+              "value": "91",
+              "name": "THREAT_ALL",
+              "isVerified": true,
+              "comment": null,
+              "line": 91
+            },
+            {
+              "value": "125",
+              "name": "MODIFY_THREAT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 125
+            },
+            {
+              "value": "130",
+              "name": "REDIRECT_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 130
+            }
+          ],
+          "line": 258
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "EffectAura",
+          "field": "SpellEffect::EffectAura",
+          "name": "SpellEffectAura",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0",
+              "name": "NONE",
+              "isVerified": true,
+              "comment": null,
+              "line": 1
+            },
+            {
+              "value": "10",
+              "name": "MOD_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 11
+            },
+            {
+              "value": "36",
+              "name": "MOD_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 37
+            },
+            {
+              "value": "50",
+              "name": "MOD_CRITICAL_HEALING_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "52",
+              "name": "MOD_WEAPON_CRIT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 53
+            },
+            {
+              "value": "57",
+              "name": "MOD_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 58
+            },
+            {
+              "value": "86",
+              "name": "CHANNEL_DEATH_ITEM",
+              "isVerified": true,
+              "comment": null,
+              "line": 87
+            },
+            {
+              "value": "103",
+              "name": "MOD_TOTAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 104
+            },
+            {
+              "value": "163",
+              "name": "MOD_CRIT_DAMAGE_BONUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 164
+            },
+            {
+              "value": "183",
+              "name": "MOD_CRIT_CHANCE_VERSUS_TARGET_HEALTH",
+              "isVerified": true,
+              "comment": null,
+              "line": 184
+            },
+            {
+              "value": "187",
+              "name": "MOD_ATTACKER_MELEE_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 188
+            },
+            {
+              "value": "197",
+              "name": "MOD_ATTACKER_SPELL_AND_WEAPON_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 198
+            },
+            {
+              "value": "253",
+              "name": "MOD_BLOCK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 254
+            },
+            {
+              "value": "275",
+              "name": "MOD_IGNORE_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 276
+            },
+            {
+              "value": "290",
+              "name": "MOD_CRIT_PCT",
+              "isVerified": true,
+              "comment": null,
+              "line": 291
+            },
+            {
+              "value": "306",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 307
+            },
+            {
+              "value": "308",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_WITH_ABILITIES",
+              "isVerified": true,
+              "comment": null,
+              "line": 309
+            },
+            {
+              "value": "334",
+              "name": "MOD_AUTOATTACK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 335
+            },
+            {
+              "value": "339",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_PET",
+              "isVerified": true,
+              "comment": null,
+              "line": 340
+            },
+            {
+              "value": "463",
+              "name": "CONVERT_CRIT_RATING_PCT_TO_PARRY_RATING",
+              "isVerified": true,
+              "comment": null,
+              "line": 464
+            },
+            {
+              "value": "501",
+              "name": "MOD_CRITICAL_DAMAGE_TAKEN_FROM_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 502
+            },
+            {
+              "value": "547",
+              "name": "MOD_CRIT_PERCENT_VERSUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 548
+            },
+            {
+              "value": "552",
+              "name": "MOD_SPELL_CRIT_CHANCE_SCHOOL",
+              "isVerified": true,
+              "comment": null,
+              "line": 553
+            },
+            {
+              "value": "569",
+              "name": "MOD_ATTACKER_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 568
+            },
+            {
+              "value": "572",
+              "name": "MOD_CRITICAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 571
+            },
+            {
+              "value": "573",
+              "name": "MOD_ATTACKER_RANGED_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 572
+            },
+            {
+              "value": "577",
+              "name": "MOD_ATTACKER_MELEE_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 576
+            },
+            {
+              "value": "578",
+              "name": "MOD_ATTACKER_RANGED_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 577
+            },
+            {
+              "value": "579",
+              "name": "MOD_SCHOOL_CRIT_DMG_TAKEN",
+              "isVerified": true,
+              "comment": null,
+              "line": 578
+            },
+            {
+              "value": "608",
+              "name": "ABILITY_PERIODIC_CRIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 607
+            },
+            {
+              "value": "638",
+              "name": "MOD_CRITICAL_BLOCK_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 628
+            }
+          ],
+          "line": 259
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[0]",
+          "field": "SpellEffect::ImplicitTarget[0]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 279
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[1]",
+          "field": "SpellEffect::ImplicitTarget[1]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 280
+        }
+      ],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellEffect",
+      "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1259799",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:46.418923+00:00",
+      "html_sha256": "216afdb46016c09d07f53feb43d74291983e40d0956e5568ac55b97fe3bf2613",
+      "records": [
+        {
+          "ID": 1269038,
+          "EffectAura": 290,
+          "DifficultyID": 0,
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAmplitude": 0,
+          "EffectAttributes": 0,
+          "EffectAuraPeriod": 0,
+          "EffectBonusCoefficient": 1,
+          "EffectChainAmplitude": 1,
+          "EffectChainTargets": 0,
+          "EffectItemType": 0,
+          "EffectMechanic": 0,
+          "EffectPointsPerResource": 0,
+          "EffectPos_facing": 0,
+          "EffectRealPointsPerLevel": 0,
+          "EffectTriggerSpell": 0,
+          "BonusCoefficientFromAP": 0,
+          "PvpMultiplier": 1,
+          "Coefficient": 0,
+          "Variance": 0,
+          "ResourceCoefficient": 0,
+          "GroupSizeBasePointsCoefficient": 1,
+          "EffectBasePointsF": 10,
+          "ScalingClass": 0,
+          "Node__Field_12_0_0_63534_001": 0,
+          "EffectMiscValue_0": 0,
+          "EffectMiscValue_1": 0,
+          "EffectRadiusIndex_0": 0,
+          "EffectRadiusIndex_1": 0,
+          "EffectSpellClassMask_0": 0,
+          "EffectSpellClassMask_1": 0,
+          "EffectSpellClassMask_2": 0,
+          "EffectSpellClassMask_3": 0,
+          "ImplicitTarget_0": 1,
+          "ImplicitTarget_1": 0,
+          "SpellID": 1259799
+        }
+      ],
+      "field_definitions": [
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "Effect",
+          "field": "SpellEffect::Effect",
+          "name": "SpellEffect",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "6",
+              "name": "APPLY_AURA",
+              "isVerified": true,
+              "comment": null,
+              "line": 6
+            },
+            {
+              "value": "51",
+              "name": "FORCE_CRITICAL_HIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "63",
+              "name": "THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 63
+            },
+            {
+              "value": "91",
+              "name": "THREAT_ALL",
+              "isVerified": true,
+              "comment": null,
+              "line": 91
+            },
+            {
+              "value": "125",
+              "name": "MODIFY_THREAT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 125
+            },
+            {
+              "value": "130",
+              "name": "REDIRECT_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 130
+            }
+          ],
+          "line": 258
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "EffectAura",
+          "field": "SpellEffect::EffectAura",
+          "name": "SpellEffectAura",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "10",
+              "name": "MOD_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 11
+            },
+            {
+              "value": "36",
+              "name": "MOD_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 37
+            },
+            {
+              "value": "50",
+              "name": "MOD_CRITICAL_HEALING_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "52",
+              "name": "MOD_WEAPON_CRIT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 53
+            },
+            {
+              "value": "57",
+              "name": "MOD_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 58
+            },
+            {
+              "value": "86",
+              "name": "CHANNEL_DEATH_ITEM",
+              "isVerified": true,
+              "comment": null,
+              "line": 87
+            },
+            {
+              "value": "103",
+              "name": "MOD_TOTAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 104
+            },
+            {
+              "value": "163",
+              "name": "MOD_CRIT_DAMAGE_BONUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 164
+            },
+            {
+              "value": "183",
+              "name": "MOD_CRIT_CHANCE_VERSUS_TARGET_HEALTH",
+              "isVerified": true,
+              "comment": null,
+              "line": 184
+            },
+            {
+              "value": "187",
+              "name": "MOD_ATTACKER_MELEE_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 188
+            },
+            {
+              "value": "197",
+              "name": "MOD_ATTACKER_SPELL_AND_WEAPON_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 198
+            },
+            {
+              "value": "253",
+              "name": "MOD_BLOCK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 254
+            },
+            {
+              "value": "275",
+              "name": "MOD_IGNORE_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 276
+            },
+            {
+              "value": "290",
+              "name": "MOD_CRIT_PCT",
+              "isVerified": true,
+              "comment": null,
+              "line": 291
+            },
+            {
+              "value": "306",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 307
+            },
+            {
+              "value": "308",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_WITH_ABILITIES",
+              "isVerified": true,
+              "comment": null,
+              "line": 309
+            },
+            {
+              "value": "334",
+              "name": "MOD_AUTOATTACK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 335
+            },
+            {
+              "value": "339",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_PET",
+              "isVerified": true,
+              "comment": null,
+              "line": 340
+            },
+            {
+              "value": "463",
+              "name": "CONVERT_CRIT_RATING_PCT_TO_PARRY_RATING",
+              "isVerified": true,
+              "comment": null,
+              "line": 464
+            },
+            {
+              "value": "501",
+              "name": "MOD_CRITICAL_DAMAGE_TAKEN_FROM_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 502
+            },
+            {
+              "value": "547",
+              "name": "MOD_CRIT_PERCENT_VERSUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 548
+            },
+            {
+              "value": "552",
+              "name": "MOD_SPELL_CRIT_CHANCE_SCHOOL",
+              "isVerified": true,
+              "comment": null,
+              "line": 553
+            },
+            {
+              "value": "569",
+              "name": "MOD_ATTACKER_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 568
+            },
+            {
+              "value": "572",
+              "name": "MOD_CRITICAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 571
+            },
+            {
+              "value": "573",
+              "name": "MOD_ATTACKER_RANGED_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 572
+            },
+            {
+              "value": "577",
+              "name": "MOD_ATTACKER_MELEE_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 576
+            },
+            {
+              "value": "578",
+              "name": "MOD_ATTACKER_RANGED_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 577
+            },
+            {
+              "value": "579",
+              "name": "MOD_SCHOOL_CRIT_DMG_TAKEN",
+              "isVerified": true,
+              "comment": null,
+              "line": 578
+            },
+            {
+              "value": "608",
+              "name": "ABILITY_PERIODIC_CRIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 607
+            },
+            {
+              "value": "638",
+              "name": "MOD_CRITICAL_BLOCK_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 628
+            }
+          ],
+          "line": 259
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[0]",
+          "field": "SpellEffect::ImplicitTarget[0]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 279
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[1]",
+          "field": "SpellEffect::ImplicitTarget[1]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 280
+        }
+      ],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellMisc",
+      "source_url": "https://wago.tools/db2/SpellMisc?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1259799",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:46.279901+00:00",
+      "html_sha256": "e29a3bad8fb30dcb240bfbec9e7c1572da261a200b9333fca082dc2c0d396134",
+      "records": [
+        {
+          "ID": 813285,
+          "Attributes_0": 16,
+          "Attributes_1": 32,
+          "Attributes_2": 16384,
+          "Attributes_3": 0,
+          "Attributes_4": 0,
+          "Attributes_5": 0,
+          "Attributes_6": 0,
+          "Attributes_7": 0,
+          "Attributes_8": 0,
+          "Attributes_9": 0,
+          "Attributes_10": 0,
+          "Attributes_11": 0,
+          "Attributes_12": 0,
+          "Attributes_13": 0,
+          "Attributes_14": 0,
+          "Attributes_15": 8192,
+          "Attributes_16": 0,
+          "DifficultyID": 0,
+          "CastingTimeIndex": 1,
+          "DurationIndex": 8,
+          "PvPDurationIndex": 0,
+          "RangeIndex": 1,
+          "SchoolMask": 1,
+          "Speed": 0,
+          "LaunchDelay": 0,
+          "MinDuration": 0,
+          "SpellIconFileDataID": 136057,
+          "ActiveIconFileDataID": 0,
+          "ContentTuningID": 0,
+          "ShowFutureSpellPlayerConditionID": 0,
+          "SpellVisualScript": 0,
+          "ActiveSpellVisualScript": 0,
+          "SpellID": 1259799
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellCooldowns",
+      "source_url": "https://wago.tools/db2/SpellCooldowns?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1259799",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:46.248681+00:00",
+      "html_sha256": "9eac94ef0ffdb10416e04b3fb8a5f5c8ee31df141e6849198bae0aec5c749cf5",
+      "records": [
+        {
+          "ID": 96706,
+          "DifficultyID": 0,
+          "CategoryRecoveryTime": 0,
+          "RecoveryTime": 180000,
+          "StartRecoveryTime": 0,
+          "AuraSpellID": 0,
+          "SpellID": 1259799
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellDuration",
+      "source_url": "https://wago.tools/db2/SpellDuration?build=1.60.1.69913&filter%5BID%5D=exact%3A8",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:07:37.267095+00:00",
+      "html_sha256": "66f4d88a57fb93d4139a8c5a8dc61e41fba54503ebdbd80ca87c236e1caee1e2",
+      "records": [
+        {
+          "ID": 8,
+          "Duration": 15000,
+          "MaxDuration": 15000,
+          "DurationPerResource": 0
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellEffect",
+      "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A20554",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:49.067523+00:00",
+      "html_sha256": "1364bb46bafed7d2b4e3846121f9173a183cbff753d81ec059291d4d64c7df70",
+      "records": [
+        {
+          "ID": 697808,
+          "EffectAura": 319,
+          "DifficultyID": 0,
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAmplitude": 0,
+          "EffectAttributes": 0,
+          "EffectAuraPeriod": 0,
+          "EffectBonusCoefficient": 1,
+          "EffectChainAmplitude": 1,
+          "EffectChainTargets": 0,
+          "EffectItemType": 0,
+          "EffectMechanic": 0,
+          "EffectPointsPerResource": 0,
+          "EffectPos_facing": 0,
+          "EffectRealPointsPerLevel": 0,
+          "EffectTriggerSpell": 0,
+          "BonusCoefficientFromAP": 0,
+          "PvpMultiplier": 1,
+          "Coefficient": 0,
+          "Variance": 0,
+          "ResourceCoefficient": 0,
+          "GroupSizeBasePointsCoefficient": 1,
+          "EffectBasePointsF": 10,
+          "ScalingClass": 0,
+          "Node__Field_12_0_0_63534_001": 0,
+          "EffectMiscValue_0": 0,
+          "EffectMiscValue_1": 0,
+          "EffectRadiusIndex_0": 0,
+          "EffectRadiusIndex_1": 0,
+          "EffectSpellClassMask_0": 0,
+          "EffectSpellClassMask_1": 0,
+          "EffectSpellClassMask_2": 0,
+          "EffectSpellClassMask_3": 0,
+          "ImplicitTarget_0": 1,
+          "ImplicitTarget_1": 0,
+          "SpellID": 20554
+        },
+        {
+          "ID": 1269659,
+          "EffectAura": 140,
+          "DifficultyID": 0,
+          "EffectIndex": 1,
+          "Effect": 6,
+          "EffectAmplitude": 0,
+          "EffectAttributes": 0,
+          "EffectAuraPeriod": 0,
+          "EffectBonusCoefficient": 1,
+          "EffectChainAmplitude": 1,
+          "EffectChainTargets": 0,
+          "EffectItemType": 0,
+          "EffectMechanic": 0,
+          "EffectPointsPerResource": 0,
+          "EffectPos_facing": 0,
+          "EffectRealPointsPerLevel": 0,
+          "EffectTriggerSpell": 0,
+          "BonusCoefficientFromAP": 0,
+          "PvpMultiplier": 1,
+          "Coefficient": 0,
+          "Variance": 0,
+          "ResourceCoefficient": 0,
+          "GroupSizeBasePointsCoefficient": 1,
+          "EffectBasePointsF": 10,
+          "ScalingClass": 0,
+          "Node__Field_12_0_0_63534_001": 0,
+          "EffectMiscValue_0": 0,
+          "EffectMiscValue_1": 0,
+          "EffectRadiusIndex_0": 0,
+          "EffectRadiusIndex_1": 0,
+          "EffectSpellClassMask_0": 0,
+          "EffectSpellClassMask_1": 0,
+          "EffectSpellClassMask_2": 0,
+          "EffectSpellClassMask_3": 0,
+          "ImplicitTarget_0": 1,
+          "ImplicitTarget_1": 0,
+          "SpellID": 20554
+        },
+        {
+          "ID": 1269660,
+          "EffectAura": 65,
+          "DifficultyID": 0,
+          "EffectIndex": 2,
+          "Effect": 6,
+          "EffectAmplitude": 0,
+          "EffectAttributes": 0,
+          "EffectAuraPeriod": 0,
+          "EffectBonusCoefficient": 1,
+          "EffectChainAmplitude": 1,
+          "EffectChainTargets": 0,
+          "EffectItemType": 0,
+          "EffectMechanic": 0,
+          "EffectPointsPerResource": 0,
+          "EffectPos_facing": 0,
+          "EffectRealPointsPerLevel": 0,
+          "EffectTriggerSpell": 0,
+          "BonusCoefficientFromAP": 0,
+          "PvpMultiplier": 1,
+          "Coefficient": 0,
+          "Variance": 0,
+          "ResourceCoefficient": 0,
+          "GroupSizeBasePointsCoefficient": 1,
+          "EffectBasePointsF": 10,
+          "ScalingClass": 0,
+          "Node__Field_12_0_0_63534_001": 0,
+          "EffectMiscValue_0": 0,
+          "EffectMiscValue_1": 0,
+          "EffectRadiusIndex_0": 0,
+          "EffectRadiusIndex_1": 0,
+          "EffectSpellClassMask_0": 0,
+          "EffectSpellClassMask_1": 0,
+          "EffectSpellClassMask_2": 0,
+          "EffectSpellClassMask_3": 0,
+          "ImplicitTarget_0": 1,
+          "ImplicitTarget_1": 0,
+          "SpellID": 20554
+        }
+      ],
+      "field_definitions": [
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "Effect",
+          "field": "SpellEffect::Effect",
+          "name": "SpellEffect",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "6",
+              "name": "APPLY_AURA",
+              "isVerified": true,
+              "comment": null,
+              "line": 6
+            },
+            {
+              "value": "51",
+              "name": "FORCE_CRITICAL_HIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "63",
+              "name": "THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 63
+            },
+            {
+              "value": "91",
+              "name": "THREAT_ALL",
+              "isVerified": true,
+              "comment": null,
+              "line": 91
+            },
+            {
+              "value": "125",
+              "name": "MODIFY_THREAT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 125
+            },
+            {
+              "value": "130",
+              "name": "REDIRECT_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 130
+            }
+          ],
+          "line": 258
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "EffectAura",
+          "field": "SpellEffect::EffectAura",
+          "name": "SpellEffectAura",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "10",
+              "name": "MOD_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 11
+            },
+            {
+              "value": "36",
+              "name": "MOD_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 37
+            },
+            {
+              "value": "50",
+              "name": "MOD_CRITICAL_HEALING_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "52",
+              "name": "MOD_WEAPON_CRIT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 53
+            },
+            {
+              "value": "57",
+              "name": "MOD_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 58
+            },
+            {
+              "value": "65",
+              "name": "MOD_CASTING_SPEED_NOT_STACK",
+              "isVerified": true,
+              "comment": null,
+              "line": 66
+            },
+            {
+              "value": "86",
+              "name": "CHANNEL_DEATH_ITEM",
+              "isVerified": true,
+              "comment": null,
+              "line": 87
+            },
+            {
+              "value": "103",
+              "name": "MOD_TOTAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 104
+            },
+            {
+              "value": "140",
+              "name": "MOD_RANGED_HASTE",
+              "isVerified": true,
+              "comment": null,
+              "line": 141
+            },
+            {
+              "value": "163",
+              "name": "MOD_CRIT_DAMAGE_BONUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 164
+            },
+            {
+              "value": "183",
+              "name": "MOD_CRIT_CHANCE_VERSUS_TARGET_HEALTH",
+              "isVerified": true,
+              "comment": null,
+              "line": 184
+            },
+            {
+              "value": "187",
+              "name": "MOD_ATTACKER_MELEE_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 188
+            },
+            {
+              "value": "197",
+              "name": "MOD_ATTACKER_SPELL_AND_WEAPON_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 198
+            },
+            {
+              "value": "253",
+              "name": "MOD_BLOCK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 254
+            },
+            {
+              "value": "275",
+              "name": "MOD_IGNORE_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 276
+            },
+            {
+              "value": "290",
+              "name": "MOD_CRIT_PCT",
+              "isVerified": true,
+              "comment": null,
+              "line": 291
+            },
+            {
+              "value": "306",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 307
+            },
+            {
+              "value": "308",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_WITH_ABILITIES",
+              "isVerified": true,
+              "comment": null,
+              "line": 309
+            },
+            {
+              "value": "319",
+              "name": "MOD_MELEE_HASTE_3",
+              "isVerified": true,
+              "comment": null,
+              "line": 320
+            },
+            {
+              "value": "334",
+              "name": "MOD_AUTOATTACK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 335
+            },
+            {
+              "value": "339",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_PET",
+              "isVerified": true,
+              "comment": null,
+              "line": 340
+            },
+            {
+              "value": "463",
+              "name": "CONVERT_CRIT_RATING_PCT_TO_PARRY_RATING",
+              "isVerified": true,
+              "comment": null,
+              "line": 464
+            },
+            {
+              "value": "501",
+              "name": "MOD_CRITICAL_DAMAGE_TAKEN_FROM_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 502
+            },
+            {
+              "value": "547",
+              "name": "MOD_CRIT_PERCENT_VERSUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 548
+            },
+            {
+              "value": "552",
+              "name": "MOD_SPELL_CRIT_CHANCE_SCHOOL",
+              "isVerified": true,
+              "comment": null,
+              "line": 553
+            },
+            {
+              "value": "569",
+              "name": "MOD_ATTACKER_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 568
+            },
+            {
+              "value": "572",
+              "name": "MOD_CRITICAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 571
+            },
+            {
+              "value": "573",
+              "name": "MOD_ATTACKER_RANGED_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 572
+            },
+            {
+              "value": "577",
+              "name": "MOD_ATTACKER_MELEE_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 576
+            },
+            {
+              "value": "578",
+              "name": "MOD_ATTACKER_RANGED_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 577
+            },
+            {
+              "value": "579",
+              "name": "MOD_SCHOOL_CRIT_DMG_TAKEN",
+              "isVerified": true,
+              "comment": null,
+              "line": 578
+            },
+            {
+              "value": "608",
+              "name": "ABILITY_PERIODIC_CRIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 607
+            },
+            {
+              "value": "638",
+              "name": "MOD_CRITICAL_BLOCK_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 628
+            }
+          ],
+          "line": 259
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[0]",
+          "field": "SpellEffect::ImplicitTarget[0]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 279
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[1]",
+          "field": "SpellEffect::ImplicitTarget[1]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 280
+        }
+      ],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellMisc",
+      "source_url": "https://wago.tools/db2/SpellMisc?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A20554",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:07:38.052542+00:00",
+      "html_sha256": "f1a56123a8e5c75c47e52f24084d87f5ffd0204b870ec2337eacc44ce6f65c7b",
+      "records": [
+        {
+          "ID": 329971,
+          "Attributes_0": 262160,
+          "Attributes_1": 0,
+          "Attributes_2": 0,
+          "Attributes_3": 0,
+          "Attributes_4": 0,
+          "Attributes_5": 0,
+          "Attributes_6": 0,
+          "Attributes_7": 0,
+          "Attributes_8": 0,
+          "Attributes_9": 0,
+          "Attributes_10": 0,
+          "Attributes_11": 0,
+          "Attributes_12": 0,
+          "Attributes_13": 0,
+          "Attributes_14": 0,
+          "Attributes_15": 8192,
+          "Attributes_16": 0,
+          "DifficultyID": 0,
+          "CastingTimeIndex": 1,
+          "DurationIndex": 1,
+          "PvPDurationIndex": 0,
+          "RangeIndex": 1,
+          "SchoolMask": 1,
+          "Speed": 0,
+          "LaunchDelay": 0,
+          "MinDuration": 0,
+          "SpellIconFileDataID": 135727,
+          "ActiveIconFileDataID": 0,
+          "ContentTuningID": 0,
+          "ShowFutureSpellPlayerConditionID": 0,
+          "SpellVisualScript": 0,
+          "ActiveSpellVisualScript": 0,
+          "SpellID": 20554
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellCooldowns",
+      "source_url": "https://wago.tools/db2/SpellCooldowns?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A20554",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:48.287823+00:00",
+      "html_sha256": "dd02950fd4afc0b16aa09bb2e48cc604ded7081c854a11eaf20c76579643598e",
+      "records": [
+        {
+          "ID": 55527,
+          "DifficultyID": 0,
+          "CategoryRecoveryTime": 0,
+          "RecoveryTime": 180000,
+          "StartRecoveryTime": 0,
+          "AuraSpellID": 0,
+          "SpellID": 20554
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellPower",
+      "source_url": "https://wago.tools/db2/SpellPower?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A20554",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-21T00:52:37.718202+00:00",
+      "html_sha256": "478fd4be33ad3472c9d1bac4c248a091794aa8e86df4418ca835121d79170d02",
+      "records": [],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellDuration",
+      "source_url": "https://wago.tools/db2/SpellDuration?build=1.60.1.69913&filter%5BID%5D=exact%3A1",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-21T00:52:37.744090+00:00",
+      "html_sha256": "aae0fa8a7cd59e2825b00f5505ed868067dd35409e63315ac6961d121f9b0f5d",
+      "records": [
+        {
+          "ID": 1,
+          "Duration": 10000,
+          "MaxDuration": 10000,
+          "DurationPerResource": 0
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellName",
+      "source_url": "https://wago.tools/db2/SpellName?build=1.60.1.69913&filter%5BID%5D=exact%3A26297",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-21T00:52:37.749070+00:00",
+      "html_sha256": "8a5686f60538d4d9e8dfacec975b0a730613eb33de681251686f6d56c9f88f47",
+      "records": [],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellMisc",
+      "source_url": "https://wago.tools/db2/SpellMisc?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1260198",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-21T01:09:56.000351+00:00",
+      "html_sha256": "70f611f41679192945c3a69da01edd94445ce314bc7a03b47c499ba353f9aba6",
+      "records": [
+        {
+          "ID": 813545,
+          "Attributes_0": 65536,
+          "Attributes_1": 0,
+          "Attributes_2": 536870912,
+          "Attributes_3": 0,
+          "Attributes_4": 0,
+          "Attributes_5": 0,
+          "Attributes_6": 0,
+          "Attributes_7": 0,
+          "Attributes_8": 0,
+          "Attributes_9": 0,
+          "Attributes_10": 0,
+          "Attributes_11": 0,
+          "Attributes_12": 0,
+          "Attributes_13": 0,
+          "Attributes_14": 0,
+          "Attributes_15": 8192,
+          "Attributes_16": 0,
+          "DifficultyID": 0,
+          "CastingTimeIndex": 1,
+          "DurationIndex": 0,
+          "PvPDurationIndex": 0,
+          "RangeIndex": 6,
+          "SchoolMask": 32,
+          "Speed": 0,
+          "LaunchDelay": 0,
+          "MinDuration": 0,
+          "SpellIconFileDataID": 136169,
+          "ActiveIconFileDataID": 0,
+          "ContentTuningID": 0,
+          "ShowFutureSpellPlayerConditionID": 0,
+          "SpellVisualScript": 0,
+          "ActiveSpellVisualScript": 0,
+          "SpellID": 1260198
+        }
+      ],
+      "field_definitions": [
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[0]",
+          "field": "SpellMisc::Attributes[0]",
+          "name": "SpellAttributes0",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x10000",
+              "name": "NOT_SHAPESHIFT",
+              "isVerified": true,
+              "comment": "Not Shapeshifted, Not while shapeshifted",
+              "line": 17
+            },
+            {
+              "value": "0x40000000",
+              "name": "HEARTBEAT_RESIST_CHECK",
+              "isVerified": true,
+              "comment": "random chance the effect will end",
+              "line": 31
+            }
+          ],
+          "line": 555
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[2]",
+          "field": "SpellMisc::Attributes[2]",
+          "name": "SpellAttributes2",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x20000000",
+              "name": "CANT_CRIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 30
+            }
+          ],
+          "line": 557
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[3]",
+          "field": "SpellMisc::Attributes[3]",
+          "name": "SpellAttributes3",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x40000",
+              "name": "ALWAYS_HIT",
+              "isVerified": true,
+              "comment": "Spell cannot miss, or be dodged/parried/blocked",
+              "line": 19
+            }
+          ],
+          "line": 558
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[5]",
+          "field": "SpellMisc::Attributes[5]",
+          "name": "SpellAttributes5",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x800000",
+              "name": "NO_PARTIAL_RESISTS",
+              "isVerified": true,
+              "comment": null,
+              "line": 24
+            },
+            {
+              "value": "0x80000000",
+              "name": "ADD_MELEE_HIT_RATING",
+              "isVerified": true,
+              "comment": null,
+              "line": 32
+            }
+          ],
+          "line": 560
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[8]",
+          "field": "SpellMisc::Attributes[8]",
+          "name": "SpellAttributes8",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x10",
+              "name": "CAN_HIT_AOE_UNTARGETABLE",
+              "isVerified": true,
+              "comment": null,
+              "line": 5
+            },
+            {
+              "value": "0x200",
+              "name": "PERIODIC_CAN_CRIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 10
+            }
+          ],
+          "line": 563
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[10]",
+          "field": "SpellMisc::Attributes[10]",
+          "name": "SpellAttributes10",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x20",
+              "name": "FORCE_NONBINARY_RESISTANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 6
+            },
+            {
+              "value": "0x200000",
+              "name": "AOE_CAN_HIT_SUMMONED_INVIS",
+              "isVerified": true,
+              "comment": null,
+              "line": 22
+            }
+          ],
+          "line": 565
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[13]",
+          "field": "SpellMisc::Attributes[13]",
+          "name": "SpellAttributes13",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x1000000",
+              "name": "CHAIN_BY_MOST_HIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 25
+            }
+          ],
+          "line": 568
+        },
+        {
+          "type": "flag",
+          "table": "SpellMisc",
+          "column": "Attributes[15]",
+          "field": "SpellMisc::Attributes[15]",
+          "name": "SpellAttributes15",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "0x2000",
+              "name": "",
+              "isVerified": true,
+              "comment": null,
+              "line": 14
+            }
+          ],
+          "line": 570
+        }
+      ],
+      "threat_table_names": []
+    },
+    {
+      "table": "Spell",
+      "source_url": "https://wago.tools/db2/Spell?build=1.60.1.69913&filter%5BID%5D=exact%3A1260198",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-21T01:09:02.874792+00:00",
+      "html_sha256": "e8581f39a8ef22adda81b7c404f86d78ca7abe7522b3e77770902efe78ef82e4",
+      "records": [
+        {
+          "ID": 1260198,
+          "NameSubtext_lang": "",
+          "Description_lang": "Steals life from target enemy equal to $1260189s1% of the caster's maximum Health.",
+          "AuraDescription_lang": ""
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "Spell",
+      "source_url": "https://wago.tools/db2/Spell?build=1.60.1.69913&filter%5BID%5D=exact%3A1260201",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-21T01:09:02.908276+00:00",
+      "html_sha256": "6ac177f32e47205dbeb68c7f690ebf5ab3f3f8990ed63a5991b86ec9bf51ceee",
+      "records": [
+        {
+          "ID": 1260201,
+          "NameSubtext_lang": "Racial Passive",
+          "Description_lang": "Your spells and attacks have a $h% chance to drain Health from the target, up to $s1% of your maximum Health.",
+          "AuraDescription_lang": ""
+        }
+      ],
+      "field_definitions": [],
+      "threat_table_names": []
+    },
+    {
+      "table": "SpellEffect",
+      "source_url": "https://wago.tools/db2/SpellEffect?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1260189",
+      "build": "1.60.1.69913",
+      "retrieved_at_utc": "2026-09-19T21:06:47.814872+00:00",
+      "html_sha256": "2a887153e1c5655ddb4c6f2686e34043d83a1f9d25042ab1f2eb5074c1d7e5c8",
+      "records": [
+        {
+          "ID": 1269533,
+          "EffectAura": 4,
+          "DifficultyID": 0,
+          "EffectIndex": 0,
+          "Effect": 6,
+          "EffectAmplitude": 0,
+          "EffectAttributes": 0,
+          "EffectAuraPeriod": 0,
+          "EffectBonusCoefficient": 0,
+          "EffectChainAmplitude": 1,
+          "EffectChainTargets": 0,
+          "EffectItemType": 0,
+          "EffectMechanic": 0,
+          "EffectPointsPerResource": 0,
+          "EffectPos_facing": 0,
+          "EffectRealPointsPerLevel": 0,
+          "EffectTriggerSpell": 0,
+          "BonusCoefficientFromAP": 0,
+          "PvpMultiplier": 1,
+          "Coefficient": 0,
+          "Variance": 0,
+          "ResourceCoefficient": 0,
+          "GroupSizeBasePointsCoefficient": 1,
+          "EffectBasePointsF": 5,
+          "ScalingClass": 0,
+          "Node__Field_12_0_0_63534_001": 0,
+          "EffectMiscValue_0": 0,
+          "EffectMiscValue_1": 0,
+          "EffectRadiusIndex_0": 0,
+          "EffectRadiusIndex_1": 0,
+          "EffectSpellClassMask_0": 0,
+          "EffectSpellClassMask_1": 0,
+          "EffectSpellClassMask_2": 0,
+          "EffectSpellClassMask_3": 0,
+          "ImplicitTarget_0": 1,
+          "ImplicitTarget_1": 0,
+          "SpellID": 1260189
+        }
+      ],
+      "field_definitions": [
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "Effect",
+          "field": "SpellEffect::Effect",
+          "name": "SpellEffect",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "6",
+              "name": "APPLY_AURA",
+              "isVerified": true,
+              "comment": null,
+              "line": 6
+            },
+            {
+              "value": "51",
+              "name": "FORCE_CRITICAL_HIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "63",
+              "name": "THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 63
+            },
+            {
+              "value": "91",
+              "name": "THREAT_ALL",
+              "isVerified": true,
+              "comment": null,
+              "line": 91
+            },
+            {
+              "value": "125",
+              "name": "MODIFY_THREAT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 125
+            },
+            {
+              "value": "130",
+              "name": "REDIRECT_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 130
+            }
+          ],
+          "line": 258
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "EffectAura",
+          "field": "SpellEffect::EffectAura",
+          "name": "SpellEffectAura",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "4",
+              "name": "DUMMY",
+              "isVerified": true,
+              "comment": null,
+              "line": 5
+            },
+            {
+              "value": "10",
+              "name": "MOD_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 11
+            },
+            {
+              "value": "36",
+              "name": "MOD_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 37
+            },
+            {
+              "value": "50",
+              "name": "MOD_CRITICAL_HEALING_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 51
+            },
+            {
+              "value": "52",
+              "name": "MOD_WEAPON_CRIT_PERCENT",
+              "isVerified": true,
+              "comment": null,
+              "line": 53
+            },
+            {
+              "value": "57",
+              "name": "MOD_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 58
+            },
+            {
+              "value": "86",
+              "name": "CHANNEL_DEATH_ITEM",
+              "isVerified": true,
+              "comment": null,
+              "line": 87
+            },
+            {
+              "value": "103",
+              "name": "MOD_TOTAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 104
+            },
+            {
+              "value": "163",
+              "name": "MOD_CRIT_DAMAGE_BONUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 164
+            },
+            {
+              "value": "183",
+              "name": "MOD_CRIT_CHANCE_VERSUS_TARGET_HEALTH",
+              "isVerified": true,
+              "comment": null,
+              "line": 184
+            },
+            {
+              "value": "187",
+              "name": "MOD_ATTACKER_MELEE_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 188
+            },
+            {
+              "value": "197",
+              "name": "MOD_ATTACKER_SPELL_AND_WEAPON_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 198
+            },
+            {
+              "value": "253",
+              "name": "MOD_BLOCK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 254
+            },
+            {
+              "value": "275",
+              "name": "MOD_IGNORE_SHAPESHIFT",
+              "isVerified": true,
+              "comment": null,
+              "line": 276
+            },
+            {
+              "value": "290",
+              "name": "MOD_CRIT_PCT",
+              "isVerified": true,
+              "comment": null,
+              "line": 291
+            },
+            {
+              "value": "306",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 307
+            },
+            {
+              "value": "308",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_WITH_ABILITIES",
+              "isVerified": true,
+              "comment": null,
+              "line": 309
+            },
+            {
+              "value": "334",
+              "name": "MOD_AUTOATTACK_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 335
+            },
+            {
+              "value": "339",
+              "name": "MOD_CRIT_CHANCE_FOR_CASTER_PET",
+              "isVerified": true,
+              "comment": null,
+              "line": 340
+            },
+            {
+              "value": "463",
+              "name": "CONVERT_CRIT_RATING_PCT_TO_PARRY_RATING",
+              "isVerified": true,
+              "comment": null,
+              "line": 464
+            },
+            {
+              "value": "501",
+              "name": "MOD_CRITICAL_DAMAGE_TAKEN_FROM_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 502
+            },
+            {
+              "value": "547",
+              "name": "MOD_CRIT_PERCENT_VERSUS",
+              "isVerified": true,
+              "comment": null,
+              "line": 548
+            },
+            {
+              "value": "552",
+              "name": "MOD_SPELL_CRIT_CHANCE_SCHOOL",
+              "isVerified": true,
+              "comment": null,
+              "line": 553
+            },
+            {
+              "value": "569",
+              "name": "MOD_ATTACKER_SPELL_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 568
+            },
+            {
+              "value": "572",
+              "name": "MOD_CRITICAL_THREAT",
+              "isVerified": true,
+              "comment": null,
+              "line": 571
+            },
+            {
+              "value": "573",
+              "name": "MOD_ATTACKER_RANGED_CRIT_CHANCE",
+              "isVerified": true,
+              "comment": null,
+              "line": 572
+            },
+            {
+              "value": "577",
+              "name": "MOD_ATTACKER_MELEE_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 576
+            },
+            {
+              "value": "578",
+              "name": "MOD_ATTACKER_RANGED_CRIT_DAMAGE",
+              "isVerified": true,
+              "comment": null,
+              "line": 577
+            },
+            {
+              "value": "579",
+              "name": "MOD_SCHOOL_CRIT_DMG_TAKEN",
+              "isVerified": true,
+              "comment": null,
+              "line": 578
+            },
+            {
+              "value": "608",
+              "name": "ABILITY_PERIODIC_CRIT",
+              "isVerified": true,
+              "comment": null,
+              "line": 607
+            },
+            {
+              "value": "638",
+              "name": "MOD_CRITICAL_BLOCK_AMOUNT",
+              "isVerified": true,
+              "comment": null,
+              "line": 628
+            }
+          ],
+          "line": 259
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[0]",
+          "field": "SpellEffect::ImplicitTarget[0]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 279
+        },
+        {
+          "type": "enum",
+          "table": "SpellEffect",
+          "column": "ImplicitTarget[1]",
+          "field": "SpellEffect::ImplicitTarget[1]",
+          "name": "Target",
+          "condition": null,
+          "definitions": [
+            {
+              "value": "76",
+              "name": "TARGET_DEST_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 76
+            },
+            {
+              "value": "77",
+              "name": "TARGET_UNIT_CHANNEL_TARGET",
+              "isVerified": true,
+              "comment": null,
+              "line": 77
+            },
+            {
+              "value": "106",
+              "name": "TARGET_DEST_CHANNEL_CASTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 106
+            },
+            {
+              "value": "122",
+              "name": "TARGET_UNIT_AREA_THREAT_LIST",
+              "isVerified": true,
+              "comment": null,
+              "line": 120
+            },
+            {
+              "value": "150",
+              "name": "TARGET_UNIT_OWN_CRITTER",
+              "isVerified": true,
+              "comment": null,
+              "line": 147
+            }
+          ],
+          "line": 280
+        }
+      ],
+      "threat_table_names": []
+    }
+  ]
+}

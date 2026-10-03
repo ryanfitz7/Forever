@@ -1,0 +1,39 @@
+{
+  "source_url": "https://wago.tools/db2/SpellClassOptions?build=1.60.1.69913&filter%5BSpellID%5D=exact%3A1259823",
+  "build": "1.60.1.69913",
+  "retrieved_at_utc": "2026-09-19T04:31:39.361758+00:00",
+  "html_sha256": "754db191e023e2c6ce102383d9481d410d5b0a53dd26ca3be91bd5ab0053eef0",
+  "records": [
+    {
+      "ID": 81618,
+      "SpellID": 1259823,
+      "ModalNextSpell": 0,
+      "SpellClassSet": 6,
+      "SpellClassMask_0": 0,
+      "SpellClassMask_1": 0,
+      "SpellClassMask_2": 0,
+      "SpellClassMask_3": 0
+    }
+  ],
+  "field_definitions": [
+    {
+      "type": "enum",
+      "table": "SpellClassOptions",
+      "column": "SpellClassSet",
+      "field": "SpellClassOptions::SpellClassSet",
+      "name": "SpellClassSet",
+      "condition": null,
+      "definitions": [
+        {
+          "value": "6",
+          "name": "Priest",
+          "isVerified": true,
+          "comment": null,
+          "line": 5
+        }
+      ],
+      "line": 257
+    }
+  ],
+  "threat_table_names": []
+}

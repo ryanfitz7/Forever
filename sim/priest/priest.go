@@ -28,6 +28,8 @@ const (
 	SpellCode_PriestSmite
 	SpellCode_PriestStarshards
 	SpellCode_PriestVampiricTouch
+	SpellCode_PriestShadowWordDeath
+	SpellCode_PriestDarkSacrifice
 )
 
 type Priest struct {
@@ -38,6 +40,7 @@ type Priest struct {
 
 	CircleOfHealing *core.Spell
 	DevouringPlague []*core.Spell
+	DarkSacrifice   []*core.Spell
 	EmpoweredRenew  *core.Spell
 	FlashHeal       []*core.Spell
 	GreaterHeal     []*core.Spell
@@ -53,6 +56,7 @@ type Priest struct {
 	Renew           []*core.Spell
 	Shadowform      *core.Spell
 	ShadowWordPain  []*core.Spell
+	ShadowWordDeath []*core.Spell
 	Smite           []*core.Spell
 	Starshards      [][]*core.Spell
 	VampiricEmbrace *core.Spell
@@ -89,6 +93,8 @@ func (priest *Priest) AddPartyBuffs(_ *proto.PartyBuffs) {
 
 func (priest *Priest) Initialize() {
 	priest.registerMindBlast()
+	priest.registerShadowWordDeath()
+	priest.registerDarkSacrifice()
 	priest.registerMindFlay()
 	priest.registerShadowWordPainSpell()
 	// Devouring Plague is an Undead racial in Classic. The Forever beta client teaches it to

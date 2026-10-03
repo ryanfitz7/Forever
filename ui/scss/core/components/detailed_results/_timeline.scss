@@ -156,6 +156,7 @@
 }
 .rotation-labels {
 	display: inline-block;
+	flex-shrink: 0;
 	white-space: nowrap;
 }
 .rotation-label {
@@ -193,7 +194,17 @@
 }
 .rotation-timeline {
 	display: inline-block;
+	flex: 1;
+	min-width: 0;
 	overflow-x: scroll;
+}
+.rotation-fit {
+	.rotation-timeline-row {
+		overflow: hidden;
+	}
+	.rotation-timeline-cast-icon {
+		width: 6px;
+	}
 }
 .rotation-timeline-row {
 	position: relative;

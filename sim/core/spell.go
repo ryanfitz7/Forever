@@ -135,9 +135,17 @@ type Spell struct {
 	CurCast    Cast
 	LastCastAt time.Duration
 
-	BonusHitRating     float64
-	BonusCritRating    float64
-	CastTimeMultiplier float64
+	// Applied when damage is evaluated, including periodic ticks, rather than at
+	// DoT snapshot time. Ordinary damage multipliers retain their snapshot rules.
+	DynamicDamageMultiplier float64
+	// Live multiplier for direct damage only; periodic snapshots and ticks exclude it.
+	DynamicDirectDamageMultiplier float64
+
+	BonusHitRating  float64
+	BonusCritRating float64
+	// Additional crit rating for direct spells, excluded from periodic crit rolls.
+	BonusDirectCritRating float64
+	CastTimeMultiplier    float64
 
 	BaseDamageMultiplierAdditive     float64 // Applies an additive multiplier to spell base damage
 	DamageMultiplier                 float64 // Applies a multiplicative multiplier to full spell damage
@@ -259,9 +267,11 @@ func (unit *Unit) RegisterSpell(config SpellConfig) *Spell {
 		expectedInitialDamageInternal: config.ExpectedInitialDamage,
 		expectedTickDamageInternal:    config.ExpectedTickDamage,
 
-		BonusHitRating:     config.BonusHitRating,
-		BonusCritRating:    config.BonusCritRating,
-		CastTimeMultiplier: 1,
+		BonusHitRating:                config.BonusHitRating,
+		BonusCritRating:               config.BonusCritRating,
+		CastTimeMultiplier:            1,
+		DynamicDamageMultiplier:       1,
+		DynamicDirectDamageMultiplier: 1,
 
 		CritDamageBonus: 1 + config.CritDamageBonus,
 
@@ -300,6 +310,7 @@ func (unit *Unit) RegisterSpell(config SpellConfig) *Spell {
 	}
 
 	if spell.Cost != nil {
+		spell.Cost.FinalMultiplier = 1
 		spell.DefaultCast.Cost = spell.Cost.BaseCost
 	}
 
@@ -529,7 +540,7 @@ func (spell *Spell) CanCast(sim *Simulation, target *Unit) bool {
 	}
 
 	// While channeling no other action is possible except rare cast-while-channeling spells
-	if spell.Unit.IsChanneling(sim) {
+	if spell.Unit.IsChanneling(sim) && (spell.Unit.Rotation == nil || !spell.Unit.Rotation.evaluatingChannelInterrupt) {
 		//if sim.Log != nil {
 		//	sim.Log("Cant cast because already channeling")
 		//}
@@ -664,10 +675,11 @@ type SpellCostFunctions interface {
 }
 
 type SpellCost struct {
-	BaseCost     float64 // The base power cost before all modifiers.
-	FlatModifier int32   // Flat value added to base cost before pct mods
-	Multiplier   int32   // Multiplier for cost, stored as an int, e.g. 0.5 is stored as 50
-	spell        *Spell
+	BaseCost        float64 // The base power cost before all modifiers.
+	FlatModifier    int32   // Flat value added to base cost before pct mods
+	Multiplier      int32   // Multiplier for cost, stored as an int, e.g. 0.5 is stored as 50
+	FinalMultiplier float64 // Independent multiplicative effects, applied after existing cost modifiers.
+	spell           *Spell
 	SpellCostFunctions
 }
 
@@ -675,7 +687,7 @@ func (sc *SpellCost) ApplyCostModifiers(cost float64) float64 {
 	spell := sc.spell
 	cost = max(0, cost+float64(sc.FlatModifier))
 	cost = max(0, cost*float64(spell.Unit.GetSchoolCostModifier(spell))/100)
-	return max(0, cost*float64(sc.Multiplier)/100)
+	return max(0, cost*float64(sc.Multiplier)/100*sc.FinalMultiplier)
 }
 
 // Get power cost after all modifiers.

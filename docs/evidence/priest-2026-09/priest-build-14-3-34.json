@@ -1,0 +1,765 @@
+{
+  "source": "User-provided screenshot, 2026-09-17",
+  "screenshot": "evidence/priest-build-14-3-34.png",
+  "effect_source": "https://foreverchanges.pro/talents/priest",
+  "effect_build": "1.60.1.69893",
+  "purpose": "Separate 51-point target build; not the uncertain level-38 demo allocation",
+  "tree_totals": {
+    "Discipline": 14,
+    "Holy": 3,
+    "Shadow Magic": 34
+  },
+  "total_points": 51,
+  "talents": [
+    {
+      "tree": "Discipline",
+      "talent": "Power in Light",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 0,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Wand Specialization",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 0,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Twin Disciplines",
+      "selected_rank": 5,
+      "max_rank": 5,
+      "current_effect": "Increases the damage and healing of your instant cast spells by 5%.",
+      "structure": {
+        "tier": 0,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Silent Resolve",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 1,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Holy Precision",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 1,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Improved Power Word: Shield",
+      "selected_rank": 3,
+      "max_rank": 3,
+      "current_effect": "Increases the damage absorbed by your Power Word: Shield by 20%.",
+      "structure": {
+        "tier": 1,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Martyrdom",
+      "selected_rank": 2,
+      "max_rank": 2,
+      "current_effect": "Gives you a 100% chance to gain Focused Casting for 6 sec after being the victim of a melee or ranged critical strike. The Focused Casting effect prevents you from losing casting time when taking damage and increases your resistance to Interrupt effects by 20%.",
+      "structure": {
+        "tier": 1,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Mental Agility",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 2,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Inner Focus",
+      "selected_rank": 1,
+      "max_rank": 1,
+      "current_effect": "When activated, reduces the Mana cost of your next spell by 100% and increases its critical effect chance by 25% if it is capable of a critical effect.",
+      "structure": {
+        "tier": 2,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Meditation",
+      "selected_rank": 3,
+      "max_rank": 3,
+      "current_effect": "Allows 50% of your Mana regeneration to continue while casting.",
+      "structure": {
+        "tier": 2,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Improved Inner Fire",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Mental Strength",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Soul Warding",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 2,
+        "reported_prerequisite": "Improved Power Word: Shield",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Improved Mana Burn",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Penance",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 4,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Renewed Hope",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 4,
+        "col": 2,
+        "reported_prerequisite": "Soul Warding",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Divine Aegis",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 5,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Discipline",
+      "talent": "Power Infusion",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 6,
+        "col": 1,
+        "reported_prerequisite": "Penance",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Twilight Focus",
+      "selected_rank": 3,
+      "max_rank": 3,
+      "current_effect": "Gives you a 70% chance to avoid interruption caused by damage while casting any spell.",
+      "structure": {
+        "tier": 0,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Improved Renew",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 0,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Holy Specialization",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 0,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Spell Warding",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 1,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Divine Fury",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 1,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Holy Nova",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 2,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Blessed Recovery",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 2,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Inspiration",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 2,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Holy Reach",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Improved Healing",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Searing Light",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 2,
+        "reported_prerequisite": "Divine Fury",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Binding Heal",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Litany of Light",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 4,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Spirit of Redemption",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 4,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Spiritual Guidance",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 4,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Spiritual Healing",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 5,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Holy",
+      "talent": "Prayer of Mending",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 6,
+        "col": 1,
+        "reported_prerequisite": "Spirit of Redemption",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Shadow Focus",
+      "selected_rank": 5,
+      "max_rank": 5,
+      "current_effect": "Improves your chance to hit with Shadow spells by 5%.",
+      "structure": {
+        "tier": 0,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Blackout",
+      "selected_rank": 0,
+      "max_rank": 5,
+      "current_effect": null,
+      "structure": {
+        "tier": 0,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Spirit Tap",
+      "selected_rank": 5,
+      "max_rank": 5,
+      "current_effect": "Gives you a 100% chance to gain a 100% bonus to your Spirit for 15 sec after killing a non-trivial target. For the duration, your Mana will regenerate at a 50% of normal rate while casting.",
+      "structure": {
+        "tier": 0,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Shadow Affinity",
+      "selected_rank": 0,
+      "max_rank": 3,
+      "current_effect": null,
+      "structure": {
+        "tier": 1,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Improved Shadow Word: Pain",
+      "selected_rank": 2,
+      "max_rank": 2,
+      "current_effect": "Increases the duration of your Shadow Word: Pain spell by 6 sec.",
+      "structure": {
+        "tier": 1,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Shadow Reach",
+      "selected_rank": 1,
+      "max_rank": 2,
+      "current_effect": "Increases the range of your offensive Shadow spells by 10%.",
+      "structure": {
+        "tier": 1,
+        "col": 3,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Improved Mind Blast",
+      "selected_rank": 4,
+      "max_rank": 5,
+      "current_effect": "Reduces the cooldown of your Mind Blast spell by 2 sec.",
+      "structure": {
+        "tier": 2,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Improved Psychic Scream",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 2,
+        "col": 1,
+        "reported_prerequisite": "Blackout",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Mind Flay",
+      "selected_rank": 1,
+      "max_rank": 1,
+      "current_effect": "Assault the target's mind with Shadow energy, causing 63 Shadow damage over 3 sec and slowing their movement speed by 50%.",
+      "structure": {
+        "tier": 2,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Improved Mind Flay",
+      "selected_rank": 2,
+      "max_rank": 2,
+      "current_effect": "Your Mind Flay now deals 20% more damage, gains 10 yards increased range, but slows the target's movement speed by 20%.",
+      "structure": {
+        "tier": 2,
+        "col": 3,
+        "reported_prerequisite": "Mind Flay",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Improved Fade",
+      "selected_rank": 0,
+      "max_rank": 2,
+      "current_effect": null,
+      "structure": {
+        "tier": 3,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Vampiric Embrace",
+      "selected_rank": 1,
+      "max_rank": 1,
+      "current_effect": "Afflicts your target with Shadow energy that causes all party members to be healed for 20% of any Shadow spell damage you deal for 30 sec. Vampiric Embrace also grants a chance for your Spirit Tap talent to trigger when enemies afflicted by it die.",
+      "structure": {
+        "tier": 3,
+        "col": 1,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Shadow Weaving",
+      "selected_rank": 3,
+      "max_rank": 3,
+      "current_effect": "Your Shadow damage spells have a 100% chance to increase the Shadow damage you deal by 2% for 15 sec, stacking up to 5 times.",
+      "structure": {
+        "tier": 3,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Silence",
+      "selected_rank": 0,
+      "max_rank": 1,
+      "current_effect": null,
+      "structure": {
+        "tier": 4,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Devouring Contagion",
+      "selected_rank": 2,
+      "max_rank": 2,
+      "current_effect": "Reduces the mana cost of your Devouring Plague by 50%.\n\nTargets that die while Devouring Plague it is active spreads it, jumping to a nearby enemy within 10 yards for the remaining duration.",
+      "structure": {
+        "tier": 4,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Early Demise",
+      "selected_rank": 2,
+      "max_rank": 2,
+      "current_effect": "Increases Shadow Word: Death's critical strike chance on targets at or below 20% health by 30%.",
+      "structure": {
+        "tier": 5,
+        "col": 0,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Darkness",
+      "selected_rank": 5,
+      "max_rank": 5,
+      "current_effect": "Increases your Shadow damage done by 10%.",
+      "structure": {
+        "tier": 5,
+        "col": 2,
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    },
+    {
+      "tree": "Shadow Magic",
+      "talent": "Shadowform",
+      "selected_rank": 1,
+      "max_rank": 1,
+      "current_effect": "Assume Shadowform, increasing your Shadow damage by 10%, reducing the Mana cost of all Shadow spells by 50%, increasing the critical strike damage bonus of your Shadow spells by 100%, and reducing Physical damage taken by you by 15%. However, you may not cast healing spells while in this form.",
+      "structure": {
+        "tier": 6,
+        "col": 1,
+        "reported_prerequisite": "Vampiric Embrace",
+        "prerequisite_status": "client_data",
+        "position_status": "client_data",
+        "max_rank_status": "client_data"
+      }
+    }
+  ]
+}
